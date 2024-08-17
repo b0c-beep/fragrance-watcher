@@ -31,7 +31,7 @@ const fetchPrices = async () => {
                         console.error(`Error fetching price from ${store}:`, error);
                     }
                 } else {
-                    console.warn(`Missing URL or selector for ${store}`);
+                    //console.warn(`Missing URL or selector for ${store}`);
                 }
             }
         }
