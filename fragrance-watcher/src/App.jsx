@@ -3,31 +3,44 @@ import React, { useEffect, useState } from 'react';
 
 function App() {
   const [prices, setPrices] = useState({});
+    const [fragrance, setFragrance] = useState('ysl_myslf_refill_150ml'); // Default fragrance
 
-  useEffect(() => {
-      fetch('http://127.0.0.1:5000/api/prices')
-          .then(response => response.json())
-          .then(data => setPrices(data))
-          .catch(error => console.error('Error fetching prices:', error));
-  }, []);
+    useEffect(() => {
+        const fetchPrices = async () => {
+            try {
+                const response = await fetch(`http://localhost:5000/api/prices/${fragrance}`);
+                const data = await response.json();
+                setPrices(data);
+            } catch (error) {
+                console.error('Error fetching prices:', error);
+            }
+        };
 
-  return (
-      <div>
-          <h1>Fragrance Prices</h1>
-          {Object.keys(prices).map(fragrance => (
-              <div key={fragrance}>
-                  <h2>{fragrance}</h2>
-                  <ul>
-                      {Object.keys(prices[fragrance]).map(site => (
-                          <li key={site}>
-                              {site}: {prices[fragrance][site] || 'Price not found'}
-                          </li>
-                      ))}
-                  </ul>
-              </div>
-          ))}
-      </div>
-  );
+        fetchPrices();
+    }, [fragrance]);
+
+    return (
+        <div>
+            <h1>Fragrance Price Tracker</h1>
+            <label>
+                Select Fragrance:
+                <select value={fragrance} onChange={(e) => setFragrance(e.target.value)}>
+                    <option value="ysl_myslf_refill_150ml">YSL MySLF Refill 150ml</option>
+                    {/* Add more options here */}
+                </select>
+            </label>
+            <div>
+                <h2>Prices:</h2>
+                <ul>
+                    {Object.entries(prices).map(([store, price]) => (
+                        <li key={store}>
+                            {store}: {price}
+                        </li>
+                    ))}
+                </ul>
+            </div>
+        </div>
+    );
 }
 
 export default App
