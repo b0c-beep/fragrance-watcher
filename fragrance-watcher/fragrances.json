@@ -1,0 +1,948 @@
+{
+    "ysl_myslf_refill_150ml": {
+        "brasty.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "hiris.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "esentedelux.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "notino.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "parfumss.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "parfimo.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "makeup.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "vivantis.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "bestvalue.eu": {
+            "url": "",
+            "price_selector": ""
+        },
+        "parfumuri-timisoara.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "deluxury.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "parfumat.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "parfumu.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "obsentum.com": {
+            "url": "",
+            "price_selector": ""
+        },
+        "sephora.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "douglas.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "beautik.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "parfumy.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "marionnaud.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "simplestore.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "depozituldecosmetice.ro": {
+            "url": "",
+            "price_selector": ""
+        }
+    },
+    "armani_swy_100ml": {
+        "brasty.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "hiris.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "esentedelux.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "notino.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "parfumss.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "parfimo.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "makeup.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "vivantis.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "bestvalue.eu": {
+            "url": "",
+            "price_selector": ""
+        },
+        "parfumuri-timisoara.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "deluxury.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "parfumat.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "parfumu.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "obsentum.com": {
+            "url": "",
+            "price_selector": ""
+        },
+        "sephora.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "douglas.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "beautik.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "parfumy.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "marionnaud.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "simplestore.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "depozituldecosmetice.ro": {
+            "url": "",
+            "price_selector": ""
+        }
+    },
+    "jpg_le_male_elixir_125ml": {
+        "brasty.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "hiris.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "esentedelux.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "notino.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "parfumss.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "parfimo.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "makeup.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "vivantis.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "bestvalue.eu": {
+            "url": "",
+            "price_selector": ""
+        },
+        "parfumuri-timisoara.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "deluxury.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "parfumat.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "parfumu.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "obsentum.com": {
+            "url": "",
+            "price_selector": ""
+        },
+        "sephora.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "douglas.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "beautik.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "parfumy.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "marionnaud.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "simplestore.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "depozituldecosmetice.ro": {
+            "url": "",
+            "price_selector": ""
+        }
+    },
+    "jpg_le_beau_le_parfum_125ml": {
+        "brasty.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "hiris.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "esentedelux.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "notino.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "parfumss.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "parfimo.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "makeup.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "vivantis.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "bestvalue.eu": {
+            "url": "",
+            "price_selector": ""
+        },
+        "parfumuri-timisoara.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "deluxury.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "parfumat.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "parfumu.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "obsentum.com": {
+            "url": "",
+            "price_selector": ""
+        },
+        "sephora.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "douglas.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "beautik.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "parfumy.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "marionnaud.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "simplestore.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "depozituldecosmetice.ro": {
+            "url": "",
+            "price_selector": ""
+        }
+    },
+    "mancera_instant_crush_120ml": {
+        "brasty.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "hiris.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "esentedelux.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "notino.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "parfumss.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "parfimo.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "makeup.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "vivantis.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "bestvalue.eu": {
+            "url": "",
+            "price_selector": ""
+        },
+        "parfumuri-timisoara.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "deluxury.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "parfumat.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "parfumu.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "obsentum.com": {
+            "url": "",
+            "price_selector": ""
+        },
+        "sephora.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "douglas.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "beautik.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "parfumy.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "marionnaud.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "simplestore.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "depozituldecosmetice.ro": {
+            "url": "",
+            "price_selector": ""
+        }
+    },
+    "mancera_french_riviera_120ml": {
+        "brasty.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "hiris.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "esentedelux.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "notino.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "parfumss.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "parfimo.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "makeup.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "vivantis.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "bestvalue.eu": {
+            "url": "",
+            "price_selector": ""
+        },
+        "parfumuri-timisoara.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "deluxury.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "parfumat.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "parfumu.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "obsentum.com": {
+            "url": "",
+            "price_selector": ""
+        },
+        "sephora.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "douglas.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "beautik.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "parfumy.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "marionnaud.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "simplestore.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "depozituldecosmetice.ro": {
+            "url": "",
+            "price_selector": ""
+        }
+    },
+    "ch_bad_boy_cobalt_100ml": {
+        "brasty.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "hiris.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "esentedelux.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "notino.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "parfumss.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "parfimo.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "makeup.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "vivantis.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "bestvalue.eu": {
+            "url": "",
+            "price_selector": ""
+        },
+        "parfumuri-timisoara.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "deluxury.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "parfumat.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "parfumu.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "obsentum.com": {
+            "url": "",
+            "price_selector": ""
+        },
+        "sephora.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "douglas.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "beautik.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "parfumy.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "marionnaud.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "simplestore.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "depozituldecosmetice.ro": {
+            "url": "",
+            "price_selector": ""
+        }
+    },
+    "dior_homme_intense_100ml": {
+        "brasty.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "hiris.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "esentedelux.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "notino.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "parfumss.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "parfimo.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "makeup.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "vivantis.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "bestvalue.eu": {
+            "url": "",
+            "price_selector": ""
+        },
+        "parfumuri-timisoara.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "deluxury.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "parfumat.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "parfumu.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "obsentum.com": {
+            "url": "",
+            "price_selector": ""
+        },
+        "sephora.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "douglas.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "beautik.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "parfumy.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "marionnaud.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "simplestore.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "depozituldecosmetice.ro": {
+            "url": "",
+            "price_selector": ""
+        }
+    },
+    "tom_ford_noir_50ml": {
+        "brasty.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "hiris.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "esentedelux.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "notino.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "parfumss.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "parfimo.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "makeup.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "vivantis.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "bestvalue.eu": {
+            "url": "",
+            "price_selector": ""
+        },
+        "parfumuri-timisoara.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "deluxury.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "parfumat.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "parfumu.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "obsentum.com": {
+            "url": "",
+            "price_selector": ""
+        },
+        "sephora.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "douglas.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "beautik.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "parfumy.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "marionnaud.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "simplestore.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "depozituldecosmetice.ro": {
+            "url": "",
+            "price_selector": ""
+        }
+    },
+    "lattafa_khamrah_100ml": {
+        "brasty.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "hiris.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "esentedelux.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "notino.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "parfumss.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "parfimo.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "makeup.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "vivantis.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "bestvalue.eu": {
+            "url": "",
+            "price_selector": ""
+        },
+        "parfumuri-timisoara.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "deluxury.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "parfumat.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "parfumu.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "obsentum.com": {
+            "url": "",
+            "price_selector": ""
+        },
+        "sephora.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "douglas.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "beautik.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "parfumy.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "marionnaud.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "simplestore.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "depozituldecosmetice.ro": {
+            "url": "",
+            "price_selector": ""
+        }
+    },
+    "prada_lhomme_intense_100ml": {
+        "brasty.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "hiris.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "esentedelux.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "notino.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "parfumss.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "parfimo.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "makeup.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "vivantis.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "bestvalue.eu": {
+            "url": "",
+            "price_selector": ""
+        },
+        "parfumuri-timisoara.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "deluxury.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "parfumat.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "parfumu.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "obsentum.com": {
+            "url": "",
+            "price_selector": ""
+        },
+        "sephora.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "douglas.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "beautik.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "parfumy.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "marionnaud.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "simplestore.ro": {
+            "url": "",
+            "price_selector": ""
+        },
+        "depozituldecosmetice.ro": {
+            "url": "",
+            "price_selector": ""
+        }
+    }
+}
