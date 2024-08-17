@@ -13,8 +13,8 @@
             "price_selector": ""
         },
         "notino.ro": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://www.notino.ro/yves-saint-laurent/myslf-eau-de-parfum-pentru-barbati/p-16196406/",
+            "price_selector": "#pd-price"
         },
         "parfumss.ro": {
             "url": "",
@@ -37,8 +37,8 @@
             "price_selector": ""
         },
         "parfumuri-timisoara.ro": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://www.parfumuri-timisoara.ro/yves-saint-laurent-myself-refill.html",
+            "price_selector": ".product-price-26063 #price"
         },
         "deluxury.ro": {
             "url": "",
@@ -57,12 +57,12 @@
             "price_selector": ""
         },
         "sephora.ro": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://www.sephora.ro/p/myslf---apa-de-parfum-reincarcabila-barbati-P10052153.html",
+            "price_selector": ".price-sales .price-sales-standard"
         },
         "douglas.ro": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://www.douglas.ro/p/yves-saint-laurent-myslf-eau-de-parfum-reincarcabila-barbati-1113402",
+            "price_selector": ".product-detail-price .neutralColor"
         },
         "beautik.ro": {
             "url": "",
@@ -73,16 +73,16 @@
             "price_selector": ""
         },
         "marionnaud.ro": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://www.marionnaud.ro/yves-saint-laurent/myslf/myslf-apa-de-parfum-reincarcabil/p/BP_83143?varSel=83146",
+            "price_selector": ".formatted-price__decimal"
         },
         "simplestore.ro": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://www.simplestore.ro/apa-de-parfum-yves-saint-laurent-my-slf-edp-rechargable-150-ml",
+            "price_selector": ".priceprodnormal .pret-normal-tva .pretpagprod"
         },
         "depozituldecosmetice.ro": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://depozituldecosmetice.ro/yves-saint-laurent-myslf-refill-apa-de-parfum-rezerva-150ml.html",
+            "price_selector": ".price"
         }
     },
     "armani_swy_100ml": {
