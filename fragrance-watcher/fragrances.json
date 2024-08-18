@@ -1,5 +1,6 @@
 {
     "ysl_myslf_refill_150ml": {
+        "quantity": "150ml",
         "brasty.ro": {
             "url": "",
             "price_selector": ""
@@ -58,7 +59,7 @@
         },
         "sephora.ro": {
             "url": "https://www.sephora.ro/p/myslf---apa-de-parfum-reincarcabila-barbati-P10052153.html",
-            "price_selector": ".price-sales"
+            "price_selector": ".price-sales .price-sales-standard"
         },
         "douglas.ro": {
             "url": "https://www.douglas.ro/p/yves-saint-laurent-myslf-eau-de-parfum-reincarcabila-barbati-1113402",
@@ -86,6 +87,7 @@
         }
     },
     "armani_swy_100ml": {
+        "quantity": "100ml",
         "brasty.ro": {
             "url": "",
             "price_selector": ""
@@ -172,6 +174,7 @@
         }
     },
     "jpg_le_male_elixir_125ml": {
+        "quantity": "125ml",
         "brasty.ro": {
             "url": "",
             "price_selector": ""
@@ -258,6 +261,7 @@
         }
     },
     "jpg_le_beau_le_parfum_125ml": {
+        "quantity": "125ml",
         "brasty.ro": {
             "url": "",
             "price_selector": ""
@@ -344,6 +348,7 @@
         }
     },
     "mancera_instant_crush_120ml": {
+        "quantity": "120ml",
         "brasty.ro": {
             "url": "",
             "price_selector": ""
@@ -430,6 +435,7 @@
         }
     },
     "mancera_french_riviera_120ml": {
+        "quantity": "120ml",
         "brasty.ro": {
             "url": "",
             "price_selector": ""
@@ -516,6 +522,7 @@
         }
     },
     "ch_bad_boy_cobalt_100ml": {
+        "quantity": "100ml",
         "brasty.ro": {
             "url": "",
             "price_selector": ""
@@ -602,6 +609,7 @@
         }
     },
     "dior_homme_intense_100ml": {
+        "quantity": "100ml",
         "brasty.ro": {
             "url": "",
             "price_selector": ""
@@ -688,6 +696,7 @@
         }
     },
     "tom_ford_noir_50ml": {
+        "quantity": "50ml",
         "brasty.ro": {
             "url": "",
             "price_selector": ""
@@ -774,6 +783,7 @@
         }
     },
     "lattafa_khamrah_100ml": {
+        "quantity": "100ml",
         "brasty.ro": {
             "url": "",
             "price_selector": ""
@@ -860,6 +870,7 @@
         }
     },
     "prada_lhomme_intense_100ml": {
+        "quantity": "100ml",
         "brasty.ro": {
             "url": "",
             "price_selector": ""
