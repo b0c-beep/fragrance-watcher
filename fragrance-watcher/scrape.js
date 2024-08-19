@@ -1,13 +1,12 @@
 import puppeteer from 'puppeteer';
 import fs from 'fs/promises';
-import { parse } from 'path';
 
 const basicFetch = async (page, store, details, fragrance, quantity) => {
     try {
         await page.goto(details.url, { waitUntil: 'domcontentloaded', timeout: 60000 });
                         
         // Fetch the price using the selector
-        const price = await page.evaluate((selector) => {
+        let price = await page.evaluate((selector) => {
             const priceElement = document.querySelector(selector);
             return priceElement ? priceElement.innerText.trim() : 'Price not found';
         }, details.price_selector);
@@ -21,6 +20,8 @@ const basicFetch = async (page, store, details, fragrance, quantity) => {
 const sephoraFetch = async (page, store, details, fragrance, quantity) => {
     try {
         await page.goto(details.url, { waitUntil: 'domcontentloaded', timeout: 60000 });
+        let price = 'Price not found';
+        let foundPrice = false;
 
         const cookieAccept = await page.$('#footer_tc_privacy_button_3');
         if (cookieAccept) {
@@ -36,18 +37,51 @@ const sephoraFetch = async (page, store, details, fragrance, quantity) => {
 
         const parentModal = await page.$('.dialog-content.ui-dialog-content.ui-widget-content');  
         if (parentModal) {
-            const variationElements = await parentModal.$$('.variation-info.variation-info-perfume');
+            
+            const variationElements = await parentModal.$$('.variation-title');
             for (const variationElement of variationElements) {
-                //console.log('Variation element found ', variationElement);
-                const variationTitle = await variationElement.$$('.variation-title');
-                const spans = await variationTitle.$$('span');
-                for (const span of spans) {
-                    console.log("Span text: ", span.innerText);
-                }
-            }
-        } 
 
-        console.log(`Price at ${store} for ${fragrance}: `);
+                const childrenData = await page.evaluate((parent) => {
+                    const children = parent.children;
+                    let result = [];
+    
+                    for (let child of children) {
+                        result.push({
+                            tagName: child.tagName,
+                            classList: Array.from(child.classList).join(' '), // Convert class list to a space-separated string
+                            id: child.id || 'null', // Get the ID or 'null' if not present
+                            innerHTML: child.innerHTML.trim(), // Get the inner HTML for better formatting
+                            innerText: child.innerText.trim(), // Get the inner text for better formatting
+                        });
+                    }
+    
+                    return result;
+                }, variationElement);
+
+                for (const childData of childrenData) {
+                    
+                    if(childData.innerText.includes(parseInt(quantity)) && childData.tagName === 'SPAN' && childData.classList === '') {
+                        const priceElement = await variationElement.$(details.price_selector);
+                        if (priceElement && !foundPrice) {
+                            price = await priceElement.evaluate(node => {
+                                let text = node.innerText.trim();
+                                // Clean the text to remove newline and any text in parentheses (e.g., "\n(1)")
+                                text = text.replace(/\s*\(.*?\)/g, ''); // Removes any text in parentheses including the preceding whitespace
+                                text = text.replace(/[^0-9.,]/g, ''); // Removes non-numeric characters except ',' and '.'
+                                
+                                // Extract numbers up to the first ',' or '.'
+                                const numbersOnly = text.match(/^\d+/);
+                                return numbersOnly ? `${numbersOnly[0]} RON` : null; // Append 'RON' to the number
+                            });
+                            foundPrice = true;
+                            break;   
+                        }
+                    }
+                }
+
+            }
+        }
+        console.log(`Price at ${store} for ${fragrance}: ${price}`);
     } catch (error) {
         console.error(`Error fetching price from ${store} for ${fragrance}:`, error);
     }
@@ -61,7 +95,7 @@ const fetchPrices = async () => {
         const fragrances = JSON.parse(data);
         
         // Launch the browser
-        const browser = await puppeteer.launch({ headless: false, defaultViewport: null, slowMo: 100 });
+        const browser = await puppeteer.launch({ headless: true, defaultViewport: null });
         const page = await browser.newPage();
 
         // Iterate through each fragrance
@@ -77,7 +111,7 @@ const fetchPrices = async () => {
                         && store !== 'notino.ro' && store !== 'marionnaud.ro'
                         && store !== 'parfumuri-timisoara.ro') {
 
-                        //await basicFetch(page, store, details, fragrance, quantity);
+                        await basicFetch(page, store, details, fragrance, quantity);
                     } else if (store === 'sephora.ro') {
                         await sephoraFetch(page, store, details, fragrance, quantity);
                     }
