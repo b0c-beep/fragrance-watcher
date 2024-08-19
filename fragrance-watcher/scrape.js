@@ -34,22 +34,25 @@ const sephoraFetch = async (page, store, details, fragrance, quantity) => {
             await dropdownElement.click();
         }
 
-        
-        // Find the correct variation based on quantity
-        const selectedPrice = await page.evaluate(async (quantity, priceSelector) => {
-            const variationElement = document.querySelector('.variation-button-line:nth-of-type(4)');
+        const parentModal = await page.$('.dialog-content.ui-dialog-content.ui-widget-content');  
+        if (parentModal) {
+            const variationElements = await parentModal.$$('.variation-info.variation-info-perfume');
+            for (const variationElement of variationElements) {
+                //console.log('Variation element found ', variationElement);
+                const variationTitle = await variationElement.$$('.variation-title');
+                const spans = await variationTitle.$$('span');
+                for (const span of spans) {
+                    console.log("Span text: ", span.innerText);
+                }
+            }
+        } 
 
-            await variationElement.click();   
-            
-        
-            return selectedPrice;
-        }, quantity, details.price_selector);
-        
-        console.log(`Price at ${store} for ${fragrance}: ${selectedPrice}`);
+        console.log(`Price at ${store} for ${fragrance}: `);
     } catch (error) {
         console.error(`Error fetching price from ${store} for ${fragrance}:`, error);
     }
 }
+
 
 const fetchPrices = async () => {
     try {
@@ -58,7 +61,7 @@ const fetchPrices = async () => {
         const fragrances = JSON.parse(data);
         
         // Launch the browser
-        const browser = await puppeteer.launch({ headless: false, defaultViewport: null, slowMo: 300 });
+        const browser = await puppeteer.launch({ headless: false, defaultViewport: null, slowMo: 100 });
         const page = await browser.newPage();
 
         // Iterate through each fragrance

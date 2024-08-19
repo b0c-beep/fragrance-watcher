@@ -59,7 +59,7 @@
         },
         "sephora.ro": {
             "url": "https://www.sephora.ro/p/myslf---apa-de-parfum-reincarcabila-barbati-P10052153.html",
-            "price_selector": ".price-sales .price-sales-standard"
+            "price_selector": ".price-sales.price-sales-standard"
         },
         "douglas.ro": {
             "url": "https://www.douglas.ro/p/yves-saint-laurent-myslf-eau-de-parfum-reincarcabila-barbati-1113402",
