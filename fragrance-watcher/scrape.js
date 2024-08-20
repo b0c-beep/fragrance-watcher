@@ -1,5 +1,10 @@
-import puppeteer from 'puppeteer';
+import puppeteer from 'puppeteer-extra';
+import StealthPlugin from 'puppeteer-extra-plugin-stealth';
 import fs from 'fs/promises';
+
+// Apply stealth plugin to Puppeteer
+puppeteer.use(StealthPlugin());
+
 
 const basicFetch = async (page, store, details, fragrance, quantity) => {
     try {
@@ -87,6 +92,50 @@ const sephoraFetch = async (page, store, details, fragrance, quantity) => {
     }
 }
 
+const douglasFetch = async (page, store, details, fragrance, quantity) => {
+    await page.goto(details.url, { waitUntil: 'domcontentloaded', timeout: 60000 });
+    let price = 'Price not found';
+
+    const highlightElement = async (selector) => {
+        await page.evaluate((selector) => {
+            const element = document.querySelector(selector);
+            if (element) {
+                element.style.border = '2px solid red';
+            }
+        }, selector);
+    };
+
+
+    const parentModal = await page.$('.product-detail-buy');
+
+    if(parentModal) {
+        
+        const variationElements = await parentModal.$$('.d-flex.flex-row.justify-content-between');
+
+        for(let variationELement of variationElements){
+
+            const cookieAccept = await page.$('[data-testid="uc-accept-all-button"]');
+            
+            if(cookieAccept){console.log("found cookie button");}
+
+            //it stops at the line below
+            const variationQuantity = await variationELement.$('.price-unit-content').innerText;
+            
+            if (cookieAccept) {
+                await cookieAccept.click();
+                console.log('Cookie accepted');
+            }
+
+            if(variationQuantity.includes(parseInt(quantity))){
+                const priceElement = await variationELement.$(details.price_selector);
+                if(priceElement){
+                    console.log('found');
+                }
+            }
+        }
+    }
+    //console.log(`Price at ${store} for ${fragrance}: ${price}`);
+}
 
 const fetchPrices = async () => {
     try {
@@ -95,7 +144,7 @@ const fetchPrices = async () => {
         const fragrances = JSON.parse(data);
         
         // Launch the browser
-        const browser = await puppeteer.launch({ headless: true, defaultViewport: null });
+        const browser = await puppeteer.launch({ headless: false, defaultViewport: null, slowMo: 200 });
         const page = await browser.newPage();
 
         // Iterate through each fragrance
@@ -111,9 +160,11 @@ const fetchPrices = async () => {
                         && store !== 'notino.ro' && store !== 'marionnaud.ro'
                         && store !== 'parfumuri-timisoara.ro') {
 
-                        await basicFetch(page, store, details, fragrance, quantity);
+                        //await basicFetch(page, store, details, fragrance, quantity);
                     } else if (store === 'sephora.ro') {
-                        await sephoraFetch(page, store, details, fragrance, quantity);
+                        //await sephoraFetch(page, store, details, fragrance, quantity);
+                    }else if (store === 'douglas.ro') {
+                        await douglasFetch(page, store, details, fragrance, quantity);
                     }
                 } else {
                     //console.warn(`Missing URL or selector for ${store}`);

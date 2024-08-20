@@ -63,7 +63,7 @@
         },
         "douglas.ro": {
             "url": "https://www.douglas.ro/p/yves-saint-laurent-myslf-eau-de-parfum-reincarcabila-barbati-1113402",
-            "price_selector": ".product-detail-price"
+            "price_selector": ".product-detail-price.neutralColor"
         },
         "beautik.ro": {
             "url": "",
