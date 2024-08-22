@@ -1,10 +1,13 @@
 import puppeteer from 'puppeteer-extra';
 import StealthPlugin from 'puppeteer-extra-plugin-stealth';
 import fs from 'fs/promises';
+import process from 'process';
+import psTree from 'ps-tree';
 
 // Apply stealth plugin to Puppeteer
 puppeteer.use(StealthPlugin());
 
+let browser;
 
 const basicFetch = async (page, store, details, fragrance, quantity) => {
     try {
@@ -16,7 +19,7 @@ const basicFetch = async (page, store, details, fragrance, quantity) => {
             return priceElement ? priceElement.innerText.trim() : 'Price not found';
         }, details.price_selector);
 
-        console.log(`Price at ${store} for ${fragrance}: ${price}`);
+        console.log(`\x1b[32mPrice at ${store} for ${fragrance}: ${price}\x1b[0m`);
     } catch (error) {
         console.error(`Error fetching price from ${store} for ${fragrance}:`, error);
     }
@@ -86,55 +89,26 @@ const sephoraFetch = async (page, store, details, fragrance, quantity) => {
 
             }
         }
-        console.log(`Price at ${store} for ${fragrance}: ${price}`);
+        console.log(`\x1b[32mPrice at ${store} for ${fragrance}: ${price}\x1b[0m`);
     } catch (error) {
         console.error(`Error fetching price from ${store} for ${fragrance}:`, error);
     }
 }
 
 const douglasFetch = async (page, store, details, fragrance, quantity) => {
-    await page.goto(details.url, { waitUntil: 'domcontentloaded', timeout: 60000 });
-    let price = 'Price not found';
+    try{
+        await page.goto(details.url, { waitUntil: 'domcontentloaded', timeout: 60000 });
+        let price = 'Price not found';
 
-    const highlightElement = async (selector) => {
-        await page.evaluate((selector) => {
-            const element = document.querySelector(selector);
-            if (element) {
-                element.style.border = '2px solid red';
-            }
-        }, selector);
-    };
+        const buttons = await page.$$eval('button', elements => elements.map(button => ({innerText: button.innerText, element: button})));
+        console.log(buttons);
 
+        //console.log(buttons.length);
 
-    const parentModal = await page.$('.product-detail-buy');
-
-    if(parentModal) {
-        
-        const variationElements = await parentModal.$$('.d-flex.flex-row.justify-content-between');
-
-        for(let variationELement of variationElements){
-
-            const cookieAccept = await page.$('[data-testid="uc-accept-all-button"]');
-            
-            if(cookieAccept){console.log("found cookie button");}
-
-            //it stops at the line below
-            const variationQuantity = await variationELement.$('.price-unit-content').innerText;
-            
-            if (cookieAccept) {
-                await cookieAccept.click();
-                console.log('Cookie accepted');
-            }
-
-            if(variationQuantity.includes(parseInt(quantity))){
-                const priceElement = await variationELement.$(details.price_selector);
-                if(priceElement){
-                    console.log('found');
-                }
-            }
-        }
+        console.log(`\x1b[32mPrice at ${store} for ${fragrance}: ${price}\x1b[0m`);
+    } catch (error) {
+        console.error(`Error fetching price from ${store} for ${fragrance}:`, error);
     }
-    //console.log(`Price at ${store} for ${fragrance}: ${price}`);
 }
 
 const fetchPrices = async () => {
@@ -144,18 +118,18 @@ const fetchPrices = async () => {
         const fragrances = JSON.parse(data);
         
         // Launch the browser
-        const browser = await puppeteer.launch({ headless: false, defaultViewport: null, slowMo: 200 });
+        browser = await puppeteer.launch({ headless: false, defaultViewport: null, slowMo: 200 });
         const page = await browser.newPage();
 
         // Iterate through each fragrance
         for (const [fragrance, stores] of Object.entries(fragrances)) {
             const quantity = stores.quantity; // Get the quantity for the current fragrance
-            console.log(`Fetching prices for: ${fragrance}`);
+            console.log(`\x1b[33mFetching prices for: ${fragrance}\x1b[0m`);
             for (const [store, details] of Object.entries(stores)) {
                 if (store === "quantity") continue; // Skip the quantity key
                 
                 if (details.url && details.price_selector) {
-                    console.log(`Fetching from ${store}...`);
+                    console.log(`\x1b[36mFetching from ${store}...\x1b[0m`);
                     if (store !== 'sephora.ro' && store !== 'douglas.ro' 
                         && store !== 'notino.ro' && store !== 'marionnaud.ro'
                         && store !== 'parfumuri-timisoara.ro') {
@@ -176,7 +150,65 @@ const fetchPrices = async () => {
         await browser.close();
     } catch (error) {
         console.error('Error reading JSON file or initializing Puppeteer:', error);
+    } finally {
+        if (browser) {
+            try {
+                await browser.close();
+            } catch (closeError) {
+                console.error('Error closing the browser:', closeError);
+            }
+        }
     }
 };
+
+
+const closeBrowserAndExit = async () => {
+    if (browser) {
+        try {
+            console.log('Closing browser...');
+            await browser.close();
+        } catch (error) {
+            console.error('Error closing the browser:', error);
+        }
+    }
+
+    // Try to kill any child processes created by Puppeteer
+    if (process.pid) {
+        psTree(process.pid, (err, children) => {
+            if (err) {
+                console.error('Error retrieving child processes:', err);
+            } else {
+                children.forEach(child => {
+                    try {
+                        process.kill(child.PID, 'SIGTERM');
+                    } catch (killErr) {
+                        console.warn(`Could not terminate process ${child.PID}: ${killErr.message}`);
+                    }
+                });
+            }
+            process.exit(0);
+        });
+    } else {
+        process.exit(0);
+    }
+};
+
+
+// Register signal handlers for graceful shutdown
+process.on('SIGINT', async () => {
+    console.log('\nCaught interrupt signal (SIGINT), shutting down gracefully...');
+    await closeBrowserAndExit();
+});
+
+process.on('SIGTERM', async () => {
+    console.log('Caught termination signal (SIGTERM), shutting down gracefully...');
+    await closeBrowserAndExit();
+});
+
+process.on('SIGQUIT', async () => {
+    console.log('Caught quit signal (SIGQUIT), shutting down gracefully...');
+    await closeBrowserAndExit();
+});
+//------------------------------------------------
 
 fetchPrices();
