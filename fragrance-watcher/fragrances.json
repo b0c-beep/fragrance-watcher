@@ -1,6 +1,6 @@
 {
     "ysl_myslf_refill_150ml": {
-        "quantity": "150ml",
+        "quantity": "60ml",
         "brasty.ro": {
             "url": "",
             "price_selector": ""
@@ -63,7 +63,7 @@
         },
         "douglas.ro": {
             "url": "https://www.douglas.ro/p/yves-saint-laurent-myslf-eau-de-parfum-reincarcabila-barbati-1113402",
-            "price_selector": ".product-detail-price.neutralColor"
+            "price_selector": ".product-detail-price"
         },
         "beautik.ro": {
             "url": "",

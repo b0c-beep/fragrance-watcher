@@ -1,8 +1,8 @@
 import puppeteer from 'puppeteer-extra';
 import StealthPlugin from 'puppeteer-extra-plugin-stealth';
 import fs from 'fs/promises';
-import process from 'process';
-import psTree from 'ps-tree';
+import axios from 'axios';
+import * as cheerio from 'cheerio';
 
 // Apply stealth plugin to Puppeteer
 puppeteer.use(StealthPlugin());
@@ -96,18 +96,45 @@ const sephoraFetch = async (page, store, details, fragrance, quantity) => {
 }
 
 const douglasFetch = async (page, store, details, fragrance, quantity) => {
-    try{
-        await page.goto(details.url, { waitUntil: 'domcontentloaded', timeout: 60000 });
+    const fileName = `${fragrance.replace(/\s+/g, '_')}_${store.replace(/\./g, '_')}.html`;
+    try {
+        // Fetch the HTML of the page using axios
+        const response = await axios.get(details.url);
+        const html = response.data;
+
+        // Save the HTML to a local file
+        await fs.writeFile(fileName, html);
+        //console.log(`Saved HTML to ${fileName}`);
+
+        // Load the HTML into cheerio
+        const $ = cheerio.load(html);
+
         let price = 'Price not found';
 
-        const buttons = await page.$$eval('button', elements => elements.map(button => ({innerText: button.innerText, element: button})));
-        console.log(buttons);
+        const parentElements = $('div.d-flex.flex-row.justify-content-between');
+        parentElements.each((index, element) => {
+            
+            const quantityElement = $(element).find('div.price-unit-content');
+            if(quantityElement.text().includes(parseInt(quantity))) {
+                const priceElement = $(element).find('p.product-detail-price');
+                if (priceElement) {
+                    price = priceElement.text().trim();
+                }
+            }
 
-        //console.log(buttons.length);
+        });
 
         console.log(`\x1b[32mPrice at ${store} for ${fragrance}: ${price}\x1b[0m`);
     } catch (error) {
         console.error(`Error fetching price from ${store} for ${fragrance}:`, error);
+    } finally {
+        try {
+            // Delete the local HTML file after processing
+            await fs.unlink(fileName);
+            //console.log(`Deleted local file ${fileName}`);
+        } catch (deleteError) {
+            console.error(`Error deleting file ${fileName}:`, deleteError);
+        }
     }
 }
 
@@ -118,8 +145,10 @@ const fetchPrices = async () => {
         const fragrances = JSON.parse(data);
         
         // Launch the browser
-        browser = await puppeteer.launch({ headless: false, defaultViewport: null, slowMo: 200 });
+        browser = await puppeteer.launch({ headless: true, defaultViewport: null });
         const page = await browser.newPage();
+        await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36');
+        
 
         // Iterate through each fragrance
         for (const [fragrance, stores] of Object.entries(fragrances)) {
