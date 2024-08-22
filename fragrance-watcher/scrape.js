@@ -163,9 +163,9 @@ const fetchPrices = async () => {
                         && store !== 'notino.ro' && store !== 'marionnaud.ro'
                         && store !== 'parfumuri-timisoara.ro') {
 
-                        //await basicFetch(page, store, details, fragrance, quantity);
+                        await basicFetch(page, store, details, fragrance, quantity);
                     } else if (store === 'sephora.ro') {
-                        //await sephoraFetch(page, store, details, fragrance, quantity);
+                        await sephoraFetch(page, store, details, fragrance, quantity);
                     }else if (store === 'douglas.ro') {
                         await douglasFetch(page, store, details, fragrance, quantity);
                     }
