@@ -138,6 +138,32 @@ const douglasFetch = async (page, store, details, fragrance, quantity) => {
     }
 }
 
+
+const notinoFetch = async (page, store, details, fragrance, quantity) => {
+    try{
+        await page.goto(details.url, { waitUntil: 'domcontentloaded', timeout: 60000 });
+        let price = 'Price not found';
+
+        const priceElement = await page.$(details.price_selector);
+        if(priceElement){
+            const childElements = await priceElement.$$('*');
+            for (const childElement of childElements) {
+                const innerText = await childElement.evaluate(node => node.innerText.trim());
+                if (/\d+/.test(innerText)) { // innerText includes numbers
+                    price = innerText.trim() + ' RON';
+                }   
+            }
+        }
+
+        console.log(`\x1b[32mPrice at ${store} for ${fragrance}: ${price}\x1b[0m`);
+        
+    }
+    catch (error) {
+        console.error(`Error fetching price from ${store} for ${fragrance}:`, error);
+    }
+}
+
+
 const fetchPrices = async () => {
     try {
         // Read the JSON file
@@ -162,12 +188,13 @@ const fetchPrices = async () => {
                     if (store !== 'sephora.ro' && store !== 'douglas.ro' 
                         && store !== 'notino.ro' && store !== 'marionnaud.ro'
                         && store !== 'parfumuri-timisoara.ro') {
-
                         await basicFetch(page, store, details, fragrance, quantity);
                     } else if (store === 'sephora.ro') {
                         await sephoraFetch(page, store, details, fragrance, quantity);
-                    }else if (store === 'douglas.ro') {
+                    } else if (store === 'douglas.ro') {
                         await douglasFetch(page, store, details, fragrance, quantity);
+                    } else if (store === 'notino.ro'){
+                        await notinoFetch(page, store, details, fragrance, quantity);
                     }
                 } else {
                     //console.warn(`Missing URL or selector for ${store}`);
