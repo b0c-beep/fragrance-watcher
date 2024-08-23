@@ -164,6 +164,43 @@ const notinoFetch = async (page, store, details, fragrance, quantity) => {
 }
 
 
+const marionnaudFetch = async (page, store, details, fragrance, quantity) => {
+    try {
+        await page.goto(details.url, { waitUntil: 'domcontentloaded', timeout: 60000 });
+        let price = 'Price not found';
+
+        const results = await page.evaluate(() => {
+            // Select all elements with itemprop="price"
+            const priceElements = document.querySelectorAll('[itemprop="price"]');
+            const descriptionElements = document.querySelectorAll('[itemprop="disambiguatingDescription"]');
+    
+            // Create an array to store the results
+            const items = [];
+    
+            // Iterate over the price elements and extract the corresponding description
+            priceElements.forEach((priceElement, index) => {
+                const price = priceElement.textContent.trim();
+                const description = descriptionElements[index] ? descriptionElements[index].textContent.trim() : 'No description';
+                items.push({ price, description });
+            });
+    
+            return items; // Return the array of items
+        });
+    
+        // Output the results
+        results.forEach((item, index) => {
+            if(item.description.includes(parseInt(quantity))) {
+                price = item.price + ' RON';
+            }
+        });
+
+        console.log(`\x1b[32mPrice at ${store} for ${fragrance}: ${price}\x1b[0m`);
+    } catch (error) {
+        console.error(`Error fetching price from ${store} for ${fragrance}:`, error);
+    }
+}
+
+
 const fetchPrices = async () => {
     try {
         // Read the JSON file
@@ -171,7 +208,7 @@ const fetchPrices = async () => {
         const fragrances = JSON.parse(data);
         
         // Launch the browser
-        browser = await puppeteer.launch({ headless: true, defaultViewport: null });
+        browser = await puppeteer.launch({ headless: false, defaultViewport: null, slowMo: 200 });
         const page = await browser.newPage();
         await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36');
         
@@ -189,11 +226,13 @@ const fetchPrices = async () => {
                         && store !== 'notino.ro' && store !== 'marionnaud.ro') {
                         await basicFetch(page, store, details, fragrance, quantity);
                     } else if (store === 'sephora.ro') {
-                        //await sephoraFetch(page, store, details, fragrance, quantity);
+                        await sephoraFetch(page, store, details, fragrance, quantity);
                     } else if (store === 'douglas.ro') {
-                        //await douglasFetch(page, store, details, fragrance, quantity);
+                        await douglasFetch(page, store, details, fragrance, quantity);
                     } else if (store === 'notino.ro'){
-                        //await notinoFetch(page, store, details, fragrance, quantity);
+                        await notinoFetch(page, store, details, fragrance, quantity);
+                    } else if (store === 'marionnaud.ro'){
+                        await marionnaudFetch(page, store, details, fragrance, quantity);
                     }
                 } else {
                     //console.warn(`Missing URL or selector for ${store}`);
