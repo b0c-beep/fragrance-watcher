@@ -39,7 +39,7 @@
         },
         "parfumuri-timisoara.ro": {
             "url": "https://www.parfumuri-timisoara.ro/yves-saint-laurent-myself-refill.html",
-            "price_selector": ".product-price-26063"
+            "price_selector": ".price"
         },
         "deluxury.ro": {
             "url": "",

@@ -186,15 +186,14 @@ const fetchPrices = async () => {
                 if (details.url && details.price_selector) {
                     console.log(`\x1b[36mFetching from ${store}...\x1b[0m`);
                     if (store !== 'sephora.ro' && store !== 'douglas.ro' 
-                        && store !== 'notino.ro' && store !== 'marionnaud.ro'
-                        && store !== 'parfumuri-timisoara.ro') {
+                        && store !== 'notino.ro' && store !== 'marionnaud.ro') {
                         await basicFetch(page, store, details, fragrance, quantity);
                     } else if (store === 'sephora.ro') {
-                        await sephoraFetch(page, store, details, fragrance, quantity);
+                        //await sephoraFetch(page, store, details, fragrance, quantity);
                     } else if (store === 'douglas.ro') {
-                        await douglasFetch(page, store, details, fragrance, quantity);
+                        //await douglasFetch(page, store, details, fragrance, quantity);
                     } else if (store === 'notino.ro'){
-                        await notinoFetch(page, store, details, fragrance, quantity);
+                        //await notinoFetch(page, store, details, fragrance, quantity);
                     }
                 } else {
                     //console.warn(`Missing URL or selector for ${store}`);
