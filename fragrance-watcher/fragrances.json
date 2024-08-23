@@ -93,16 +93,16 @@
             "price_selector": ""
         },
         "hiris.ro": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://www.hiris.ro/parfumuri-pentru-barbati/giorgio-armani/armani-stronger-with-you-intensely-barbati-apa-de-parfum",
+            "price_selector": ".custom-tag-price"
         },
         "esentedelux.ro": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://esentedelux.ro/parfumuri-pentru-barbati/4009-10048-giorgio-armani-emporio-stronger-with-you-intensely-eau-de-parfum-pentru-barbai.html#/22-pentru_cine-pentru_barbati/32-tip_produs-eau_de_parfum/36-volum-100_ml",
+            "price_selector": ".product-price.current-price-value"
         },
         "notino.ro": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://www.notino.ro/armani/emporio-stronger-with-you-intensely-eau-de-parfum-pentru-barbati/",
+            "price_selector": "#pd-price"
         },
         "parfumss.ro": {
             "url": "",
@@ -113,20 +113,20 @@
             "price_selector": ""
         },
         "makeup.ro": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://makeup.ro/product/429976/",
+            "price_selector": ".price_item"
         },
         "vivantis.ro": {
             "url": "",
             "price_selector": ""
         },
         "bestvalue.eu": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://bestvalue.eu/p/apa-de-parfum-emporio-armani-stronger-with-you-intensely-100-ml",
+            "price_selector": "#product-price"
         },
         "parfumuri-timisoara.ro": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://www.parfumuri-timisoara.ro/emporio-armani-stronger-with-you-intensely.html",
+            "price_selector": ".price"
         },
         "deluxury.ro": {
             "url": "",
@@ -137,20 +137,20 @@
             "price_selector": ""
         },
         "parfumu.ro": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://www.parfumu.ro/parfumuri/parfumuri-pentru-barbati/giorgio-armani-emporio-armani-stronger-with-you-intensely-ap-de-parfum/",
+            "price_selector": ".ty-price-num"
         },
         "obsentum.com": {
             "url": "",
             "price_selector": ""
         },
         "sephora.ro": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://www.sephora.ro/p/stronger-with-you-intensely---eau-de-parfum-P3592118.html",
+            "price_selector": ".price-sales.price-sales-standard"
         },
         "douglas.ro": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://www.douglas.ro/p/armani-stronger-with-you-intensely-eau-de-parfum-063552",
+            "price_selector": ".product-detail-price.neutralColor"
         },
         "beautik.ro": {
             "url": "",
@@ -161,16 +161,16 @@
             "price_selector": ""
         },
         "marionnaud.ro": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://www.marionnaud.ro/armani/you/stronger-with-you-intense/p/BP_70135?varSel=70137",
+            "price_selector": ".formatted-price__decimal"
         },
         "simplestore.ro": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://www.simplestore.ro/emporio-armani-stronger-with-you-intensely-edp-100-ml",
+            "price_selector": ".priceprodnormal.pret-normal-tva.pretpagprod"
         },
         "depozituldecosmetice.ro": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://depozituldecosmetice.ro/armani-emporio-stronger-with-you-intensely-apa-de-parfum-100ml.html",
+            "price_selector": ".price"
         }
     },
     "jpg_le_male_elixir_125ml": {
