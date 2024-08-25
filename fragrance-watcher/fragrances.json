@@ -180,8 +180,8 @@
             "price_selector": ""
         },
         "hiris.ro": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://www.hiris.ro/parfumuri-pentru-barbati/jean-paul-gaultier/jean-paul-gaultiere-le-male-elixir-apa-de-parfum-barbati",
+            "price_selector": ".custom-tag-price"
         },
         "esentedelux.ro": {
             "url": "",
@@ -208,12 +208,12 @@
             "price_selector": ""
         },
         "bestvalue.eu": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://bestvalue.eu/p/parfum-jean-paul-gaultier-le-male-elixir-parfum-125-ml",
+            "price_selector": "#product-price"
         },
         "parfumuri-timisoara.ro": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://www.parfumuri-timisoara.ro/jean-paul-gaultier-le-male-elixir.html",
+            "price_selector": ".price"
         },
         "deluxury.ro": {
             "url": "",
@@ -232,8 +232,8 @@
             "price_selector": ""
         },
         "sephora.ro": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://www.sephora.ro/p/le-male---elixir-parfum-P10051068.html",
+            "price_selector": ".price-sales.price-sales-standard"
         },
         "douglas.ro": {
             "url": "",
@@ -248,16 +248,16 @@
             "price_selector": ""
         },
         "marionnaud.ro": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://www.marionnaud.ro/jp-gaultier/le-male/le-male-elixir-parfum/p/BP_82331?varSel=82332",
+            "price_selector": ".formatted-price__decimal"
         },
         "simplestore.ro": {
             "url": "",
             "price_selector": ""
         },
         "depozituldecosmetice.ro": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://depozituldecosmetice.ro/jpg-le-male-elixir-apa-de-parfum-125ml.html",
+            "price_selector": ".price"
         }
     },
     "jpg_le_beau_le_parfum_125ml": {
