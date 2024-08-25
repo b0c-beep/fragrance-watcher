@@ -275,8 +275,8 @@
             "price_selector": ""
         },
         "notino.ro": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://www.notino.ro/jean-paul-gaultier/le-beau-le-parfum-eau-de-parfum-pentru-barbati/",
+            "price_selector": "#pd-price"
         },
         "parfumss.ro": {
             "url": "",
@@ -299,8 +299,8 @@
             "price_selector": ""
         },
         "parfumuri-timisoara.ro": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://www.parfumuri-timisoara.ro/jean-paul-gaultier-le-male-le-parfum-22148.html",
+            "price_selector": ".price"
         },
         "deluxury.ro": {
             "url": "",
@@ -319,8 +319,8 @@
             "price_selector": ""
         },
         "sephora.ro": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://www.sephora.ro/p/le-beau---le-parfum-P10024513.html",
+            "price_selector": ".price-sales.price-sales-standard"
         },
         "douglas.ro": {
             "url": "",
@@ -335,16 +335,16 @@
             "price_selector": ""
         },
         "marionnaud.ro": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://www.marionnaud.ro/jp-gaultier/le-beau/le-beau-le-parfum/p/BP_79077?varSel=79076",
+            "price_selector": ".formatted-price__decimal"
         },
         "simplestore.ro": {
             "url": "",
             "price_selector": ""
         },
         "depozituldecosmetice.ro": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://depozituldecosmetice.ro/jpg-le-beau-le-parfum-apa-de-parfum-125ml.html",
+            "price_selector": ".price"
         }
     },
     "mancera_instant_crush_120ml": {
