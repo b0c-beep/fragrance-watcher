@@ -350,24 +350,24 @@
     "mancera_instant_crush_120ml": {
         "quantity": "120ml",
         "brasty.ro": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://www.brasty.ro/mancera-instant-crush-eau-de-parfum-unisex-120-ml",
+            "price_selector": "div.c-pd-offer > strong"
         },
         "hiris.ro": {
             "url": "",
             "price_selector": ""
         },
         "esentedelux.ro": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://esentedelux.ro/parfumuri-unisex/4338-9006-mancera-instant-crush-eau-de-parfum-unisex.html#/23-pentru_cine-unisex/32-tip_produs-eau_de_parfum/78-volum-120_ml",
+            "price_selector": ".product-price.current-price-value"
         },
         "notino.ro": {
             "url": "",
             "price_selector": ""
         },
         "parfumss.ro": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://www.parfumss.ro/product/37591-mancera-instant-crush.html#1102",
+            "price_selector": ".price"
         },
         "parfimo.ro": {
             "url": "",
@@ -386,8 +386,8 @@
             "price_selector": ""
         },
         "parfumuri-timisoara.ro": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://www.parfumuri-timisoara.ro/mancera-instant-crush-unisex.html",
+            "price_selector": ".price"
         },
         "deluxury.ro": {
             "url": "",
@@ -398,12 +398,12 @@
             "price_selector": ""
         },
         "parfumu.ro": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://www.parfumu.ro/parfumuri/parfumuri-unisex/mancera-instant-crush-ap-de-parfum/",
+            "price_selector": ".ty-price-num"
         },
         "obsentum.com": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://obsentum.com/ro/product/OBSENTMERA193134/Instant%20Crush",
+            "price_selector": ".cstm-price"
         },
         "sephora.ro": {
             "url": "",
