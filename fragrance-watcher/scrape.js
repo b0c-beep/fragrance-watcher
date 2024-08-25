@@ -302,6 +302,24 @@ const brastyFetch = async (page, store, details, fragrance, quantity) => {
 }
 
 
+const obsentumFetch = async (page, store, details, fragrance, quantity) => {
+    try{
+        await page.goto(details.url, { waitUntil: 'domcontentloaded', timeout: 60000 });
+        let price = 'Price not found';
+
+        const priceContainer = await page.waitForSelector(details.price_selector, { timeout: 60000 });
+        const priceElement = await priceContainer.$('.cstm-price');
+        const priceText = await priceElement.evaluate(node => node.innerText.trim());
+        price = priceText;
+
+        console.log(`\x1b[32mFetching from ${store}. for ${fragrance}: ${price}\x1b[0m`);
+    }
+    catch (error) {
+        console.error(`Error fetching price from ${store} for ${fragrance}:`, error);
+    }
+}
+
+
 const fetchPrices = async () => {
     try {
         // Read the JSON file
@@ -326,7 +344,7 @@ const fetchPrices = async () => {
                     if (store !== 'sephora.ro' && store !== 'douglas.ro' 
                         && store !== 'notino.ro' && store !== 'marionnaud.ro'
                         && store != 'hiris.ro' && store != 'parfumu.ro' && store != 'makeup.ro'
-                        && store != 'brasty.ro' && store != 'obsentum.ro') {
+                        && store != 'brasty.ro' && store != 'obsentum.com') {
                         //await basicFetch(page, store, details, fragrance, quantity);
                     } else if (store === 'sephora.ro') {
                         //await sephoraFetch(page, store, details, fragrance, quantity);
@@ -343,9 +361,9 @@ const fetchPrices = async () => {
                     } else if (store === 'makeup.ro'){
                         //await makeupFetch(page, store, details, fragrance, quantity);
                     } else if (store === 'brasty.ro'){
-                        await brastyFetch(page, store, details, fragrance, quantity);
-                    } else if (store === 'obsentum.ro'){
-                        //await obsentumFetch(page, store, details, fragrance, quantity);
+                        //await brastyFetch(page, store, details, fragrance, quantity);
+                    } else if (store === 'obsentum.com'){
+                        await obsentumFetch(page, store, details, fragrance, quantity);
                     }
 
                 } else {

@@ -403,7 +403,7 @@
         },
         "obsentum.com": {
             "url": "https://obsentum.com/ro/product/OBSENTMERA193134/Instant%20Crush",
-            "price_selector": ".cstm-price"
+            "price_selector": ".cstm-product-summary.cstm-product-summary-no-mk"
         },
         "sephora.ro": {
             "url": "",
