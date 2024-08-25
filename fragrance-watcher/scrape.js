@@ -9,6 +9,14 @@ puppeteer.use(StealthPlugin());
 
 let browser;
 
+function isNumeric(str) {
+    return /^\d+$/.test(str);
+}
+
+function containsNumber(str) {
+    return /\d/.test(str);
+}
+
 const basicFetch = async (page, store, details, fragrance, quantity) => {
     try {
         await page.goto(details.url, { waitUntil: 'domcontentloaded', timeout: 60000 });
@@ -227,6 +235,29 @@ const hirisFetch = async (page, store, details, fragrance, quantity) => {
 }
 
 
+const parfumuFetch = async (page, store, details, fragrance, quantity) => {
+    try {
+        await page.goto(details.url, { waitUntil: 'domcontentloaded', timeout: 60000 });
+        let price = 'Price not found';                
+    
+        const productVariants = await page.$$('.ty-compact-list__content');
+        for (let productVariant of productVariants){
+            const variantTitle = await productVariant.$('.product_title');
+            const titleText = await variantTitle.evaluate(node => node.innerText.trim());
+            if(variantTitle && containsNumber(titleText) && titleText.includes(parseInt(quantity))){
+                const variantPrice = await productVariant.$('.ty-price-num');
+                const priceText = await variantPrice.evaluate(node => node.innerText.trim());
+                price = priceText + ' RON';
+            }
+        }
+
+        console.log(`\x1b[32mPrice at ${store} for ${fragrance}: ${price}\x1b[0m`);
+    } catch (error) {
+        console.error(`Error fetching price from ${store} for ${fragrance}:`, error);
+    }
+}
+
+
 const fetchPrices = async () => {
     try {
         // Read the JSON file
@@ -261,9 +292,9 @@ const fetchPrices = async () => {
                     } else if (store === 'marionnaud.ro'){
                         //await marionnaudFetch(page, store, details, fragrance, quantity);
                     } else if (store === 'hiris.ro'){
-                        await hirisFetch(page, store, details, fragrance, quantity);
+                        //await hirisFetch(page, store, details, fragrance, quantity);
                     } else if (store === 'parfumu.ro'){
-                        //await parfumuFetch(page, store, details, fragrance, quantity);
+                        await parfumuFetch(page, store, details, fragrance, quantity);
                     } else if (store === 'makeup.ro'){
                         //await makeupFetch(page, store, details, fragrance, quantity);
                     }
