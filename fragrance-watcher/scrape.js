@@ -33,75 +33,6 @@ const basicFetch = async (page, store, details, fragrance, quantity) => {
     }
 }
 
-const sephoraFetch = async (page, store, details, fragrance, quantity) => {
-    try {
-        await page.goto(details.url, { waitUntil: 'domcontentloaded', timeout: 60000 });
-        let price = 'Price not found';
-        let foundPrice = false;
-
-        const cookieAccept = await page.$('#footer_tc_privacy_button_3');
-        if (cookieAccept) {
-            await cookieAccept.click();
-        }
-
-        // Check if there is a dropdown element
-        const dropdownElement = await page.waitForSelector('.variations-size-selected', { timeout: 60000 });
-        if (dropdownElement) {
-            // Toggle the dropdown to reveal all options
-            await dropdownElement.click();
-        }
-
-        const parentModal = await page.$('.dialog-content.ui-dialog-content.ui-widget-content');  
-        if (parentModal) {
-            
-            const variationElements = await parentModal.$$('.variation-title');
-            for (const variationElement of variationElements) {
-
-                const childrenData = await page.evaluate((parent) => {
-                    const children = parent.children;
-                    let result = [];
-    
-                    for (let child of children) {
-                        result.push({
-                            tagName: child.tagName,
-                            classList: Array.from(child.classList).join(' '), // Convert class list to a space-separated string
-                            id: child.id || 'null', // Get the ID or 'null' if not present
-                            innerHTML: child.innerHTML.trim(), // Get the inner HTML for better formatting
-                            innerText: child.innerText.trim(), // Get the inner text for better formatting
-                        });
-                    }
-    
-                    return result;
-                }, variationElement);
-
-                for (const childData of childrenData) {
-                    
-                    if(childData.innerText.includes(parseInt(quantity)) && childData.tagName === 'SPAN' && childData.classList === '') {
-                        const priceElement = await variationElement.$(details.price_selector);
-                        if (priceElement && !foundPrice) {
-                            price = await priceElement.evaluate(node => {
-                                let text = node.innerText.trim();
-                                // Clean the text to remove newline and any text in parentheses (e.g., "\n(1)")
-                                text = text.replace(/\s*\(.*?\)/g, ''); // Removes any text in parentheses including the preceding whitespace
-                                text = text.replace(/[^0-9.,]/g, ''); // Removes non-numeric characters except ',' and '.'
-                                
-                                // Extract numbers up to the first ',' or '.'
-                                const numbersOnly = text.match(/^\d+/);
-                                return numbersOnly ? `${numbersOnly[0]} RON` : null; // Append 'RON' to the number
-                            });
-                            foundPrice = true;
-                            break;   
-                        }
-                    }
-                }
-
-            }
-        }
-        console.log(`\x1b[32mPrice at ${store} for ${fragrance}: ${price}\x1b[0m`);
-    } catch (error) {
-        console.error(`Error fetching price from ${store} for ${fragrance}:`, error);
-    }
-}
 
 const douglasFetch = async (page, store, details, fragrance, quantity) => {
     const fileName = `${fragrance.replace(/\s+/g, '_')}_${store.replace(/\./g, '_')}.html`;
@@ -370,6 +301,35 @@ const vivantisFetch = async (page, store, details, fragrance, quantity) => {
     }
 }
 
+const sephoraFetch = async (page, store, details, fragrance, quantity) => {
+    try{
+        await page.goto(details.url, { waitUntil: 'domcontentloaded', timeout: 60000 });
+        let price = 'Price not found';
+
+        const variantItems = await page.$$('.variation-info.variation-info-perfume');
+        for (let variantItem of variantItems){
+            const weightElement = await variantItem.$('.variation-title > :first-child');
+            const weightText = await weightElement.evaluate(node => node.innerText.trim());
+
+            const priceElement = await variantItem.$(details.price_selector);
+            const priceText = await priceElement.evaluate(node => {
+                // Get the text content of the node but only include the text that's directly inside it
+                return node.childNodes[0].nodeValue.trim();
+            });
+            
+            if(weightText.includes(parseInt(quantity))){
+                price = priceText;
+                break;
+            }
+
+        }
+
+        console.log(`\x1b[32mFetching from ${store}. for ${fragrance}: ${price}\x1b[0m`);
+    }
+    catch (error) {
+        console.error(`Error fetching price from ${store} for ${fragrance}:`, error);
+    }
+}
 
 const fetchPrices = async () => {
     try {
@@ -399,7 +359,7 @@ const fetchPrices = async () => {
                         && store != 'parfumuri-timisoara.ro' && store != 'vivantis.ro') {
                         //await basicFetch(page, store, details, fragrance, quantity);
                     } else if (store === 'sephora.ro') {
-                        //await sephoraFetch(page, store, details, fragrance, quantity);
+                        await sephoraFetch(page, store, details, fragrance, quantity);
                     } else if (store === 'douglas.ro') {
                         //await douglasFetch(page, store, details, fragrance, quantity);
                     } else if (store === 'notino.ro'){
@@ -419,7 +379,7 @@ const fetchPrices = async () => {
                     } else if (store === 'parfumuri-timisoara.ro'){
                         //await parfumuritimisoaraFetch(page, store, details, fragrance, quantity);
                     } else if (store === 'vivantis.ro'){
-                        await vivantisFetch(page, store, details, fragrance, quantity);
+                        //await vivantisFetch(page, store, details, fragrance, quantity);
                     }
 
                 } else {
