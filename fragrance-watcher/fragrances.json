@@ -473,8 +473,8 @@
             "price_selector": ""
         },
         "parfumuri-timisoara.ro": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://www.parfumuri-timisoara.ro/mancera-french-riviera.html",
+            "price_selector": ".price"
         },
         "deluxury.ro": {
             "url": "",
@@ -524,24 +524,24 @@
     "ch_bad_boy_cobalt_100ml": {
         "quantity": "100ml",
         "brasty.ro": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://www.brasty.ro/carolina-herrera-bad-boy-cobalt-eau-de-parfum-barba-i-100-ml",
+            "price_selector": ".c-pd-shopbox__row"
         },
         "hiris.ro": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://www.hiris.ro/parfumuri-pentru-barbati/carolina-herrera/carolina-herrera-bad-boy-cobalt-apa-de-parfum-barbati",
+            "price_selector": ".custom-tag-price"
         },
         "esentedelux.ro": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://esentedelux.ro/parfumuri-pentru-barbati/4594-9781-carolina-herrera-bad-boy-cobalt-eau-de-parfum-pentru-barbati.html#/22-pentru_cine-pentru_barbati/32-tip_produs-eau_de_parfum/43-volum-100_ml_tester",
+            "price_selector": ".product-price.current-price-value"
         },
         "notino.ro": {
             "url": "",
             "price_selector": ""
         },
         "parfumss.ro": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://www.parfumss.ro/product/39985-carolina-herrera-bad-boy-cobalt.html",
+            "price_selector": ".price"
         },
         "parfimo.ro": {
             "url": "",
@@ -552,16 +552,16 @@
             "price_selector": ""
         },
         "vivantis.ro": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://www.vivantis.ro/parfumuri/carolina-herrera-bad-boy-cobalt-electrique-edp.html",
+            "price_selector": ".lh-18.font-size-sm.fw-bold"
         },
         "bestvalue.eu": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://bestvalue.eu/p/apa-de-parfum-carolina-herrera-bad-boy-cobalt-100-ml",
+            "price_selector": "#product-price"
         },
         "parfumuri-timisoara.ro": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://www.parfumuri-timisoara.ro/carolina-herrera-bad-boy-cobalt.html",
+            "price_selector": ".price"
         },
         "deluxury.ro": {
             "url": "",
@@ -580,12 +580,12 @@
             "price_selector": ""
         },
         "sephora.ro": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://www.sephora.ro/p/bad-boy-cobalt---eau-de-parfum-P10024472.html",
+            "price_selector": ".price-sales.price-sales-standard"
         },
         "douglas.ro": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://www.douglas.ro/p/carolina-herrera-bad-boy-cobalt-eau-de-parfum-499562",
+            "price_selector": ".product-detail-price"
         },
         "beautik.ro": {
             "url": "",
@@ -596,16 +596,16 @@
             "price_selector": ""
         },
         "marionnaud.ro": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://www.marionnaud.ro/carolina-herrera/bad-boy/bad-boy-cobalt-apa-de-parfum/p/BP_79075?varSel=79074",
+            "price_selector": ".formatted-price__decimal"
         },
         "simplestore.ro": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://www.simplestore.ro/carolina-herrera-bad-boy-cobalt-edp-electrique-100-ml",
+            "price_selector": ".priceprodnormal.pret-normal-tva.pretpagprod"
         },
         "depozituldecosmetice.ro": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://depozituldecosmetice.ro/carolina-herrera-bad-boy-cobalt-apa-de-parfum-100ml.html",
+            "price_selector": ".price"
         }
     },
     "dior_homme_intense_100ml": {

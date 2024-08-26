@@ -319,6 +319,32 @@ const obsentumFetch = async (page, store, details, fragrance, quantity) => {
     }
 }
 
+const parfumuritimisoaraFetch = async (page, store, details, fragrance, quantity) => {
+    try{
+        await page.goto(details.url, { waitUntil: 'domcontentloaded', timeout: 60000 });
+        let price = 'Price not found';
+
+        const products = await page.$('#product-matrix-body');
+        const childElements = await products.$$(':scope > *');
+        for (let childElement of childElements){
+            const weightElement = await childElement.$('span');
+            const weightText = await weightElement.evaluate(node => node.innerText.trim());
+
+            const priceElement = await childElement.$('.price');
+            const priceText = await priceElement.evaluate(node => node.innerText.trim());
+
+            if(weightText.includes(parseInt(quantity))){
+                price = priceText;
+                break;
+            }
+        }
+
+        console.log(`\x1b[32mFetching from ${store}. for ${fragrance}: ${price}\x1b[0m`);
+    } catch (error) {
+        console.error(`Error fetching price from ${store} for ${fragrance}:`, error);
+    }
+}
+
 
 const fetchPrices = async () => {
     try {
@@ -344,26 +370,31 @@ const fetchPrices = async () => {
                     if (store !== 'sephora.ro' && store !== 'douglas.ro' 
                         && store !== 'notino.ro' && store !== 'marionnaud.ro'
                         && store != 'hiris.ro' && store != 'parfumu.ro' && store != 'makeup.ro'
-                        && store != 'brasty.ro' && store != 'obsentum.com') {
-                        await basicFetch(page, store, details, fragrance, quantity);
+                        && store != 'brasty.ro' && store != 'obsentum.com'
+                        && store != 'parfumuri-timisoara.ro' && store != 'vivantis.ro') {
+                        //await basicFetch(page, store, details, fragrance, quantity);
                     } else if (store === 'sephora.ro') {
-                        await sephoraFetch(page, store, details, fragrance, quantity);
+                        //await sephoraFetch(page, store, details, fragrance, quantity);
                     } else if (store === 'douglas.ro') {
-                        await douglasFetch(page, store, details, fragrance, quantity);
+                        //await douglasFetch(page, store, details, fragrance, quantity);
                     } else if (store === 'notino.ro'){
-                        await notinoFetch(page, store, details, fragrance, quantity);
+                        //await notinoFetch(page, store, details, fragrance, quantity);
                     } else if (store === 'marionnaud.ro'){
-                        await marionnaudFetch(page, store, details, fragrance, quantity);
+                        //await marionnaudFetch(page, store, details, fragrance, quantity);
                     } else if (store === 'hiris.ro'){
-                        await hirisFetch(page, store, details, fragrance, quantity);
+                        //await hirisFetch(page, store, details, fragrance, quantity);
                     } else if (store === 'parfumu.ro'){
-                        await parfumuFetch(page, store, details, fragrance, quantity);
+                        //await parfumuFetch(page, store, details, fragrance, quantity);
                     } else if (store === 'makeup.ro'){
-                        await makeupFetch(page, store, details, fragrance, quantity);
+                        //await makeupFetch(page, store, details, fragrance, quantity);
                     } else if (store === 'brasty.ro'){
-                        await brastyFetch(page, store, details, fragrance, quantity);
+                        //await brastyFetch(page, store, details, fragrance, quantity);
                     } else if (store === 'obsentum.com'){
-                        await obsentumFetch(page, store, details, fragrance, quantity);
+                        //await obsentumFetch(page, store, details, fragrance, quantity);
+                    } else if (store === 'parfumuri-timisoara.ro'){
+                        await parfumuritimisoaraFetch(page, store, details, fragrance, quantity);
+                    } else if (store === 'vivantis.ro'){
+                        //await vivantisFetch(page, store, details, fragrance, quantity);
                     }
 
                 } else {
