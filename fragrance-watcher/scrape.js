@@ -207,6 +207,12 @@ const makeupFetch = async (page, store, details, fragrance, quantity) => {
                 }
             }
         }
+        else{
+            const wrap = await page.$('.product-item__price-wrap');
+            const priceElement = await wrap.$(details.price_selector);
+            const priceText = await priceElement.evaluate(node => node.innerText.trim());
+            price = priceText + ' RON';
+        }
 
         console.log(`\x1b[32mPrice at ${store} for ${fragrance}: ${price}\x1b[0m`);
 

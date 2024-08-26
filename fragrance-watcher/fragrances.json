@@ -611,44 +611,44 @@
     "dior_homme_intense_100ml": {
         "quantity": "100ml",
         "brasty.ro": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://www.brasty.ro/dior-christian-dior-dior-homme-intense-2020-eau-de-parfum-barba-i-100-ml",
+            "price_selector": ".c-pd-shopbox__row"
         },
         "hiris.ro": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://www.hiris.ro/parfumuri-pentru-barbati/christian-dior/dior-homme-intense-apa-de-parfum",
+            "price_selector": ".custom-tag-price"
         },
         "esentedelux.ro": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://esentedelux.ro/parfumuri-pentru-barbati/398-1003-christian-dior-dior-homme-intense-eau-de-parfum-pentru-barbati.html#/22-pentru_cine-pentru_barbati/32-tip_produs-eau_de_parfum/36-volum-100_ml",
+            "price_selector": ".product-price.current-price-value"
         },
         "notino.ro": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://www.notino.ro/dior/dior-homme-intense-2011-eau-de-parfum-pentru-barbati/",
+            "price_selector": "#pd-price"
         },
         "parfumss.ro": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://www.parfumss.ro/product/4308-dior-homme-intense.html#629",
+            "price_selector": ".price"
         },
         "parfimo.ro": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://www.parfimo.ro/dior-dior-homme-intense-2020-apa-de-parfum-pentru-barbati-100-ml/",
+            "price_selector": ".Price.ProductRow-price.js-price"
         },
         "makeup.ro": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://makeup.ro/product/1354/",
+            "price_selector": ".price_item"
         },
         "vivantis.ro": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://www.vivantis.ro/parfumuri/dior-dior-homme-intense-edp.html?c=pCI174100",
+            "price_selector": ".lh-18.font-size-sm.fw-bold"
         },
         "bestvalue.eu": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://bestvalue.eu/p/apa-de-parfum-dior-homme-intense-100-ml",
+            "price_selector": "#product-price"
         },
         "parfumuri-timisoara.ro": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://www.parfumuri-timisoara.ro/dior-homme-intense-18402.html",
+            "price_selector": ".price"
         },
         "deluxury.ro": {
             "url": "",
@@ -659,20 +659,20 @@
             "price_selector": ""
         },
         "parfumu.ro": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://www.parfumu.ro/parfumuri/parfumuri-pentru-barbati/christian-dior-homme-intense-ap-de-parfum/",
+            "price_selector": ".ty-price-num"
         },
         "obsentum.com": {
             "url": "",
             "price_selector": ""
         },
         "sephora.ro": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://www.sephora.ro/p/dior-homme-intense---eau-de-parfum-for-men-P53514.html",
+            "price_selector": ".price-sales.price-sales-standard"
         },
         "douglas.ro": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://www.douglas.ro/p/dior-dior-homme-intense-eau-de-parfum-406858",
+            "price_selector": ".product-detail-price.neutralColor"
         },
         "beautik.ro": {
             "url": "",
@@ -691,8 +691,8 @@
             "price_selector": ""
         },
         "depozituldecosmetice.ro": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://depozituldecosmetice.ro/dior-homme-intense-apa-de-parfum-100ml.html",
+            "price_selector": ".price"
         }
     },
     "tom_ford_noir_50ml": {
