@@ -698,44 +698,44 @@
     "tom_ford_noir_50ml": {
         "quantity": "50ml",
         "brasty.ro": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://www.brasty.ro/tom-ford-noir-eau-de-parfum-barbati-50-ml",
+            "price_selector": ".c-pd-shopbox__row"
         },
         "hiris.ro": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://www.hiris.ro/parfumuri-pentru-barbati/tom-ford/tom-ford-noir-barbati-apa-de-parfum",
+            "price_selector": ".custom-tag-price"
         },
         "esentedelux.ro": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://esentedelux.ro/parfumuri-pentru-barbati/1403-3343-tom-ford-noir-eau-de-parfum-pentru-barbati.html#/22-pentru_cine-pentru_barbati/32-tip_produs-eau_de_parfum/35-volum-50_ml",
+            "price_selector": ".product-price.current-price-value"
         },
         "notino.ro": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://www.notino.ro/tom-ford/noir-eau-de-parfum-pentru-barbati/p-86043/",
+            "price_selector": "#pd-price"
         },
         "parfumss.ro": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://www.parfumss.ro/product/10425-tom-ford-noir-for-men.html#612",
+            "price_selector": ".price"
         },
         "parfimo.ro": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://www.parfimo.ro/tom-ford-noir-apa-de-parfum-pentru-barbati-50-ml/",
+            "price_selector": ".Price.ProductRow-price.js-price"
         },
         "makeup.ro": {
             "url": "",
             "price_selector": ""
         },
         "vivantis.ro": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://www.vivantis.ro/parfumuri/noir-edp.html?c=pTF00350",
+            "price_selector": ".lh-18.font-size-sm.fw-bold"
         },
         "bestvalue.eu": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://bestvalue.eu/p/parfumuri-niche-tom-ford-noir-50-ml",
+            "price_selector": "#product-price"
         },
         "parfumuri-timisoara.ro": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://www.parfumuri-timisoara.ro/tom-ford-tom-ford-noir.html",
+            "price_selector": ".price"
         },
         "deluxury.ro": {
             "url": "",
@@ -746,16 +746,16 @@
             "price_selector": ""
         },
         "parfumu.ro": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://www.parfumu.ro/parfumuri/parfumuri-pentru-barbati/tom-ford-noir-ap-de-parfum/",
+            "price_selector": ".ty-price-num"
         },
         "obsentum.com": {
             "url": "",
             "price_selector": ""
         },
         "sephora.ro": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://www.sephora.ro/p/tom-ford-noir---eau-de-parfum-256698.html",
+            "price_selector": ".price-sales.price-sales-standard"
         },
         "douglas.ro": {
             "url": "",
@@ -778,15 +778,15 @@
             "price_selector": ""
         },
         "depozituldecosmetice.ro": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://depozituldecosmetice.ro/tom-ford-noir-pour-homme-apa-de-parfum.html",
+            "price_selector": ".price"
         }
     },
     "lattafa_khamrah_100ml": {
         "quantity": "100ml",
         "brasty.ro": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://www.brasty.ro/lattafa-khamrah-eau-de-parfum-unisex-100-ml",
+            "price_selector": ".c-pd-shopbox__row"
         },
         "hiris.ro": {
             "url": "",
@@ -801,8 +801,8 @@
             "price_selector": ""
         },
         "parfumss.ro": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://www.parfumss.ro/product/43342-lattafa-khamrah.html",
+            "price_selector": ".price"
         },
         "parfimo.ro": {
             "url": "",
@@ -813,16 +813,16 @@
             "price_selector": ""
         },
         "vivantis.ro": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://www.vivantis.ro/parfumuri/lattafa-khamrah-edp.html?c=pLTF096100",
+            "price_selector": ".lh-18.font-size-sm.fw-bold"
         },
         "bestvalue.eu": {
             "url": "",
             "price_selector": ""
         },
         "parfumuri-timisoara.ro": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://www.parfumuri-timisoara.ro/lattafa-khamrah-22879.html",
+            "price_selector": ".price"
         },
         "deluxury.ro": {
             "url": "",
@@ -880,8 +880,8 @@
             "price_selector": ""
         },
         "esentedelux.ro": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://esentedelux.ro/parfumuri-pentru-barbati/3586-7408-prada-l-homme-intense-eau-de-parfum-pentru-barbati.html#/22-pentru_cine-pentru_barbati/32-tip_produs-eau_de_parfum/36-volum-100_ml",
+            "price_selector": ".product-price.current-price-value"
         },
         "notino.ro": {
             "url": "",
@@ -928,12 +928,12 @@
             "price_selector": ""
         },
         "sephora.ro": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://www.sephora.ro/p/l-homme-prada-intense---eau-de-parfum-405180.html",
+            "price_selector": ".price-sales.price-sales-standard"
         },
         "douglas.ro": {
-            "url": "",
-            "price_selector": ""
+            "url": "https://www.douglas.ro/p/prada-l-homme-intense-eau-de-parfum-971573",
+            "price_selector": ".product-detail-price"
         },
         "beautik.ro": {
             "url": "",
