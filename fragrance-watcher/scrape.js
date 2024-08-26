@@ -330,7 +330,32 @@ const parfumuritimisoaraFetch = async (page, store, details, fragrance, quantity
             const weightElement = await childElement.$('span');
             const weightText = await weightElement.evaluate(node => node.innerText.trim());
 
-            const priceElement = await childElement.$('.price');
+            const priceElement = await childElement.$(details.price_selector);
+            const priceText = await priceElement.evaluate(node => node.innerText.trim());
+
+            if(weightText.includes(parseInt(quantity))){
+                price = priceText;
+                break;
+            }
+        }
+
+        console.log(`\x1b[32mFetching from ${store}. for ${fragrance}: ${price}\x1b[0m`);
+    } catch (error) {
+        console.error(`Error fetching price from ${store} for ${fragrance}:`, error);
+    }
+}
+
+
+const vivantisFetch = async (page, store, details, fragrance, quantity) => {
+    try{
+        await page.goto(details.url, { waitUntil: 'domcontentloaded', timeout: 60000 });
+        let price = 'Price not found';
+
+        const weights = await page.$$('.font-size-sm.fw-bold')
+        for (let i = 0; i < weights.length; i = i + 2){
+            const weightElement = weights[i];
+            const priceElement = weights[i + 1];
+            const weightText = await weightElement.evaluate(node => node.innerText.trim());
             const priceText = await priceElement.evaluate(node => node.innerText.trim());
 
             if(weightText.includes(parseInt(quantity))){
@@ -392,9 +417,9 @@ const fetchPrices = async () => {
                     } else if (store === 'obsentum.com'){
                         //await obsentumFetch(page, store, details, fragrance, quantity);
                     } else if (store === 'parfumuri-timisoara.ro'){
-                        await parfumuritimisoaraFetch(page, store, details, fragrance, quantity);
+                        //await parfumuritimisoaraFetch(page, store, details, fragrance, quantity);
                     } else if (store === 'vivantis.ro'){
-                        //await vivantisFetch(page, store, details, fragrance, quantity);
+                        await vivantisFetch(page, store, details, fragrance, quantity);
                     }
 
                 } else {
