@@ -3,6 +3,7 @@ import StealthPlugin from 'puppeteer-extra-plugin-stealth';
 import fs from 'fs/promises';
 import axios from 'axios';
 import * as cheerio from 'cheerio';
+import pLimit from 'p-limit';
 
 // Apply stealth plugin to Puppeteer
 puppeteer.use(StealthPlugin());
@@ -355,71 +356,83 @@ const sephoraFetch = async (page, store, details, fragrance, quantity) => {
 }
 
 const fetchPrices = async () => {
+    let browser;
     try {
         // Read the JSON file
         const data = await fs.readFile('fragrances.json', 'utf-8');
         const fragrances = JSON.parse(data);
-        
+
         // Launch the browser
         browser = await puppeteer.launch({ headless: true, defaultViewport: null });
-        const page = await browser.newPage();
-        await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36');
         
+        const pageLimit = pLimit(10); // Set your desired concurrency limit
+
+        const fetchPriceFromStore = async (store, details, fragrance, quantity) => {
+            const page = await browser.newPage();
+            await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36');
+            
+            let fetchPromise;
+            switch (store) {
+                case 'sephora.ro':
+                    fetchPromise = sephoraFetch(page, store, details, fragrance, quantity);
+                    break;
+                case 'douglas.ro':
+                    fetchPromise = douglasFetch(page, store, details, fragrance, quantity);
+                    break;
+                case 'notino.ro':
+                    fetchPromise = notinoFetch(page, store, details, fragrance, quantity);
+                    break;
+                case 'marionnaud.ro':
+                    fetchPromise = marionnaudFetch(page, store, details, fragrance, quantity);
+                    break;
+                case 'hiris.ro':
+                    fetchPromise = hirisFetch(page, store, details, fragrance, quantity);
+                    break;
+                case 'parfumu.ro':
+                    fetchPromise = parfumuFetch(page, store, details, fragrance, quantity);
+                    break;
+                case 'makeup.ro':
+                    fetchPromise = makeupFetch(page, store, details, fragrance, quantity);
+                    break;
+                case 'brasty.ro':
+                    fetchPromise = brastyFetch(page, store, details, fragrance, quantity);
+                    break;
+                case 'obsentum.com':
+                    fetchPromise = obsentumFetch(page, store, details, fragrance, quantity);
+                    break;
+                case 'parfumuri-timisoara.ro':
+                    fetchPromise = parfumuritimisoaraFetch(page, store, details, fragrance, quantity);
+                    break;
+                case 'vivantis.ro':
+                    fetchPromise = vivantisFetch(page, store, details, fragrance, quantity);
+                    break;
+                default:
+                    fetchPromise = basicFetch(page, store, details, fragrance, quantity);
+            }
+
+            const result = await fetchPromise;
+            await page.close();
+            return result;
+        };
+
         const promises = [];
 
         // Iterate through each fragrance
         for (const [fragrance, stores] of Object.entries(fragrances)) {
-            const quantity = stores.quantity; // Get the quantity for the current fragrance
+            const quantity = stores.quantity;
             console.log(`\x1b[33mFetching prices for: ${fragrance}\x1b[0m`);
+            
             for (const [store, details] of Object.entries(stores)) {
-                if (store === "quantity") continue; // Skip the quantity key
-                
-                if (details.url && details.price_selector) {
-                    console.log(`\x1b[36mFetching from ${store}...\x1b[0m`);
-                    let fetchPromise;
+                if (store === "quantity" || !details.url || !details.price_selector) continue;
 
-                    if (store !== 'sephora.ro' && store !== 'douglas.ro' 
-                        && store !== 'notino.ro' && store !== 'marionnaud.ro'
-                        && store != 'hiris.ro' && store != 'parfumu.ro' && store != 'makeup.ro'
-                        && store != 'brasty.ro' && store != 'obsentum.com'
-                        && store != 'parfumuri-timisoara.ro' && store != 'vivantis.ro') {
-                        fetchPromise = await basicFetch(page, store, details, fragrance, quantity);
-                    } else if (store === 'sephora.ro') {
-                        fetchPromise = await sephoraFetch(page, store, details, fragrance, quantity);
-                    } else if (store === 'douglas.ro') {
-                        fetchPromise = await douglasFetch(page, store, details, fragrance, quantity);
-                    } else if (store === 'notino.ro'){
-                        fetchPromise = await notinoFetch(page, store, details, fragrance, quantity);
-                    } else if (store === 'marionnaud.ro'){
-                        fetchPromise = await marionnaudFetch(page, store, details, fragrance, quantity);
-                    } else if (store === 'hiris.ro'){
-                        fetchPromise = await hirisFetch(page, store, details, fragrance, quantity);
-                    } else if (store === 'parfumu.ro'){
-                        fetchPromise = await parfumuFetch(page, store, details, fragrance, quantity);
-                    } else if (store === 'makeup.ro'){
-                        fetchPromise = await makeupFetch(page, store, details, fragrance, quantity);
-                    } else if (store === 'brasty.ro'){
-                        fetchPromise = await brastyFetch(page, store, details, fragrance, quantity);
-                    } else if (store === 'obsentum.com'){
-                        fetchPromise = await obsentumFetch(page, store, details, fragrance, quantity);
-                    } else if (store === 'parfumuri-timisoara.ro'){
-                        fetchPromise = await parfumuritimisoaraFetch(page, store, details, fragrance, quantity);
-                    } else if (store === 'vivantis.ro'){
-                        fetchPromise = await vivantisFetch(page, store, details, fragrance, quantity);
-                    }
-
-                    promises.push(fetchPromise);
-
-                }
+                console.log(`\x1b[36mFetching from ${store}...\x1b[0m`);
+                promises.push(pageLimit(() => fetchPriceFromStore(store, details, fragrance, quantity)));
             }
         }
-        const results = await Promise.all(promises);
 
+        const results = await Promise.all(promises);
         console.log(results);
 
-
-        // Close the browser
-        await browser.close();
     } catch (error) {
         console.error('Error reading JSON file or initializing Puppeteer:', error);
     } finally {
@@ -432,6 +445,7 @@ const fetchPrices = async () => {
         }
     }
 };
+
 
 
 const closeBrowserAndExit = async () => {
