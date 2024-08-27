@@ -1,9 +1,5 @@
 [
-  {
-    "fragrance": "ysl_myslf_refill_150ml",
-    "store": "notino.ro",
-    "price": "524 RON"
-  },
+  null,
   {
     "fragrance": "ysl_myslf_refill_150ml",
     "store": "parfumuri-timisoara.ro",
@@ -19,11 +15,7 @@
     "store": "douglas.ro",
     "price": "615,00 RON*"
   },
-  {
-    "fragrance": "ysl_myslf_refill_150ml",
-    "store": "marionnaud.ro",
-    "price": "923.0 RON"
-  },
+  null,
   {
     "fragrance": "ysl_myslf_refill_150ml",
     "store": "simplestore.ro",
@@ -39,11 +31,7 @@
     "store": "hiris.ro",
     "price": "517,00 RON"
   },
-  {
-    "fragrance": "armani_swy_100ml",
-    "store": "esentedelux.ro",
-    "price": "399,00 lei"
-  },
+  null,
   {
     "fragrance": "armani_swy_100ml",
     "store": "notino.ro",
@@ -64,11 +52,7 @@
     "store": "parfumuri-timisoara.ro",
     "price": "399,00 RON"
   },
-  {
-    "fragrance": "armani_swy_100ml",
-    "store": "parfumu.ro",
-    "price": "469 RON"
-  },
+  null,
   {
     "fragrance": "armani_swy_100ml",
     "store": "sephora.ro",
