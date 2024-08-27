@@ -28,6 +28,7 @@ const basicFetch = async (page, store, details, fragrance, quantity) => {
         }, details.price_selector);
 
         console.log(`\x1b[32mPrice at ${store} for ${fragrance}: ${price}\x1b[0m`);
+        return { fragrance, store, price };
     } catch (error) {
         console.error(`Error fetching price from ${store} for ${fragrance}:`, error);
     }
@@ -64,6 +65,7 @@ const douglasFetch = async (page, store, details, fragrance, quantity) => {
         });
 
         console.log(`\x1b[32mPrice at ${store} for ${fragrance}: ${price}\x1b[0m`);
+        return { fragrance, store, price };
     } catch (error) {
         console.error(`Error fetching price from ${store} for ${fragrance}:`, error);
     } finally {
@@ -95,7 +97,7 @@ const notinoFetch = async (page, store, details, fragrance, quantity) => {
         }
 
         console.log(`\x1b[32mPrice at ${store} for ${fragrance}: ${price}\x1b[0m`);
-        
+        return { fragrance, store, price };
     }
     catch (error) {
         console.error(`Error fetching price from ${store} for ${fragrance}:`, error);
@@ -134,6 +136,7 @@ const marionnaudFetch = async (page, store, details, fragrance, quantity) => {
         });
 
         console.log(`\x1b[32mPrice at ${store} for ${fragrance}: ${price}\x1b[0m`);
+        return { fragrance, store, price };
     } catch (error) {
         console.error(`Error fetching price from ${store} for ${fragrance}:`, error);
     }
@@ -160,6 +163,7 @@ const hirisFetch = async (page, store, details, fragrance, quantity) => {
         }
 
         console.log(`\x1b[32mPrice at ${store} for ${fragrance}: ${price}\x1b[0m`);
+        return { fragrance, store, price };
     }catch (error) {
         console.error(`Error fetching price from ${store} for ${fragrance}:`, error);
     }
@@ -183,6 +187,7 @@ const parfumuFetch = async (page, store, details, fragrance, quantity) => {
         }
 
         console.log(`\x1b[32mPrice at ${store} for ${fragrance}: ${price}\x1b[0m`);
+        return { fragrance, store, price };
     } catch (error) {
         console.error(`Error fetching price from ${store} for ${fragrance}:`, error);
     }
@@ -215,6 +220,7 @@ const makeupFetch = async (page, store, details, fragrance, quantity) => {
         }
 
         console.log(`\x1b[32mPrice at ${store} for ${fragrance}: ${price}\x1b[0m`);
+        return { fragrance, store, price };
 
     } catch (error) {
         console.error(`Error fetching price from ${store} for ${fragrance}:`, error);
@@ -233,6 +239,7 @@ const brastyFetch = async (page, store, details, fragrance, quantity) => {
         price = priceText;
 
         console.log(`\x1b[32mPrice at ${store} for ${fragrance}: ${price}\x1b[0m`);
+        return { fragrance, store, price };
     } catch (error) {
         console.error(`Error fetching price from ${store} for ${fragrance}:`, error);
     }
@@ -250,6 +257,7 @@ const obsentumFetch = async (page, store, details, fragrance, quantity) => {
         price = priceText;
 
         console.log(`\x1b[32mFetching from ${store}. for ${fragrance}: ${price}\x1b[0m`);
+        return { fragrance, store, price };
     }
     catch (error) {
         console.error(`Error fetching price from ${store} for ${fragrance}:`, error);
@@ -263,7 +271,8 @@ const parfumuritimisoaraFetch = async (page, store, details, fragrance, quantity
 
         const products = await page.$('#product-matrix-body');
         if(!products){
-            await basicFetch(page, store, details, fragrance, quantity);
+            let response = await basicFetch(page, store, details, fragrance, quantity);
+            return response;
         }
         else{
             const childElements = await products.$$(':scope > *');
@@ -281,6 +290,7 @@ const parfumuritimisoaraFetch = async (page, store, details, fragrance, quantity
             }
 
             console.log(`\x1b[32mFetching from ${store}. for ${fragrance}: ${price}\x1b[0m`);
+            return { fragrance, store, price };
         }
     } catch (error) {
         console.error(`Error fetching price from ${store} for ${fragrance}:`, error);
@@ -307,6 +317,7 @@ const vivantisFetch = async (page, store, details, fragrance, quantity) => {
         }
 
         console.log(`\x1b[32mFetching from ${store}. for ${fragrance}: ${price}\x1b[0m`);
+        return { fragrance, store, price };
     } catch (error) {
         console.error(`Error fetching price from ${store} for ${fragrance}:`, error);
     }
@@ -336,6 +347,7 @@ const sephoraFetch = async (page, store, details, fragrance, quantity) => {
         }
 
         console.log(`\x1b[32mFetching from ${store}. for ${fragrance}: ${price}\x1b[0m`);
+        return { fragrance, store, price };
     }
     catch (error) {
         console.error(`Error fetching price from ${store} for ${fragrance}:`, error);
@@ -353,6 +365,7 @@ const fetchPrices = async () => {
         const page = await browser.newPage();
         await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36');
         
+        const promises = [];
 
         // Iterate through each fragrance
         for (const [fragrance, stores] of Object.entries(fragrances)) {
@@ -363,41 +376,47 @@ const fetchPrices = async () => {
                 
                 if (details.url && details.price_selector) {
                     console.log(`\x1b[36mFetching from ${store}...\x1b[0m`);
+                    let fetchPromise;
+
                     if (store !== 'sephora.ro' && store !== 'douglas.ro' 
                         && store !== 'notino.ro' && store !== 'marionnaud.ro'
                         && store != 'hiris.ro' && store != 'parfumu.ro' && store != 'makeup.ro'
                         && store != 'brasty.ro' && store != 'obsentum.com'
                         && store != 'parfumuri-timisoara.ro' && store != 'vivantis.ro') {
-                        await basicFetch(page, store, details, fragrance, quantity);
+                        fetchPromise = await basicFetch(page, store, details, fragrance, quantity);
                     } else if (store === 'sephora.ro') {
-                        await sephoraFetch(page, store, details, fragrance, quantity);
+                        fetchPromise = await sephoraFetch(page, store, details, fragrance, quantity);
                     } else if (store === 'douglas.ro') {
-                        await douglasFetch(page, store, details, fragrance, quantity);
+                        fetchPromise = await douglasFetch(page, store, details, fragrance, quantity);
                     } else if (store === 'notino.ro'){
-                        await notinoFetch(page, store, details, fragrance, quantity);
+                        fetchPromise = await notinoFetch(page, store, details, fragrance, quantity);
                     } else if (store === 'marionnaud.ro'){
-                        await marionnaudFetch(page, store, details, fragrance, quantity);
+                        fetchPromise = await marionnaudFetch(page, store, details, fragrance, quantity);
                     } else if (store === 'hiris.ro'){
-                        await hirisFetch(page, store, details, fragrance, quantity);
+                        fetchPromise = await hirisFetch(page, store, details, fragrance, quantity);
                     } else if (store === 'parfumu.ro'){
-                        await parfumuFetch(page, store, details, fragrance, quantity);
+                        fetchPromise = await parfumuFetch(page, store, details, fragrance, quantity);
                     } else if (store === 'makeup.ro'){
-                        await makeupFetch(page, store, details, fragrance, quantity);
+                        fetchPromise = await makeupFetch(page, store, details, fragrance, quantity);
                     } else if (store === 'brasty.ro'){
-                        await brastyFetch(page, store, details, fragrance, quantity);
+                        fetchPromise = await brastyFetch(page, store, details, fragrance, quantity);
                     } else if (store === 'obsentum.com'){
-                        await obsentumFetch(page, store, details, fragrance, quantity);
+                        fetchPromise = await obsentumFetch(page, store, details, fragrance, quantity);
                     } else if (store === 'parfumuri-timisoara.ro'){
-                        await parfumuritimisoaraFetch(page, store, details, fragrance, quantity);
+                        fetchPromise = await parfumuritimisoaraFetch(page, store, details, fragrance, quantity);
                     } else if (store === 'vivantis.ro'){
-                        await vivantisFetch(page, store, details, fragrance, quantity);
+                        fetchPromise = await vivantisFetch(page, store, details, fragrance, quantity);
                     }
 
-                } else {
-                    //console.warn(`Missing URL or selector for ${store}`);
+                    promises.push(fetchPromise);
+
                 }
             }
         }
+        const results = await Promise.all(promises);
+
+        console.log(results);
+
 
         // Close the browser
         await browser.close();
