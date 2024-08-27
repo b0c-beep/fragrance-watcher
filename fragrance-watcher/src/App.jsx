@@ -11,25 +11,20 @@ function App() {
     setError(null);
 
     try {
-      const response = await fetch('http://localhost:5000/api/run-script', {
-        method: 'POST',
-      });
+        const response = await fetch('/api/run-script');
+    
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
 
-      if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
-      }
+        const data = await response.json();
 
-      const data = await response.json();
+        console.log(data);
 
-      if (Array.isArray(data)) {
-        setPrices(data);
-      } else {
-        setError('Unexpected data format');
-      }
     } catch (err) {
-      setError(`Error: ${err.message}`);
+        setError(`Error: ${err.message}`);
     } finally {
-      setLoading(false);
+        setLoading(false);
     }
   };
 
