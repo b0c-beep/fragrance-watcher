@@ -1,46 +1,53 @@
-import './App.css'
-import React, { useEffect, useState } from 'react';
+// src/App.jsx
+import React, { useState } from 'react';
 
 function App() {
-  const [prices, setPrices] = useState({});
-    const [fragrance, setFragrance] = useState('ysl_myslf_refill_150ml'); // Default fragrance
+  const [prices, setPrices] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
 
-    useEffect(() => {
-        const fetchPrices = async () => {
-            try {
-                const response = await fetch(`http://localhost:5000/api/prices/${fragrance}`);
-                const data = await response.json();
-                setPrices(data);
-            } catch (error) {
-                console.error('Error fetching prices:', error);
-            }
-        };
+  const handleRunScript = async () => {
+    setLoading(true);
+    setError(null);
 
-        fetchPrices();
-    }, [fragrance]);
+    try {
+      const response = await fetch('http://localhost:5000/api/run-script', {
+        method: 'POST',
+      });
 
-    return (
-        <div>
-            <h1>Fragrance Price Tracker</h1>
-            <label>
-                Select Fragrance:
-                <select value={fragrance} onChange={(e) => setFragrance(e.target.value)}>
-                    <option value="ysl_myslf_refill_150ml">YSL MySLF Refill 150ml</option>
-                    {/* Add more options here */}
-                </select>
-            </label>
-            <div>
-                <h2>Prices:</h2>
-                <ul>
-                    {Object.entries(prices).map(([store, price]) => (
-                        <li key={store}>
-                            {store}: {price}
-                        </li>
-                    ))}
-                </ul>
-            </div>
-        </div>
-    );
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+
+      const data = await response.json();
+
+      if (Array.isArray(data)) {
+        setPrices(data);
+      } else {
+        setError('Unexpected data format');
+      }
+    } catch (err) {
+      setError(`Error: ${err.message}`);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  return (
+    <div>
+      <button onClick={handleRunScript} disabled={loading}>
+        {loading ? 'Running...' : 'Run Script'}
+      </button>
+      {error && <p>{error}</p>}
+      <ul>
+        {prices.map((price, index) => (
+          <li key={index}>
+            <strong>Fragrance:</strong> {price.fragrance}, <strong>Store:</strong> {price.store}, <strong>Price:</strong> {price.price}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
 }
 
-export default App
+export default App;

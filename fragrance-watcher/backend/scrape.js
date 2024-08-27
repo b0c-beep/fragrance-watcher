@@ -4,6 +4,7 @@ import fs from 'fs/promises';
 import axios from 'axios';
 import * as cheerio from 'cheerio';
 import pLimit from 'p-limit';
+import psTree from 'ps-tree';
 
 // Apply stealth plugin to Puppeteer
 puppeteer.use(StealthPlugin());
@@ -355,7 +356,7 @@ const sephoraFetch = async (page, store, details, fragrance, quantity) => {
     }
 }
 
-const fetchPrices = async () => {
+export const fetchPrices = async () => {
     let browser;
     try {
         // Read the JSON file
@@ -431,6 +432,7 @@ const fetchPrices = async () => {
         }
 
         const results = await Promise.all(promises);
+        fs.writeFile('results.json', JSON.stringify(results, null, 2));
         console.log(results);
 
     } catch (error) {
