@@ -5,16 +5,30 @@ import { exec } from 'child_process';
 import path from 'path';
 import fs from 'fs';
 import { fileURLToPath } from 'url';
+import multer from 'multer';
 
 const app = express();
 const port = 5000;
 
-//app.use(cors());
-//app.use(express.json());
+app.use(cors());
+app.use(express.json());
 
 // Get __dirname for ES modules
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+
+// Set up storage for images using multer
+const storage = multer.diskStorage({
+    destination: (req, file, cb) => {
+        // Specify the correct path for the public folder in the root directory
+        const imagesPath = path.join(__dirname, '..', 'public', 'images');
+        cb(null, imagesPath);  // Directory to save images
+    },
+    filename: (req, file, cb) => {
+        const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9);
+        cb(null, `${uniqueSuffix}-${file.originalname}`);
+    }
+});
 
 // Endpoint to run the script
 app.get('/run-script', (req, res) => {
@@ -53,6 +67,61 @@ app.get('/run-script', (req, res) => {
     });
 });
 
+
+// Endpoint to get existing fragrance data
+app.get('/fragrances', (req, res) => {
+    const filePath = path.join(__dirname, '', 'fragrances.json');
+
+    fs.readFile(filePath, 'utf8', (err, data) => {
+        if (err) {
+            console.error(`Error reading JSON file: ${err}`);
+            return res.status(500).send(`Error reading JSON file: ${err.message}`);
+        }
+
+        try {
+            const jsonData = JSON.parse(data);
+            res.json(jsonData);
+        } catch (parseError) {
+            console.error(`Error parsing JSON: ${parseError}`);
+            res.status(500).send(`Error parsing JSON: ${parseError.message}`);
+        }
+    });
+});
+
+// Endpoint to add a new fragrance
+app.post('/fragrances', (req, res) => {
+    const newFragrance = req.body;
+    const filePath = path.join(__dirname, '', 'fragrances.json');
+
+    fs.readFile(filePath, 'utf8', (err, data) => {
+        if (err) {
+            console.error(`Error reading JSON file: ${err}`);
+            return res.status(500).send(`Error reading JSON file: ${err.message}`);
+        }
+
+        let jsonData;
+        try {
+            jsonData = JSON.parse(data);
+        } catch (parseError) {
+            console.error(`Error parsing JSON: ${parseError}`);
+            return res.status(500).send(`Error parsing JSON: ${parseError.message}`);
+        }
+
+        // Add the new fragrance to the JSON data
+        const fragranceKey = Object.keys(newFragrance)[0];
+        jsonData[fragranceKey] = newFragrance[fragranceKey];
+
+        // Write the updated JSON data back to the file
+        fs.writeFile(filePath, JSON.stringify(jsonData, null, 2), 'utf8', (writeErr) => {
+            if (writeErr) {
+                console.error(`Error writing JSON file: ${writeErr}`);
+                return res.status(500).send(`Error writing JSON file: ${writeErr.message}`);
+            }
+
+            res.status(201).send('Fragrance added successfully');
+        });
+    });
+});
 
 
 app.listen(port, () => {

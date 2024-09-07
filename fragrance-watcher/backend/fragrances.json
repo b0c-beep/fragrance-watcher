@@ -1,959 +1,959 @@
 {
-    "ysl_myslf_refill_150ml": {
-        "quantity": "150ml",
-        "brasty.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "hiris.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "esentedelux.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "notino.ro": {
-            "url": "https://www.notino.ro/yves-saint-laurent/myslf-eau-de-parfum-pentru-barbati/p-16196406/",
-            "price_selector": "#pd-price"
-        },
-        "parfumss.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "parfimo.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "makeup.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "vivantis.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "bestvalue.eu": {
-            "url": "",
-            "price_selector": ""
-        },
-        "parfumuri-timisoara.ro": {
-            "url": "https://www.parfumuri-timisoara.ro/yves-saint-laurent-myself-refill.html",
-            "price_selector": ".price"
-        },
-        "deluxury.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "parfumat.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "parfumu.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "obsentum.com": {
-            "url": "",
-            "price_selector": ""
-        },
-        "sephora.ro": {
-            "url": "https://www.sephora.ro/p/myslf---apa-de-parfum-reincarcabila-barbati-P10052153.html",
-            "price_selector": ".price-sales.price-sales-standard"
-        },
-        "douglas.ro": {
-            "url": "https://www.douglas.ro/p/yves-saint-laurent-myslf-eau-de-parfum-reincarcabila-barbati-1113402",
-            "price_selector": ".product-detail-price"
-        },
-        "beautik.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "parfumy.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "marionnaud.ro": {
-            "url": "https://www.marionnaud.ro/yves-saint-laurent/myslf/myslf-apa-de-parfum-reincarcabil/p/BP_83143?varSel=83146",
-            "price_selector": ".formatted-price__decimal"
-        },
-        "simplestore.ro": {
-            "url": "https://www.simplestore.ro/apa-de-parfum-yves-saint-laurent-my-slf-edp-rechargable-150-ml",
-            "price_selector": ".priceprodnormal"
-        },
-        "depozituldecosmetice.ro": {
-            "url": "https://depozituldecosmetice.ro/yves-saint-laurent-myslf-refill-apa-de-parfum-rezerva-150ml.html",
-            "price_selector": ".price"
-        }
+  "ysl_myslf_refill_150ml": {
+    "quantity": "150ml",
+    "brasty.ro": {
+      "url": "",
+      "price_selector": ""
     },
-    "armani_swy_100ml": {
-        "quantity": "100ml",
-        "brasty.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "hiris.ro": {
-            "url": "https://www.hiris.ro/parfumuri-pentru-barbati/giorgio-armani/armani-stronger-with-you-intensely-barbati-apa-de-parfum",
-            "price_selector": ".custom-tag-price"
-        },
-        "esentedelux.ro": {
-            "url": "https://esentedelux.ro/parfumuri-pentru-barbati/4009-10048-giorgio-armani-emporio-stronger-with-you-intensely-eau-de-parfum-pentru-barbai.html#/22-pentru_cine-pentru_barbati/32-tip_produs-eau_de_parfum/36-volum-100_ml",
-            "price_selector": ".product-price.current-price-value"
-        },
-        "notino.ro": {
-            "url": "https://www.notino.ro/armani/emporio-stronger-with-you-intensely-eau-de-parfum-pentru-barbati/",
-            "price_selector": "#pd-price"
-        },
-        "parfumss.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "parfimo.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "makeup.ro": {
-            "url": "https://makeup.ro/product/429976/",
-            "price_selector": ".price_item"
-        },
-        "vivantis.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "bestvalue.eu": {
-            "url": "https://bestvalue.eu/p/apa-de-parfum-emporio-armani-stronger-with-you-intensely-100-ml",
-            "price_selector": "#product-price"
-        },
-        "parfumuri-timisoara.ro": {
-            "url": "https://www.parfumuri-timisoara.ro/emporio-armani-stronger-with-you-intensely.html",
-            "price_selector": ".price"
-        },
-        "deluxury.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "parfumat.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "parfumu.ro": {
-            "url": "https://www.parfumu.ro/parfumuri/parfumuri-pentru-barbati/giorgio-armani-emporio-armani-stronger-with-you-intensely-ap-de-parfum/",
-            "price_selector": ".ty-price-num"
-        },
-        "obsentum.com": {
-            "url": "",
-            "price_selector": ""
-        },
-        "sephora.ro": {
-            "url": "https://www.sephora.ro/p/stronger-with-you-intensely---eau-de-parfum-P3592118.html",
-            "price_selector": ".price-sales.price-sales-standard"
-        },
-        "douglas.ro": {
-            "url": "https://www.douglas.ro/p/armani-stronger-with-you-intensely-eau-de-parfum-063552",
-            "price_selector": ".product-detail-price.neutralColor"
-        },
-        "beautik.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "parfumy.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "marionnaud.ro": {
-            "url": "https://www.marionnaud.ro/armani/you/stronger-with-you-intense/p/BP_70135?varSel=70137",
-            "price_selector": ".formatted-price__decimal"
-        },
-        "simplestore.ro": {
-            "url": "https://www.simplestore.ro/emporio-armani-stronger-with-you-intensely-edp-100-ml",
-            "price_selector": ".priceprodnormal.pret-normal-tva.pretpagprod"
-        },
-        "depozituldecosmetice.ro": {
-            "url": "https://depozituldecosmetice.ro/armani-emporio-stronger-with-you-intensely-apa-de-parfum-100ml.html",
-            "price_selector": ".price"
-        }
+    "hiris.ro": {
+      "url": "",
+      "price_selector": ""
     },
-    "jpg_le_male_elixir_125ml": {
-        "quantity": "125ml",
-        "brasty.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "hiris.ro": {
-            "url": "https://www.hiris.ro/parfumuri-pentru-barbati/jean-paul-gaultier/jean-paul-gaultiere-le-male-elixir-apa-de-parfum-barbati",
-            "price_selector": ".custom-tag-price"
-        },
-        "esentedelux.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "notino.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "parfumss.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "parfimo.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "makeup.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "vivantis.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "bestvalue.eu": {
-            "url": "https://bestvalue.eu/p/parfum-jean-paul-gaultier-le-male-elixir-parfum-125-ml",
-            "price_selector": "#product-price"
-        },
-        "parfumuri-timisoara.ro": {
-            "url": "https://www.parfumuri-timisoara.ro/jean-paul-gaultier-le-male-elixir.html",
-            "price_selector": ".price"
-        },
-        "deluxury.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "parfumat.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "parfumu.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "obsentum.com": {
-            "url": "",
-            "price_selector": ""
-        },
-        "sephora.ro": {
-            "url": "https://www.sephora.ro/p/le-male---elixir-parfum-P10051068.html",
-            "price_selector": ".price-sales.price-sales-standard"
-        },
-        "douglas.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "beautik.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "parfumy.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "marionnaud.ro": {
-            "url": "https://www.marionnaud.ro/jp-gaultier/le-male/le-male-elixir-parfum/p/BP_82331?varSel=82332",
-            "price_selector": ".formatted-price__decimal"
-        },
-        "simplestore.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "depozituldecosmetice.ro": {
-            "url": "https://depozituldecosmetice.ro/jpg-le-male-elixir-apa-de-parfum-125ml.html",
-            "price_selector": ".price"
-        }
+    "esentedelux.ro": {
+      "url": "",
+      "price_selector": ""
     },
-    "jpg_le_beau_le_parfum_125ml": {
-        "quantity": "125ml",
-        "brasty.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "hiris.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "esentedelux.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "notino.ro": {
-            "url": "https://www.notino.ro/jean-paul-gaultier/le-beau-le-parfum-eau-de-parfum-pentru-barbati/",
-            "price_selector": "#pd-price"
-        },
-        "parfumss.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "parfimo.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "makeup.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "vivantis.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "bestvalue.eu": {
-            "url": "",
-            "price_selector": ""
-        },
-        "parfumuri-timisoara.ro": {
-            "url": "https://www.parfumuri-timisoara.ro/jean-paul-gaultier-le-male-le-parfum-22148.html",
-            "price_selector": ".price"
-        },
-        "deluxury.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "parfumat.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "parfumu.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "obsentum.com": {
-            "url": "",
-            "price_selector": ""
-        },
-        "sephora.ro": {
-            "url": "https://www.sephora.ro/p/le-beau---le-parfum-P10024513.html",
-            "price_selector": ".price-sales.price-sales-standard"
-        },
-        "douglas.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "beautik.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "parfumy.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "marionnaud.ro": {
-            "url": "https://www.marionnaud.ro/jp-gaultier/le-beau/le-beau-le-parfum/p/BP_79077?varSel=79076",
-            "price_selector": ".formatted-price__decimal"
-        },
-        "simplestore.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "depozituldecosmetice.ro": {
-            "url": "https://depozituldecosmetice.ro/jpg-le-beau-le-parfum-apa-de-parfum-125ml.html",
-            "price_selector": ".price"
-        }
+    "notino.ro": {
+      "url": "https://www.notino.ro/yves-saint-laurent/myslf-eau-de-parfum-pentru-barbati/p-16196406/",
+      "price_selector": "#pd-price"
     },
-    "mancera_instant_crush_120ml": {
-        "quantity": "120ml",
-        "brasty.ro": {
-            "url": "https://www.brasty.ro/mancera-instant-crush-eau-de-parfum-unisex-120-ml",
-            "price_selector": ".c-pd-shopbox__row"
-        },
-        "hiris.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "esentedelux.ro": {
-            "url": "https://esentedelux.ro/parfumuri-unisex/4338-9006-mancera-instant-crush-eau-de-parfum-unisex.html#/23-pentru_cine-unisex/32-tip_produs-eau_de_parfum/78-volum-120_ml",
-            "price_selector": ".product-price.current-price-value"
-        },
-        "notino.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "parfumss.ro": {
-            "url": "https://www.parfumss.ro/product/37591-mancera-instant-crush.html#1102",
-            "price_selector": ".price"
-        },
-        "parfimo.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "makeup.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "vivantis.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "bestvalue.eu": {
-            "url": "",
-            "price_selector": ""
-        },
-        "parfumuri-timisoara.ro": {
-            "url": "https://www.parfumuri-timisoara.ro/mancera-instant-crush-unisex.html",
-            "price_selector": ".price"
-        },
-        "deluxury.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "parfumat.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "parfumu.ro": {
-            "url": "https://www.parfumu.ro/parfumuri/parfumuri-unisex/mancera-instant-crush-ap-de-parfum/",
-            "price_selector": ".ty-price-num"
-        },
-        "obsentum.com": {
-            "url": "https://obsentum.com/ro/product/OBSENTMERA193134/Instant%20Crush",
-            "price_selector": ".cstm-product-summary.cstm-product-summary-no-mk"
-        },
-        "sephora.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "douglas.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "beautik.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "parfumy.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "marionnaud.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "simplestore.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "depozituldecosmetice.ro": {
-            "url": "",
-            "price_selector": ""
-        }
+    "parfumss.ro": {
+      "url": "",
+      "price_selector": ""
     },
-    "mancera_french_riviera_120ml": {
-        "quantity": "120ml",
-        "brasty.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "hiris.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "esentedelux.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "notino.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "parfumss.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "parfimo.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "makeup.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "vivantis.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "bestvalue.eu": {
-            "url": "",
-            "price_selector": ""
-        },
-        "parfumuri-timisoara.ro": {
-            "url": "https://www.parfumuri-timisoara.ro/mancera-french-riviera.html",
-            "price_selector": ".price"
-        },
-        "deluxury.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "parfumat.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "parfumu.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "obsentum.com": {
-            "url": "",
-            "price_selector": ""
-        },
-        "sephora.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "douglas.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "beautik.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "parfumy.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "marionnaud.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "simplestore.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "depozituldecosmetice.ro": {
-            "url": "",
-            "price_selector": ""
-        }
+    "parfimo.ro": {
+      "url": "",
+      "price_selector": ""
     },
-    "ch_bad_boy_cobalt_100ml": {
-        "quantity": "100ml",
-        "brasty.ro": {
-            "url": "https://www.brasty.ro/carolina-herrera-bad-boy-cobalt-eau-de-parfum-barba-i-100-ml",
-            "price_selector": ".c-pd-shopbox__row"
-        },
-        "hiris.ro": {
-            "url": "https://www.hiris.ro/parfumuri-pentru-barbati/carolina-herrera/carolina-herrera-bad-boy-cobalt-apa-de-parfum-barbati",
-            "price_selector": ".custom-tag-price"
-        },
-        "esentedelux.ro": {
-            "url": "https://esentedelux.ro/parfumuri-pentru-barbati/4594-9781-carolina-herrera-bad-boy-cobalt-eau-de-parfum-pentru-barbati.html#/22-pentru_cine-pentru_barbati/32-tip_produs-eau_de_parfum/43-volum-100_ml_tester",
-            "price_selector": ".product-price.current-price-value"
-        },
-        "notino.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "parfumss.ro": {
-            "url": "https://www.parfumss.ro/product/39985-carolina-herrera-bad-boy-cobalt.html",
-            "price_selector": ".price"
-        },
-        "parfimo.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "makeup.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "vivantis.ro": {
-            "url": "https://www.vivantis.ro/parfumuri/carolina-herrera-bad-boy-cobalt-electrique-edp.html",
-            "price_selector": ".lh-18.font-size-sm.fw-bold"
-        },
-        "bestvalue.eu": {
-            "url": "https://bestvalue.eu/p/apa-de-parfum-carolina-herrera-bad-boy-cobalt-100-ml",
-            "price_selector": "#product-price"
-        },
-        "parfumuri-timisoara.ro": {
-            "url": "https://www.parfumuri-timisoara.ro/carolina-herrera-bad-boy-cobalt.html",
-            "price_selector": ".price"
-        },
-        "deluxury.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "parfumat.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "parfumu.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "obsentum.com": {
-            "url": "",
-            "price_selector": ""
-        },
-        "sephora.ro": {
-            "url": "https://www.sephora.ro/p/bad-boy-cobalt---eau-de-parfum-P10024472.html",
-            "price_selector": ".price-sales.price-sales-standard"
-        },
-        "douglas.ro": {
-            "url": "https://www.douglas.ro/p/carolina-herrera-bad-boy-cobalt-eau-de-parfum-499562",
-            "price_selector": ".product-detail-price"
-        },
-        "beautik.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "parfumy.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "marionnaud.ro": {
-            "url": "https://www.marionnaud.ro/carolina-herrera/bad-boy/bad-boy-cobalt-apa-de-parfum/p/BP_79075?varSel=79074",
-            "price_selector": ".formatted-price__decimal"
-        },
-        "simplestore.ro": {
-            "url": "https://www.simplestore.ro/carolina-herrera-bad-boy-cobalt-edp-electrique-100-ml",
-            "price_selector": ".priceprodnormal.pret-normal-tva.pretpagprod"
-        },
-        "depozituldecosmetice.ro": {
-            "url": "https://depozituldecosmetice.ro/carolina-herrera-bad-boy-cobalt-apa-de-parfum-100ml.html",
-            "price_selector": ".price"
-        }
+    "makeup.ro": {
+      "url": "",
+      "price_selector": ""
     },
-    "dior_homme_intense_100ml": {
-        "quantity": "100ml",
-        "brasty.ro": {
-            "url": "https://www.brasty.ro/dior-christian-dior-dior-homme-intense-2020-eau-de-parfum-barba-i-100-ml",
-            "price_selector": ".c-pd-shopbox__row"
-        },
-        "hiris.ro": {
-            "url": "https://www.hiris.ro/parfumuri-pentru-barbati/christian-dior/dior-homme-intense-apa-de-parfum",
-            "price_selector": ".custom-tag-price"
-        },
-        "esentedelux.ro": {
-            "url": "https://esentedelux.ro/parfumuri-pentru-barbati/398-1003-christian-dior-dior-homme-intense-eau-de-parfum-pentru-barbati.html#/22-pentru_cine-pentru_barbati/32-tip_produs-eau_de_parfum/36-volum-100_ml",
-            "price_selector": ".product-price.current-price-value"
-        },
-        "notino.ro": {
-            "url": "https://www.notino.ro/dior/dior-homme-intense-2011-eau-de-parfum-pentru-barbati/",
-            "price_selector": "#pd-price"
-        },
-        "parfumss.ro": {
-            "url": "https://www.parfumss.ro/product/4308-dior-homme-intense.html#629",
-            "price_selector": ".price"
-        },
-        "parfimo.ro": {
-            "url": "https://www.parfimo.ro/dior-dior-homme-intense-2020-apa-de-parfum-pentru-barbati-100-ml/",
-            "price_selector": ".Price.ProductRow-price.js-price"
-        },
-        "makeup.ro": {
-            "url": "https://makeup.ro/product/1354/",
-            "price_selector": ".price_item"
-        },
-        "vivantis.ro": {
-            "url": "https://www.vivantis.ro/parfumuri/dior-dior-homme-intense-edp.html?c=pCI174100",
-            "price_selector": ".lh-18.font-size-sm.fw-bold"
-        },
-        "bestvalue.eu": {
-            "url": "https://bestvalue.eu/p/apa-de-parfum-dior-homme-intense-100-ml",
-            "price_selector": "#product-price"
-        },
-        "parfumuri-timisoara.ro": {
-            "url": "https://www.parfumuri-timisoara.ro/dior-homme-intense-18402.html",
-            "price_selector": ".price"
-        },
-        "deluxury.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "parfumat.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "parfumu.ro": {
-            "url": "https://www.parfumu.ro/parfumuri/parfumuri-pentru-barbati/christian-dior-homme-intense-ap-de-parfum/",
-            "price_selector": ".ty-price-num"
-        },
-        "obsentum.com": {
-            "url": "",
-            "price_selector": ""
-        },
-        "sephora.ro": {
-            "url": "https://www.sephora.ro/p/dior-homme-intense---eau-de-parfum-for-men-P53514.html",
-            "price_selector": ".price-sales.price-sales-standard"
-        },
-        "douglas.ro": {
-            "url": "https://www.douglas.ro/p/dior-dior-homme-intense-eau-de-parfum-406858",
-            "price_selector": ".product-detail-price.neutralColor"
-        },
-        "beautik.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "parfumy.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "marionnaud.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "simplestore.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "depozituldecosmetice.ro": {
-            "url": "https://depozituldecosmetice.ro/dior-homme-intense-apa-de-parfum-100ml.html",
-            "price_selector": ".price"
-        }
+    "vivantis.ro": {
+      "url": "",
+      "price_selector": ""
     },
-    "tom_ford_noir_50ml": {
-        "quantity": "50ml",
-        "brasty.ro": {
-            "url": "https://www.brasty.ro/tom-ford-noir-eau-de-parfum-barbati-50-ml",
-            "price_selector": ".c-pd-shopbox__row"
-        },
-        "hiris.ro": {
-            "url": "https://www.hiris.ro/parfumuri-pentru-barbati/tom-ford/tom-ford-noir-barbati-apa-de-parfum",
-            "price_selector": ".custom-tag-price"
-        },
-        "esentedelux.ro": {
-            "url": "https://esentedelux.ro/parfumuri-pentru-barbati/1403-3343-tom-ford-noir-eau-de-parfum-pentru-barbati.html#/22-pentru_cine-pentru_barbati/32-tip_produs-eau_de_parfum/35-volum-50_ml",
-            "price_selector": ".product-price.current-price-value"
-        },
-        "notino.ro": {
-            "url": "https://www.notino.ro/tom-ford/noir-eau-de-parfum-pentru-barbati/p-86043/",
-            "price_selector": "#pd-price"
-        },
-        "parfumss.ro": {
-            "url": "https://www.parfumss.ro/product/10425-tom-ford-noir-for-men.html#612",
-            "price_selector": ".price"
-        },
-        "parfimo.ro": {
-            "url": "https://www.parfimo.ro/tom-ford-noir-apa-de-parfum-pentru-barbati-50-ml/",
-            "price_selector": ".Price.ProductRow-price.js-price"
-        },
-        "makeup.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "vivantis.ro": {
-            "url": "https://www.vivantis.ro/parfumuri/noir-edp.html?c=pTF00350",
-            "price_selector": ".lh-18.font-size-sm.fw-bold"
-        },
-        "bestvalue.eu": {
-            "url": "https://bestvalue.eu/p/parfumuri-niche-tom-ford-noir-50-ml",
-            "price_selector": "#product-price"
-        },
-        "parfumuri-timisoara.ro": {
-            "url": "https://www.parfumuri-timisoara.ro/tom-ford-tom-ford-noir.html",
-            "price_selector": ".price"
-        },
-        "deluxury.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "parfumat.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "parfumu.ro": {
-            "url": "https://www.parfumu.ro/parfumuri/parfumuri-pentru-barbati/tom-ford-noir-ap-de-parfum/",
-            "price_selector": ".ty-price-num"
-        },
-        "obsentum.com": {
-            "url": "",
-            "price_selector": ""
-        },
-        "sephora.ro": {
-            "url": "https://www.sephora.ro/p/tom-ford-noir---eau-de-parfum-256698.html",
-            "price_selector": ".price-sales.price-sales-standard"
-        },
-        "douglas.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "beautik.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "parfumy.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "marionnaud.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "simplestore.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "depozituldecosmetice.ro": {
-            "url": "https://depozituldecosmetice.ro/tom-ford-noir-pour-homme-apa-de-parfum.html",
-            "price_selector": ".price"
-        }
+    "bestvalue.eu": {
+      "url": "",
+      "price_selector": ""
     },
-    "lattafa_khamrah_100ml": {
-        "quantity": "100ml",
-        "brasty.ro": {
-            "url": "https://www.brasty.ro/lattafa-khamrah-eau-de-parfum-unisex-100-ml",
-            "price_selector": ".c-pd-shopbox__row"
-        },
-        "hiris.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "esentedelux.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "notino.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "parfumss.ro": {
-            "url": "https://www.parfumss.ro/product/43342-lattafa-khamrah.html",
-            "price_selector": ".price"
-        },
-        "parfimo.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "makeup.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "vivantis.ro": {
-            "url": "https://www.vivantis.ro/parfumuri/lattafa-khamrah-edp.html?c=pLTF096100",
-            "price_selector": ".lh-18.font-size-sm.fw-bold"
-        },
-        "bestvalue.eu": {
-            "url": "",
-            "price_selector": ""
-        },
-        "parfumuri-timisoara.ro": {
-            "url": "https://www.parfumuri-timisoara.ro/lattafa-khamrah-22879.html",
-            "price_selector": ".price"
-        },
-        "deluxury.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "parfumat.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "parfumu.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "obsentum.com": {
-            "url": "",
-            "price_selector": ""
-        },
-        "sephora.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "douglas.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "beautik.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "parfumy.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "marionnaud.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "simplestore.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "depozituldecosmetice.ro": {
-            "url": "",
-            "price_selector": ""
-        }
+    "parfumuri-timisoara.ro": {
+      "url": "https://www.parfumuri-timisoara.ro/yves-saint-laurent-myself-refill.html",
+      "price_selector": ".price"
     },
-    "prada_lhomme_intense_100ml": {
-        "quantity": "100ml",
-        "brasty.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "hiris.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "esentedelux.ro": {
-            "url": "https://esentedelux.ro/parfumuri-pentru-barbati/3586-7408-prada-l-homme-intense-eau-de-parfum-pentru-barbati.html#/22-pentru_cine-pentru_barbati/32-tip_produs-eau_de_parfum/36-volum-100_ml",
-            "price_selector": ".product-price.current-price-value"
-        },
-        "notino.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "parfumss.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "parfimo.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "makeup.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "vivantis.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "bestvalue.eu": {
-            "url": "",
-            "price_selector": ""
-        },
-        "parfumuri-timisoara.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "deluxury.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "parfumat.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "parfumu.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "obsentum.com": {
-            "url": "",
-            "price_selector": ""
-        },
-        "sephora.ro": {
-            "url": "https://www.sephora.ro/p/l-homme-prada-intense---eau-de-parfum-405180.html",
-            "price_selector": ".price-sales.price-sales-standard"
-        },
-        "douglas.ro": {
-            "url": "https://www.douglas.ro/p/prada-l-homme-intense-eau-de-parfum-971573",
-            "price_selector": ".product-detail-price"
-        },
-        "beautik.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "parfumy.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "marionnaud.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "simplestore.ro": {
-            "url": "",
-            "price_selector": ""
-        },
-        "depozituldecosmetice.ro": {
-            "url": "",
-            "price_selector": ""
-        }
+    "deluxury.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "parfumat.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "parfumu.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "obsentum.com": {
+      "url": "",
+      "price_selector": ""
+    },
+    "sephora.ro": {
+      "url": "https://www.sephora.ro/p/myslf---apa-de-parfum-reincarcabila-barbati-P10052153.html",
+      "price_selector": ".price-sales.price-sales-standard"
+    },
+    "douglas.ro": {
+      "url": "https://www.douglas.ro/p/yves-saint-laurent-myslf-eau-de-parfum-reincarcabila-barbati-1113402",
+      "price_selector": ".product-detail-price"
+    },
+    "beautik.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "parfumy.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "marionnaud.ro": {
+      "url": "https://www.marionnaud.ro/yves-saint-laurent/myslf/myslf-apa-de-parfum-reincarcabil/p/BP_83143?varSel=83146",
+      "price_selector": ".formatted-price__decimal"
+    },
+    "simplestore.ro": {
+      "url": "https://www.simplestore.ro/apa-de-parfum-yves-saint-laurent-my-slf-edp-rechargable-150-ml",
+      "price_selector": ".priceprodnormal"
+    },
+    "depozituldecosmetice.ro": {
+      "url": "https://depozituldecosmetice.ro/yves-saint-laurent-myslf-refill-apa-de-parfum-rezerva-150ml.html",
+      "price_selector": ".price"
     }
+  },
+  "armani_swy_100ml": {
+    "quantity": "100ml",
+    "brasty.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "hiris.ro": {
+      "url": "https://www.hiris.ro/parfumuri-pentru-barbati/giorgio-armani/armani-stronger-with-you-intensely-barbati-apa-de-parfum",
+      "price_selector": ".custom-tag-price"
+    },
+    "esentedelux.ro": {
+      "url": "https://esentedelux.ro/parfumuri-pentru-barbati/4009-10048-giorgio-armani-emporio-stronger-with-you-intensely-eau-de-parfum-pentru-barbai.html#/22-pentru_cine-pentru_barbati/32-tip_produs-eau_de_parfum/36-volum-100_ml",
+      "price_selector": ".product-price.current-price-value"
+    },
+    "notino.ro": {
+      "url": "https://www.notino.ro/armani/emporio-stronger-with-you-intensely-eau-de-parfum-pentru-barbati/",
+      "price_selector": "#pd-price"
+    },
+    "parfumss.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "parfimo.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "makeup.ro": {
+      "url": "https://makeup.ro/product/429976/",
+      "price_selector": ".price_item"
+    },
+    "vivantis.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "bestvalue.eu": {
+      "url": "https://bestvalue.eu/p/apa-de-parfum-emporio-armani-stronger-with-you-intensely-100-ml",
+      "price_selector": "#product-price"
+    },
+    "parfumuri-timisoara.ro": {
+      "url": "https://www.parfumuri-timisoara.ro/emporio-armani-stronger-with-you-intensely.html",
+      "price_selector": ".price"
+    },
+    "deluxury.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "parfumat.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "parfumu.ro": {
+      "url": "https://www.parfumu.ro/parfumuri/parfumuri-pentru-barbati/giorgio-armani-emporio-armani-stronger-with-you-intensely-ap-de-parfum/",
+      "price_selector": ".ty-price-num"
+    },
+    "obsentum.com": {
+      "url": "",
+      "price_selector": ""
+    },
+    "sephora.ro": {
+      "url": "https://www.sephora.ro/p/stronger-with-you-intensely---eau-de-parfum-P3592118.html",
+      "price_selector": ".price-sales.price-sales-standard"
+    },
+    "douglas.ro": {
+      "url": "https://www.douglas.ro/p/armani-stronger-with-you-intensely-eau-de-parfum-063552",
+      "price_selector": ".product-detail-price.neutralColor"
+    },
+    "beautik.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "parfumy.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "marionnaud.ro": {
+      "url": "https://www.marionnaud.ro/armani/you/stronger-with-you-intense/p/BP_70135?varSel=70137",
+      "price_selector": ".formatted-price__decimal"
+    },
+    "simplestore.ro": {
+      "url": "https://www.simplestore.ro/emporio-armani-stronger-with-you-intensely-edp-100-ml",
+      "price_selector": ".priceprodnormal.pret-normal-tva.pretpagprod"
+    },
+    "depozituldecosmetice.ro": {
+      "url": "https://depozituldecosmetice.ro/armani-emporio-stronger-with-you-intensely-apa-de-parfum-100ml.html",
+      "price_selector": ".price"
+    }
+  },
+  "jpg_le_male_elixir_125ml": {
+    "quantity": "125ml",
+    "brasty.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "hiris.ro": {
+      "url": "https://www.hiris.ro/parfumuri-pentru-barbati/jean-paul-gaultier/jean-paul-gaultiere-le-male-elixir-apa-de-parfum-barbati",
+      "price_selector": ".custom-tag-price"
+    },
+    "esentedelux.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "notino.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "parfumss.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "parfimo.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "makeup.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "vivantis.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "bestvalue.eu": {
+      "url": "https://bestvalue.eu/p/parfum-jean-paul-gaultier-le-male-elixir-parfum-125-ml",
+      "price_selector": "#product-price"
+    },
+    "parfumuri-timisoara.ro": {
+      "url": "https://www.parfumuri-timisoara.ro/jean-paul-gaultier-le-male-elixir.html",
+      "price_selector": ".price"
+    },
+    "deluxury.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "parfumat.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "parfumu.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "obsentum.com": {
+      "url": "",
+      "price_selector": ""
+    },
+    "sephora.ro": {
+      "url": "https://www.sephora.ro/p/le-male---elixir-parfum-P10051068.html",
+      "price_selector": ".price-sales.price-sales-standard"
+    },
+    "douglas.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "beautik.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "parfumy.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "marionnaud.ro": {
+      "url": "https://www.marionnaud.ro/jp-gaultier/le-male/le-male-elixir-parfum/p/BP_82331?varSel=82332",
+      "price_selector": ".formatted-price__decimal"
+    },
+    "simplestore.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "depozituldecosmetice.ro": {
+      "url": "https://depozituldecosmetice.ro/jpg-le-male-elixir-apa-de-parfum-125ml.html",
+      "price_selector": ".price"
+    }
+  },
+  "jpg_le_beau_le_parfum_125ml": {
+    "quantity": "125ml",
+    "brasty.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "hiris.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "esentedelux.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "notino.ro": {
+      "url": "https://www.notino.ro/jean-paul-gaultier/le-beau-le-parfum-eau-de-parfum-pentru-barbati/",
+      "price_selector": "#pd-price"
+    },
+    "parfumss.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "parfimo.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "makeup.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "vivantis.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "bestvalue.eu": {
+      "url": "",
+      "price_selector": ""
+    },
+    "parfumuri-timisoara.ro": {
+      "url": "https://www.parfumuri-timisoara.ro/jean-paul-gaultier-le-male-le-parfum-22148.html",
+      "price_selector": ".price"
+    },
+    "deluxury.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "parfumat.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "parfumu.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "obsentum.com": {
+      "url": "",
+      "price_selector": ""
+    },
+    "sephora.ro": {
+      "url": "https://www.sephora.ro/p/le-beau---le-parfum-P10024513.html",
+      "price_selector": ".price-sales.price-sales-standard"
+    },
+    "douglas.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "beautik.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "parfumy.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "marionnaud.ro": {
+      "url": "https://www.marionnaud.ro/jp-gaultier/le-beau/le-beau-le-parfum/p/BP_79077?varSel=79076",
+      "price_selector": ".formatted-price__decimal"
+    },
+    "simplestore.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "depozituldecosmetice.ro": {
+      "url": "https://depozituldecosmetice.ro/jpg-le-beau-le-parfum-apa-de-parfum-125ml.html",
+      "price_selector": ".price"
+    }
+  },
+  "mancera_instant_crush_120ml": {
+    "quantity": "120ml",
+    "brasty.ro": {
+      "url": "https://www.brasty.ro/mancera-instant-crush-eau-de-parfum-unisex-120-ml",
+      "price_selector": ".c-pd-shopbox__row"
+    },
+    "hiris.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "esentedelux.ro": {
+      "url": "https://esentedelux.ro/parfumuri-unisex/4338-9006-mancera-instant-crush-eau-de-parfum-unisex.html#/23-pentru_cine-unisex/32-tip_produs-eau_de_parfum/78-volum-120_ml",
+      "price_selector": ".product-price.current-price-value"
+    },
+    "notino.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "parfumss.ro": {
+      "url": "https://www.parfumss.ro/product/37591-mancera-instant-crush.html#1102",
+      "price_selector": ".price"
+    },
+    "parfimo.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "makeup.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "vivantis.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "bestvalue.eu": {
+      "url": "",
+      "price_selector": ""
+    },
+    "parfumuri-timisoara.ro": {
+      "url": "https://www.parfumuri-timisoara.ro/mancera-instant-crush-unisex.html",
+      "price_selector": ".price"
+    },
+    "deluxury.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "parfumat.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "parfumu.ro": {
+      "url": "https://www.parfumu.ro/parfumuri/parfumuri-unisex/mancera-instant-crush-ap-de-parfum/",
+      "price_selector": ".ty-price-num"
+    },
+    "obsentum.com": {
+      "url": "https://obsentum.com/ro/product/OBSENTMERA193134/Instant%20Crush",
+      "price_selector": ".cstm-product-summary.cstm-product-summary-no-mk"
+    },
+    "sephora.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "douglas.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "beautik.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "parfumy.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "marionnaud.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "simplestore.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "depozituldecosmetice.ro": {
+      "url": "",
+      "price_selector": ""
+    }
+  },
+  "mancera_french_riviera_120ml": {
+    "quantity": "120ml",
+    "brasty.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "hiris.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "esentedelux.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "notino.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "parfumss.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "parfimo.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "makeup.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "vivantis.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "bestvalue.eu": {
+      "url": "",
+      "price_selector": ""
+    },
+    "parfumuri-timisoara.ro": {
+      "url": "https://www.parfumuri-timisoara.ro/mancera-french-riviera.html",
+      "price_selector": ".price"
+    },
+    "deluxury.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "parfumat.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "parfumu.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "obsentum.com": {
+      "url": "",
+      "price_selector": ""
+    },
+    "sephora.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "douglas.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "beautik.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "parfumy.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "marionnaud.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "simplestore.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "depozituldecosmetice.ro": {
+      "url": "",
+      "price_selector": ""
+    }
+  },
+  "ch_bad_boy_cobalt_100ml": {
+    "quantity": "100ml",
+    "brasty.ro": {
+      "url": "https://www.brasty.ro/carolina-herrera-bad-boy-cobalt-eau-de-parfum-barba-i-100-ml",
+      "price_selector": ".c-pd-shopbox__row"
+    },
+    "hiris.ro": {
+      "url": "https://www.hiris.ro/parfumuri-pentru-barbati/carolina-herrera/carolina-herrera-bad-boy-cobalt-apa-de-parfum-barbati",
+      "price_selector": ".custom-tag-price"
+    },
+    "esentedelux.ro": {
+      "url": "https://esentedelux.ro/parfumuri-pentru-barbati/4594-9781-carolina-herrera-bad-boy-cobalt-eau-de-parfum-pentru-barbati.html#/22-pentru_cine-pentru_barbati/32-tip_produs-eau_de_parfum/43-volum-100_ml_tester",
+      "price_selector": ".product-price.current-price-value"
+    },
+    "notino.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "parfumss.ro": {
+      "url": "https://www.parfumss.ro/product/39985-carolina-herrera-bad-boy-cobalt.html",
+      "price_selector": ".price"
+    },
+    "parfimo.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "makeup.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "vivantis.ro": {
+      "url": "https://www.vivantis.ro/parfumuri/carolina-herrera-bad-boy-cobalt-electrique-edp.html",
+      "price_selector": ".lh-18.font-size-sm.fw-bold"
+    },
+    "bestvalue.eu": {
+      "url": "https://bestvalue.eu/p/apa-de-parfum-carolina-herrera-bad-boy-cobalt-100-ml",
+      "price_selector": "#product-price"
+    },
+    "parfumuri-timisoara.ro": {
+      "url": "https://www.parfumuri-timisoara.ro/carolina-herrera-bad-boy-cobalt.html",
+      "price_selector": ".price"
+    },
+    "deluxury.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "parfumat.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "parfumu.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "obsentum.com": {
+      "url": "",
+      "price_selector": ""
+    },
+    "sephora.ro": {
+      "url": "https://www.sephora.ro/p/bad-boy-cobalt---eau-de-parfum-P10024472.html",
+      "price_selector": ".price-sales.price-sales-standard"
+    },
+    "douglas.ro": {
+      "url": "https://www.douglas.ro/p/carolina-herrera-bad-boy-cobalt-eau-de-parfum-499562",
+      "price_selector": ".product-detail-price"
+    },
+    "beautik.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "parfumy.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "marionnaud.ro": {
+      "url": "https://www.marionnaud.ro/carolina-herrera/bad-boy/bad-boy-cobalt-apa-de-parfum/p/BP_79075?varSel=79074",
+      "price_selector": ".formatted-price__decimal"
+    },
+    "simplestore.ro": {
+      "url": "https://www.simplestore.ro/carolina-herrera-bad-boy-cobalt-edp-electrique-100-ml",
+      "price_selector": ".priceprodnormal.pret-normal-tva.pretpagprod"
+    },
+    "depozituldecosmetice.ro": {
+      "url": "https://depozituldecosmetice.ro/carolina-herrera-bad-boy-cobalt-apa-de-parfum-100ml.html",
+      "price_selector": ".price"
+    }
+  },
+  "dior_homme_intense_100ml": {
+    "quantity": "100ml",
+    "brasty.ro": {
+      "url": "https://www.brasty.ro/dior-christian-dior-dior-homme-intense-2020-eau-de-parfum-barba-i-100-ml",
+      "price_selector": ".c-pd-shopbox__row"
+    },
+    "hiris.ro": {
+      "url": "https://www.hiris.ro/parfumuri-pentru-barbati/christian-dior/dior-homme-intense-apa-de-parfum",
+      "price_selector": ".custom-tag-price"
+    },
+    "esentedelux.ro": {
+      "url": "https://esentedelux.ro/parfumuri-pentru-barbati/398-1003-christian-dior-dior-homme-intense-eau-de-parfum-pentru-barbati.html#/22-pentru_cine-pentru_barbati/32-tip_produs-eau_de_parfum/36-volum-100_ml",
+      "price_selector": ".product-price.current-price-value"
+    },
+    "notino.ro": {
+      "url": "https://www.notino.ro/dior/dior-homme-intense-2011-eau-de-parfum-pentru-barbati/",
+      "price_selector": "#pd-price"
+    },
+    "parfumss.ro": {
+      "url": "https://www.parfumss.ro/product/4308-dior-homme-intense.html#629",
+      "price_selector": ".price"
+    },
+    "parfimo.ro": {
+      "url": "https://www.parfimo.ro/dior-dior-homme-intense-2020-apa-de-parfum-pentru-barbati-100-ml/",
+      "price_selector": ".Price.ProductRow-price.js-price"
+    },
+    "makeup.ro": {
+      "url": "https://makeup.ro/product/1354/",
+      "price_selector": ".price_item"
+    },
+    "vivantis.ro": {
+      "url": "https://www.vivantis.ro/parfumuri/dior-dior-homme-intense-edp.html?c=pCI174100",
+      "price_selector": ".lh-18.font-size-sm.fw-bold"
+    },
+    "bestvalue.eu": {
+      "url": "https://bestvalue.eu/p/apa-de-parfum-dior-homme-intense-100-ml",
+      "price_selector": "#product-price"
+    },
+    "parfumuri-timisoara.ro": {
+      "url": "https://www.parfumuri-timisoara.ro/dior-homme-intense-18402.html",
+      "price_selector": ".price"
+    },
+    "deluxury.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "parfumat.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "parfumu.ro": {
+      "url": "https://www.parfumu.ro/parfumuri/parfumuri-pentru-barbati/christian-dior-homme-intense-ap-de-parfum/",
+      "price_selector": ".ty-price-num"
+    },
+    "obsentum.com": {
+      "url": "",
+      "price_selector": ""
+    },
+    "sephora.ro": {
+      "url": "https://www.sephora.ro/p/dior-homme-intense---eau-de-parfum-for-men-P53514.html",
+      "price_selector": ".price-sales.price-sales-standard"
+    },
+    "douglas.ro": {
+      "url": "https://www.douglas.ro/p/dior-dior-homme-intense-eau-de-parfum-406858",
+      "price_selector": ".product-detail-price.neutralColor"
+    },
+    "beautik.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "parfumy.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "marionnaud.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "simplestore.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "depozituldecosmetice.ro": {
+      "url": "https://depozituldecosmetice.ro/dior-homme-intense-apa-de-parfum-100ml.html",
+      "price_selector": ".price"
+    }
+  },
+  "tom_ford_noir_50ml": {
+    "quantity": "50ml",
+    "brasty.ro": {
+      "url": "https://www.brasty.ro/tom-ford-noir-eau-de-parfum-barbati-50-ml",
+      "price_selector": ".c-pd-shopbox__row"
+    },
+    "hiris.ro": {
+      "url": "https://www.hiris.ro/parfumuri-pentru-barbati/tom-ford/tom-ford-noir-barbati-apa-de-parfum",
+      "price_selector": ".custom-tag-price"
+    },
+    "esentedelux.ro": {
+      "url": "https://esentedelux.ro/parfumuri-pentru-barbati/1403-3343-tom-ford-noir-eau-de-parfum-pentru-barbati.html#/22-pentru_cine-pentru_barbati/32-tip_produs-eau_de_parfum/35-volum-50_ml",
+      "price_selector": ".product-price.current-price-value"
+    },
+    "notino.ro": {
+      "url": "https://www.notino.ro/tom-ford/noir-eau-de-parfum-pentru-barbati/p-86043/",
+      "price_selector": "#pd-price"
+    },
+    "parfumss.ro": {
+      "url": "https://www.parfumss.ro/product/10425-tom-ford-noir-for-men.html#612",
+      "price_selector": ".price"
+    },
+    "parfimo.ro": {
+      "url": "https://www.parfimo.ro/tom-ford-noir-apa-de-parfum-pentru-barbati-50-ml/",
+      "price_selector": ".Price.ProductRow-price.js-price"
+    },
+    "makeup.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "vivantis.ro": {
+      "url": "https://www.vivantis.ro/parfumuri/noir-edp.html?c=pTF00350",
+      "price_selector": ".lh-18.font-size-sm.fw-bold"
+    },
+    "bestvalue.eu": {
+      "url": "https://bestvalue.eu/p/parfumuri-niche-tom-ford-noir-50-ml",
+      "price_selector": "#product-price"
+    },
+    "parfumuri-timisoara.ro": {
+      "url": "https://www.parfumuri-timisoara.ro/tom-ford-tom-ford-noir.html",
+      "price_selector": ".price"
+    },
+    "deluxury.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "parfumat.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "parfumu.ro": {
+      "url": "https://www.parfumu.ro/parfumuri/parfumuri-pentru-barbati/tom-ford-noir-ap-de-parfum/",
+      "price_selector": ".ty-price-num"
+    },
+    "obsentum.com": {
+      "url": "",
+      "price_selector": ""
+    },
+    "sephora.ro": {
+      "url": "https://www.sephora.ro/p/tom-ford-noir---eau-de-parfum-256698.html",
+      "price_selector": ".price-sales.price-sales-standard"
+    },
+    "douglas.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "beautik.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "parfumy.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "marionnaud.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "simplestore.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "depozituldecosmetice.ro": {
+      "url": "https://depozituldecosmetice.ro/tom-ford-noir-pour-homme-apa-de-parfum.html",
+      "price_selector": ".price"
+    }
+  },
+  "lattafa_khamrah_100ml": {
+    "quantity": "100ml",
+    "brasty.ro": {
+      "url": "https://www.brasty.ro/lattafa-khamrah-eau-de-parfum-unisex-100-ml",
+      "price_selector": ".c-pd-shopbox__row"
+    },
+    "hiris.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "esentedelux.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "notino.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "parfumss.ro": {
+      "url": "https://www.parfumss.ro/product/43342-lattafa-khamrah.html",
+      "price_selector": ".price"
+    },
+    "parfimo.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "makeup.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "vivantis.ro": {
+      "url": "https://www.vivantis.ro/parfumuri/lattafa-khamrah-edp.html?c=pLTF096100",
+      "price_selector": ".lh-18.font-size-sm.fw-bold"
+    },
+    "bestvalue.eu": {
+      "url": "",
+      "price_selector": ""
+    },
+    "parfumuri-timisoara.ro": {
+      "url": "https://www.parfumuri-timisoara.ro/lattafa-khamrah-22879.html",
+      "price_selector": ".price"
+    },
+    "deluxury.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "parfumat.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "parfumu.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "obsentum.com": {
+      "url": "",
+      "price_selector": ""
+    },
+    "sephora.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "douglas.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "beautik.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "parfumy.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "marionnaud.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "simplestore.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "depozituldecosmetice.ro": {
+      "url": "",
+      "price_selector": ""
+    }
+  },
+  "prada_lhomme_intense_100ml": {
+    "quantity": "100ml",
+    "brasty.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "hiris.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "esentedelux.ro": {
+      "url": "https://esentedelux.ro/parfumuri-pentru-barbati/3586-7408-prada-l-homme-intense-eau-de-parfum-pentru-barbati.html#/22-pentru_cine-pentru_barbati/32-tip_produs-eau_de_parfum/36-volum-100_ml",
+      "price_selector": ".product-price.current-price-value"
+    },
+    "notino.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "parfumss.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "parfimo.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "makeup.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "vivantis.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "bestvalue.eu": {
+      "url": "",
+      "price_selector": ""
+    },
+    "parfumuri-timisoara.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "deluxury.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "parfumat.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "parfumu.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "obsentum.com": {
+      "url": "",
+      "price_selector": ""
+    },
+    "sephora.ro": {
+      "url": "https://www.sephora.ro/p/l-homme-prada-intense---eau-de-parfum-405180.html",
+      "price_selector": ".price-sales.price-sales-standard"
+    },
+    "douglas.ro": {
+      "url": "https://www.douglas.ro/p/prada-l-homme-intense-eau-de-parfum-971573",
+      "price_selector": ".product-detail-price"
+    },
+    "beautik.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "parfumy.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "marionnaud.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "simplestore.ro": {
+      "url": "",
+      "price_selector": ""
+    },
+    "depozituldecosmetice.ro": {
+      "url": "",
+      "price_selector": ""
+    }
+  }
 }
