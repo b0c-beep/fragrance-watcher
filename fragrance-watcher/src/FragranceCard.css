@@ -48,8 +48,9 @@
   }
   
 .fragrance-card-name{
-    font-family: 'Courier New', Courier, monospace;
-    padding: 10px;
     font-size: 15px;
 }
 
+.fragrance-card-link{
+    text-decoration: none;
+}

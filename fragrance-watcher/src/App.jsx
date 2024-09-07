@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import FragranceCard from './FragranceCard';
 import './App.css';
+import Navbar from './Navbar';
 
 function App() {
     const [prices, setPrices] = useState([]);
@@ -64,6 +65,7 @@ function App() {
 
     return (
         <div>
+            <Navbar onAddFragrance={handleRunScript} />
             <button onClick={handleRunScript} disabled={loading}>
                 {loading ? 'Fetching...' : 'Fetch Prices'}
             </button>

@@ -24,7 +24,7 @@ function FragranceCard({ fragrance, prices, imageUrl }) {
                     {prices.map((price, index) => (
                         <li key={index}>
                             <strong>Store: </strong>
-                            <a href={price.url} target="_blank" rel="noopener noreferrer">
+                            <a href={price.url} target="_blank" rel="noopener noreferrer" className='fragrance-card-link'>
                                 {price.store}
                             </a>, 
                             <strong> Price:</strong> {price.price}

@@ -1,0 +1,44 @@
+/* Navbar.css */
+.navbar {
+    width: 100%;
+    margin: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9f9;
+    color: #4a4949;
+    padding: 0.5rem 1rem;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-right: 1rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+}
+
+.navbar-button {
+    background-color: #696867; /* Adjust the button color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-button:hover {
+    background-color: #c1bfbc; /* Darker shade for hover effect */
+}
