@@ -1,404 +1,494 @@
 [
-  null,
+  {
+    "fragrance": "ysl_myslf_refill_150ml",
+    "store": "notino.ro",
+    "price": "522 RON",
+    "url": "https://www.notino.ro/yves-saint-laurent/myslf-eau-de-parfum-pentru-barbati/p-16196406/"
+  },
   {
     "fragrance": "ysl_myslf_refill_150ml",
     "store": "parfumuri-timisoara.ro",
-    "price": "389,00 RON"
+    "price": "389,00 RON",
+    "url": "https://www.parfumuri-timisoara.ro/yves-saint-laurent-myself-refill.html"
   },
   {
     "fragrance": "ysl_myslf_refill_150ml",
     "store": "sephora.ro",
-    "price": "900,00 Lei"
+    "price": "900,00 Lei",
+    "url": "https://www.sephora.ro/p/myslf---apa-de-parfum-reincarcabila-barbati-P10052153.html"
   },
   {
     "fragrance": "ysl_myslf_refill_150ml",
     "store": "douglas.ro",
-    "price": "615,00 RON*"
+    "price": "615,00 RON*",
+    "url": "https://www.douglas.ro/p/yves-saint-laurent-myslf-eau-de-parfum-reincarcabila-barbati-1113402"
   },
-  null,
+  {
+    "fragrance": "ysl_myslf_refill_150ml",
+    "store": "marionnaud.ro",
+    "price": "923.0 RON",
+    "url": "https://www.marionnaud.ro/yves-saint-laurent/myslf/myslf-apa-de-parfum-reincarcabil/p/BP_83143?varSel=83146"
+  },
   {
     "fragrance": "ysl_myslf_refill_150ml",
     "store": "simplestore.ro",
-    "price": "700.00 lei"
+    "price": "700.00 lei",
+    "url": "https://www.simplestore.ro/apa-de-parfum-yves-saint-laurent-my-slf-edp-rechargable-150-ml"
   },
   {
     "fragrance": "ysl_myslf_refill_150ml",
     "store": "depozituldecosmetice.ro",
-    "price": "589,00 RON"
+    "price": "589,00 RON",
+    "url": "https://depozituldecosmetice.ro/yves-saint-laurent-myslf-refill-apa-de-parfum-rezerva-150ml.html"
   },
   {
     "fragrance": "armani_swy_100ml",
     "store": "hiris.ro",
-    "price": "517,00 RON"
+    "price": "517,00 RON",
+    "url": "https://www.hiris.ro/parfumuri-pentru-barbati/giorgio-armani/armani-stronger-with-you-intensely-barbati-apa-de-parfum"
   },
   {
     "fragrance": "armani_swy_100ml",
     "store": "esentedelux.ro",
-    "price": "399,00 lei"
+    "price": "399,00 lei",
+    "url": "https://esentedelux.ro/parfumuri-pentru-barbati/4009-10048-giorgio-armani-emporio-stronger-with-you-intensely-eau-de-parfum-pentru-barbai.html#/22-pentru_cine-pentru_barbati/32-tip_produs-eau_de_parfum/36-volum-100_ml"
   },
   {
     "fragrance": "armani_swy_100ml",
     "store": "notino.ro",
-    "price": "433 RON"
+    "price": "433 RON",
+    "url": "https://www.notino.ro/armani/emporio-stronger-with-you-intensely-eau-de-parfum-pentru-barbati/"
   },
   {
     "fragrance": "armani_swy_100ml",
     "store": "makeup.ro",
-    "price": "433 RON"
+    "price": "433 RON",
+    "url": "https://makeup.ro/product/429976/"
   },
   {
     "fragrance": "armani_swy_100ml",
     "store": "bestvalue.eu",
-    "price": "422 Lei"
+    "price": "422 Lei",
+    "url": "https://bestvalue.eu/p/apa-de-parfum-emporio-armani-stronger-with-you-intensely-100-ml"
   },
   {
     "fragrance": "armani_swy_100ml",
     "store": "parfumuri-timisoara.ro",
-    "price": "399,00 RON"
+    "price": "399,00 RON",
+    "url": "https://www.parfumuri-timisoara.ro/emporio-armani-stronger-with-you-intensely.html"
   },
   {
     "fragrance": "armani_swy_100ml",
     "store": "parfumu.ro",
-    "price": "439 RON"
+    "price": "439 RON",
+    "url": "https://www.parfumu.ro/parfumuri/parfumuri-pentru-barbati/giorgio-armani-emporio-armani-stronger-with-you-intensely-ap-de-parfum/"
   },
   {
     "fragrance": "armani_swy_100ml",
     "store": "sephora.ro",
-    "price": "600,00 Lei"
+    "price": "600,00 Lei",
+    "url": "https://www.sephora.ro/p/stronger-with-you-intensely---eau-de-parfum-P3592118.html"
   },
   {
     "fragrance": "armani_swy_100ml",
     "store": "douglas.ro",
-    "price": "433,00 RON*"
+    "price": "433,00 RON*",
+    "url": "https://www.douglas.ro/p/armani-stronger-with-you-intensely-eau-de-parfum-063552"
   },
   {
     "fragrance": "armani_swy_100ml",
     "store": "marionnaud.ro",
-    "price": "440.0 RON"
+    "price": "440.0 RON",
+    "url": "https://www.marionnaud.ro/armani/you/stronger-with-you-intense/p/BP_70135?varSel=70137"
   },
   {
     "fragrance": "armani_swy_100ml",
     "store": "simplestore.ro",
-    "price": "420.00 lei"
+    "price": "420.00 lei",
+    "url": "https://www.simplestore.ro/emporio-armani-stronger-with-you-intensely-edp-100-ml"
   },
   {
     "fragrance": "armani_swy_100ml",
     "store": "depozituldecosmetice.ro",
-    "price": "399,00 RON"
+    "price": "399,00 RON",
+    "url": "https://depozituldecosmetice.ro/armani-emporio-stronger-with-you-intensely-apa-de-parfum-100ml.html"
   },
   {
     "fragrance": "jpg_le_male_elixir_125ml",
     "store": "hiris.ro",
-    "price": "533,00 RON"
+    "price": "533,00 RON",
+    "url": "https://www.hiris.ro/parfumuri-pentru-barbati/jean-paul-gaultier/jean-paul-gaultiere-le-male-elixir-apa-de-parfum-barbati"
   },
   {
     "fragrance": "jpg_le_male_elixir_125ml",
     "store": "bestvalue.eu",
-    "price": "449,46 Lei"
+    "price": "449,46 Lei",
+    "url": "https://bestvalue.eu/p/parfum-jean-paul-gaultier-le-male-elixir-parfum-125-ml"
   },
   {
     "fragrance": "jpg_le_male_elixir_125ml",
     "store": "parfumuri-timisoara.ro",
-    "price": "499,00 RON"
+    "price": "499,00 RON",
+    "url": "https://www.parfumuri-timisoara.ro/jean-paul-gaultier-le-male-elixir.html"
   },
   {
     "fragrance": "jpg_le_male_elixir_125ml",
     "store": "sephora.ro",
-    "price": "657,00 Lei"
+    "price": "657,00 Lei",
+    "url": "https://www.sephora.ro/p/le-male---elixir-parfum-P10051068.html"
   },
   {
     "fragrance": "jpg_le_male_elixir_125ml",
     "store": "marionnaud.ro",
-    "price": "671.0 RON"
+    "price": "671.0 RON",
+    "url": "https://www.marionnaud.ro/jp-gaultier/le-male/le-male-elixir-parfum/p/BP_82331?varSel=82332"
   },
   {
     "fragrance": "jpg_le_male_elixir_125ml",
     "store": "depozituldecosmetice.ro",
-    "price": "469,00 RON"
+    "price": "469,00 RON",
+    "url": "https://depozituldecosmetice.ro/jpg-le-male-elixir-apa-de-parfum-125ml.html"
   },
   {
     "fragrance": "jpg_le_beau_le_parfum_125ml",
     "store": "notino.ro",
-    "price": "527 RON"
+    "price": "527 RON",
+    "url": "https://www.notino.ro/jean-paul-gaultier/le-beau-le-parfum-eau-de-parfum-pentru-barbati/"
   },
   {
     "fragrance": "jpg_le_beau_le_parfum_125ml",
     "store": "parfumuri-timisoara.ro",
-    "price": "599,00 RON"
+    "price": "599,00 RON",
+    "url": "https://www.parfumuri-timisoara.ro/jean-paul-gaultier-le-male-le-parfum-22148.html"
   },
   {
     "fragrance": "jpg_le_beau_le_parfum_125ml",
     "store": "sephora.ro",
-    "price": "706,00 Lei"
+    "price": "706,00 Lei",
+    "url": "https://www.sephora.ro/p/le-beau---le-parfum-P10024513.html"
   },
   {
     "fragrance": "jpg_le_beau_le_parfum_125ml",
     "store": "marionnaud.ro",
-    "price": "720.0 RON"
+    "price": "720.0 RON",
+    "url": "https://www.marionnaud.ro/jp-gaultier/le-beau/le-beau-le-parfum/p/BP_79077?varSel=79076"
   },
   {
     "fragrance": "jpg_le_beau_le_parfum_125ml",
     "store": "depozituldecosmetice.ro",
-    "price": "489,00 RON"
+    "price": "489,00 RON",
+    "url": "https://depozituldecosmetice.ro/jpg-le-beau-le-parfum-apa-de-parfum-125ml.html"
   },
   {
     "fragrance": "mancera_instant_crush_120ml",
     "store": "brasty.ro",
-    "price": "397 lei"
+    "price": "397 lei",
+    "url": "https://www.brasty.ro/mancera-instant-crush-eau-de-parfum-unisex-120-ml"
   },
   {
     "fragrance": "mancera_instant_crush_120ml",
     "store": "esentedelux.ro",
-    "price": "429,00 lei"
+    "price": "429,00 lei",
+    "url": "https://esentedelux.ro/parfumuri-unisex/4338-9006-mancera-instant-crush-eau-de-parfum-unisex.html#/23-pentru_cine-unisex/32-tip_produs-eau_de_parfum/78-volum-120_ml"
   },
   {
     "fragrance": "mancera_instant_crush_120ml",
     "store": "parfumss.ro",
-    "price": "412,77 RON"
+    "price": "412,77 RON",
+    "url": "https://www.parfumss.ro/product/37591-mancera-instant-crush.html#1102"
   },
   {
     "fragrance": "mancera_instant_crush_120ml",
     "store": "parfumuri-timisoara.ro",
-    "price": "389,00 RON"
+    "price": "389,00 RON",
+    "url": "https://www.parfumuri-timisoara.ro/mancera-instant-crush-unisex.html"
   },
   {
     "fragrance": "mancera_instant_crush_120ml",
     "store": "parfumu.ro",
-    "price": "Price not found"
+    "price": "Price not found",
+    "url": "https://www.parfumu.ro/parfumuri/parfumuri-unisex/mancera-instant-crush-ap-de-parfum/"
   },
   {
     "fragrance": "mancera_instant_crush_120ml",
     "store": "obsentum.com",
-    "price": "725 lei"
+    "price": "725 lei",
+    "url": "https://obsentum.com/ro/product/OBSENTMERA193134/Instant%20Crush"
   },
   {
     "fragrance": "mancera_french_riviera_120ml",
     "store": "parfumuri-timisoara.ro",
-    "price": "579,00 RON"
+    "price": "579,00 RON",
+    "url": "https://www.parfumuri-timisoara.ro/mancera-french-riviera.html"
   },
   {
     "fragrance": "ch_bad_boy_cobalt_100ml",
     "store": "brasty.ro",
-    "price": "416 lei"
+    "price": "416 lei",
+    "url": "https://www.brasty.ro/carolina-herrera-bad-boy-cobalt-eau-de-parfum-barba-i-100-ml"
   },
   {
     "fragrance": "ch_bad_boy_cobalt_100ml",
     "store": "hiris.ro",
-    "price": "488,00 RON"
+    "price": "488,00 RON",
+    "url": "https://www.hiris.ro/parfumuri-pentru-barbati/carolina-herrera/carolina-herrera-bad-boy-cobalt-apa-de-parfum-barbati"
   },
   {
     "fragrance": "ch_bad_boy_cobalt_100ml",
     "store": "esentedelux.ro",
-    "price": "379,00 lei"
+    "price": "379,00 lei",
+    "url": "https://esentedelux.ro/parfumuri-pentru-barbati/4594-9781-carolina-herrera-bad-boy-cobalt-eau-de-parfum-pentru-barbati.html#/22-pentru_cine-pentru_barbati/32-tip_produs-eau_de_parfum/43-volum-100_ml_tester"
   },
   {
     "fragrance": "ch_bad_boy_cobalt_100ml",
     "store": "parfumss.ro",
-    "price": "459,24 RON"
+    "price": "459,24 RON",
+    "url": "https://www.parfumss.ro/product/39985-carolina-herrera-bad-boy-cobalt.html"
   },
   {
     "fragrance": "ch_bad_boy_cobalt_100ml",
     "store": "vivantis.ro",
-    "price": "424 lei"
+    "price": "424 lei",
+    "url": "https://www.vivantis.ro/parfumuri/carolina-herrera-bad-boy-cobalt-electrique-edp.html"
   },
   {
     "fragrance": "ch_bad_boy_cobalt_100ml",
     "store": "bestvalue.eu",
-    "price": "550 Lei"
+    "price": "550 Lei",
+    "url": "https://bestvalue.eu/p/apa-de-parfum-carolina-herrera-bad-boy-cobalt-100-ml"
   },
   {
     "fragrance": "ch_bad_boy_cobalt_100ml",
     "store": "parfumuri-timisoara.ro",
-    "price": "369,00 RON"
+    "price": "369,00 RON",
+    "url": "https://www.parfumuri-timisoara.ro/carolina-herrera-bad-boy-cobalt.html"
   },
   {
     "fragrance": "ch_bad_boy_cobalt_100ml",
     "store": "sephora.ro",
-    "price": "650,00 Lei"
+    "price": "650,00 Lei",
+    "url": "https://www.sephora.ro/p/bad-boy-cobalt---eau-de-parfum-P10024472.html"
   },
   {
     "fragrance": "ch_bad_boy_cobalt_100ml",
     "store": "douglas.ro",
-    "price": "653,00 RON*"
+    "price": "653,00 RON*",
+    "url": "https://www.douglas.ro/p/carolina-herrera-bad-boy-cobalt-eau-de-parfum-499562"
   },
   {
     "fragrance": "ch_bad_boy_cobalt_100ml",
     "store": "marionnaud.ro",
-    "price": "668.0 RON"
+    "price": "668.0 RON",
+    "url": "https://www.marionnaud.ro/carolina-herrera/bad-boy/bad-boy-cobalt-apa-de-parfum/p/BP_79075?varSel=79074"
   },
   {
     "fragrance": "ch_bad_boy_cobalt_100ml",
     "store": "simplestore.ro",
-    "price": "420.00 lei"
+    "price": "420.00 lei",
+    "url": "https://www.simplestore.ro/carolina-herrera-bad-boy-cobalt-edp-electrique-100-ml"
   },
   {
     "fragrance": "ch_bad_boy_cobalt_100ml",
     "store": "depozituldecosmetice.ro",
-    "price": "449,00 RON"
+    "price": "449,00 RON",
+    "url": "https://depozituldecosmetice.ro/carolina-herrera-bad-boy-cobalt-apa-de-parfum-100ml.html"
   },
   {
     "fragrance": "dior_homme_intense_100ml",
     "store": "brasty.ro",
-    "price": "569 lei"
+    "price": "569 lei",
+    "url": "https://www.brasty.ro/dior-christian-dior-dior-homme-intense-2020-eau-de-parfum-barba-i-100-ml"
   },
   {
     "fragrance": "dior_homme_intense_100ml",
     "store": "hiris.ro",
-    "price": "577,00 RON"
+    "price": "577,00 RON",
+    "url": "https://www.hiris.ro/parfumuri-pentru-barbati/christian-dior/dior-homme-intense-apa-de-parfum"
   },
   {
     "fragrance": "dior_homme_intense_100ml",
     "store": "esentedelux.ro",
-    "price": "485,00 lei"
+    "price": "485,00 lei",
+    "url": "https://esentedelux.ro/parfumuri-pentru-barbati/398-1003-christian-dior-dior-homme-intense-eau-de-parfum-pentru-barbati.html#/22-pentru_cine-pentru_barbati/32-tip_produs-eau_de_parfum/36-volum-100_ml"
   },
   {
     "fragrance": "dior_homme_intense_100ml",
     "store": "notino.ro",
-    "price": "599 RON"
+    "price": "599 RON",
+    "url": "https://www.notino.ro/dior/dior-homme-intense-2011-eau-de-parfum-pentru-barbati/"
   },
   {
     "fragrance": "dior_homme_intense_100ml",
     "store": "parfumss.ro",
-    "price": "487,62 RON"
+    "price": "487,62 RON",
+    "url": "https://www.parfumss.ro/product/4308-dior-homme-intense.html#629"
   },
   {
     "fragrance": "dior_homme_intense_100ml",
     "store": "parfimo.ro",
-    "price": "534,50 LEI"
+    "price": "534,50 LEI",
+    "url": "https://www.parfimo.ro/dior-dior-homme-intense-2020-apa-de-parfum-pentru-barbati-100-ml/"
   },
   {
     "fragrance": "dior_homme_intense_100ml",
     "store": "makeup.ro",
-    "price": "568 RON"
+    "price": "568 RON",
+    "url": "https://makeup.ro/product/1354/"
   },
   {
     "fragrance": "dior_homme_intense_100ml",
     "store": "vivantis.ro",
-    "price": "568 lei"
+    "price": "568 lei",
+    "url": "https://www.vivantis.ro/parfumuri/dior-dior-homme-intense-edp.html?c=pCI174100"
   },
   {
     "fragrance": "dior_homme_intense_100ml",
     "store": "bestvalue.eu",
-    "price": "575 Lei"
+    "price": "575 Lei",
+    "url": "https://bestvalue.eu/p/apa-de-parfum-dior-homme-intense-100-ml"
   },
   {
     "fragrance": "dior_homme_intense_100ml",
     "store": "parfumuri-timisoara.ro",
-    "price": "489,00 RON"
+    "price": "489,00 RON",
+    "url": "https://www.parfumuri-timisoara.ro/dior-homme-intense-18402.html"
   },
   {
     "fragrance": "dior_homme_intense_100ml",
     "store": "parfumu.ro",
-    "price": "539 RON"
+    "price": "539 RON",
+    "url": "https://www.parfumu.ro/parfumuri/parfumuri-pentru-barbati/christian-dior-homme-intense-ap-de-parfum/"
   },
   {
     "fragrance": "dior_homme_intense_100ml",
     "store": "sephora.ro",
-    "price": "690,00 Lei"
+    "price": "690,00 Lei",
+    "url": "https://www.sephora.ro/p/dior-homme-intense---eau-de-parfum-for-men-P53514.html"
   },
   {
     "fragrance": "dior_homme_intense_100ml",
     "store": "douglas.ro",
-    "price": "607,00 RON*"
+    "price": "607,00 RON*",
+    "url": "https://www.douglas.ro/p/dior-dior-homme-intense-eau-de-parfum-406858"
   },
   {
     "fragrance": "dior_homme_intense_100ml",
     "store": "depozituldecosmetice.ro",
-    "price": "439,00 RON"
+    "price": "439,00 RON",
+    "url": "https://depozituldecosmetice.ro/dior-homme-intense-apa-de-parfum-100ml.html"
   },
   {
     "fragrance": "tom_ford_noir_50ml",
     "store": "brasty.ro",
-    "price": "458 lei"
+    "price": "458 lei",
+    "url": "https://www.brasty.ro/tom-ford-noir-eau-de-parfum-barbati-50-ml"
   },
   {
     "fragrance": "tom_ford_noir_50ml",
     "store": "hiris.ro",
-    "price": "537,00 RON"
+    "price": "537,00 RON",
+    "url": "https://www.hiris.ro/parfumuri-pentru-barbati/tom-ford/tom-ford-noir-barbati-apa-de-parfum"
   },
   {
     "fragrance": "tom_ford_noir_50ml",
     "store": "esentedelux.ro",
-    "price": "469,00 lei"
+    "price": "469,00 lei",
+    "url": "https://esentedelux.ro/parfumuri-pentru-barbati/1403-3343-tom-ford-noir-eau-de-parfum-pentru-barbati.html#/22-pentru_cine-pentru_barbati/32-tip_produs-eau_de_parfum/35-volum-50_ml"
   },
   {
     "fragrance": "tom_ford_noir_50ml",
     "store": "notino.ro",
-    "price": "Price not found"
+    "price": "Price not found",
+    "url": "https://www.notino.ro/tom-ford/noir-eau-de-parfum-pentru-barbati/p-86043/"
   },
   {
     "fragrance": "tom_ford_noir_50ml",
     "store": "parfumss.ro",
-    "price": "657,90 RON"
+    "price": "657,90 RON",
+    "url": "https://www.parfumss.ro/product/10425-tom-ford-noir-for-men.html#612"
   },
   {
     "fragrance": "tom_ford_noir_50ml",
     "store": "parfimo.ro",
-    "price": "467,10 LEI"
+    "price": "467,10 LEI",
+    "url": "https://www.parfimo.ro/tom-ford-noir-apa-de-parfum-pentru-barbati-50-ml/"
   },
   {
     "fragrance": "tom_ford_noir_50ml",
     "store": "vivantis.ro",
-    "price": "450 lei"
+    "price": "450 lei",
+    "url": "https://www.vivantis.ro/parfumuri/noir-edp.html?c=pTF00350"
   },
   {
     "fragrance": "tom_ford_noir_50ml",
     "store": "bestvalue.eu",
-    "price": "670 Lei"
+    "price": "670 Lei",
+    "url": "https://bestvalue.eu/p/parfumuri-niche-tom-ford-noir-50-ml"
   },
   {
     "fragrance": "tom_ford_noir_50ml",
     "store": "parfumuri-timisoara.ro",
-    "price": "439,00 RON"
+    "price": "439,00 RON",
+    "url": "https://www.parfumuri-timisoara.ro/tom-ford-tom-ford-noir.html"
   },
   {
     "fragrance": "tom_ford_noir_50ml",
     "store": "parfumu.ro",
-    "price": "489 RON"
+    "price": "489 RON",
+    "url": "https://www.parfumu.ro/parfumuri/parfumuri-pentru-barbati/tom-ford-noir-ap-de-parfum/"
   },
   {
     "fragrance": "tom_ford_noir_50ml",
     "store": "sephora.ro",
-    "price": "770,00 Lei"
+    "price": "770,00 Lei",
+    "url": "https://www.sephora.ro/p/tom-ford-noir---eau-de-parfum-256698.html"
   },
   {
     "fragrance": "tom_ford_noir_50ml",
     "store": "depozituldecosmetice.ro",
-    "price": "544,00 RON"
+    "price": "544,00 RON",
+    "url": "https://depozituldecosmetice.ro/tom-ford-noir-pour-homme-apa-de-parfum.html"
   },
   {
     "fragrance": "lattafa_khamrah_100ml",
     "store": "brasty.ro",
-    "price": "161 lei"
+    "price": "161 lei",
+    "url": "https://www.brasty.ro/lattafa-khamrah-eau-de-parfum-unisex-100-ml"
   },
   {
     "fragrance": "lattafa_khamrah_100ml",
     "store": "parfumss.ro",
-    "price": "206,37 RON"
+    "price": "206,37 RON",
+    "url": "https://www.parfumss.ro/product/43342-lattafa-khamrah.html"
   },
   {
     "fragrance": "lattafa_khamrah_100ml",
     "store": "vivantis.ro",
-    "price": "214 lei"
+    "price": "214 lei",
+    "url": "https://www.vivantis.ro/parfumuri/lattafa-khamrah-edp.html?c=pLTF096100"
   },
   {
     "fragrance": "lattafa_khamrah_100ml",
     "store": "parfumuri-timisoara.ro",
-    "price": "209,00 RON"
+    "price": "209,00 RON",
+    "url": "https://www.parfumuri-timisoara.ro/lattafa-khamrah-22879.html"
   },
   {
     "fragrance": "prada_lhomme_intense_100ml",
     "store": "esentedelux.ro",
-    "price": "499,00 lei"
+    "price": "499,00 lei",
+    "url": "https://esentedelux.ro/parfumuri-pentru-barbati/3586-7408-prada-l-homme-intense-eau-de-parfum-pentru-barbati.html#/22-pentru_cine-pentru_barbati/32-tip_produs-eau_de_parfum/36-volum-100_ml"
   },
   {
     "fragrance": "prada_lhomme_intense_100ml",
     "store": "sephora.ro",
-    "price": "720,00 Lei"
+    "price": "720,00 Lei",
+    "url": "https://www.sephora.ro/p/l-homme-prada-intense---eau-de-parfum-405180.html"
   },
   {
     "fragrance": "prada_lhomme_intense_100ml",
     "store": "douglas.ro",
-    "price": "717,00 RON*"
+    "price": "717,00 RON*",
+    "url": "https://www.douglas.ro/p/prada-l-homme-intense-eau-de-parfum-971573"
   }
 ]

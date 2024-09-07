@@ -1,7 +1,13 @@
 import React from 'react';
 import './FragranceCard.css';
 
-function FragranceCard({ fragrance, prices, imageUrl }) {    
+function FragranceCard({ fragrance, prices, imageUrl }) { 
+    
+    const formatFragranceName = (name) => {
+        return name
+            .replace(/_/g, ' ')  // Replace underscores with spaces
+            .replace(/\b\w/g, (char) => char.toUpperCase());  // Capitalize the first letter of each word
+    };
 
     return (
         <div className="fragrance-card">
@@ -13,11 +19,15 @@ function FragranceCard({ fragrance, prices, imageUrl }) {
 
             {/* Right side: List of Prices */}
             <div className="fragrance-card-details">
-                <h4>Prices from stores for {fragrance}:</h4>
+                <h4>Prices from stores for <span className='fragrance-card-name'>{formatFragranceName(fragrance)}</span>:</h4>
                 <ul className="fragrance-card-price-list">
                     {prices.map((price, index) => (
                         <li key={index}>
-                            <strong>Store:</strong> {price.store}, <strong>Price:</strong> {price.price}
+                            <strong>Store: </strong>
+                            <a href={price.url} target="_blank" rel="noopener noreferrer">
+                                {price.store}
+                            </a>, 
+                            <strong> Price:</strong> {price.price}
                         </li>
                     ))}
                 </ul>

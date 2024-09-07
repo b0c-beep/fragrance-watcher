@@ -11,7 +11,7 @@
     border-radius: 8px;
   }
   
-  .fragrance-card-display {
+.fragrance-card-display {
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -19,31 +19,37 @@
     padding-right: 20px;
   }
   
-  .fragrance-card-display img {
+.fragrance-card-display img {
     width: 150px;
     height: 150px;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: 4px;
     justify-content: center;
   }
   
-  .fragrance-card-details {
+.fragrance-card-details {
     padding: 20px;
   }
   
-  .fragrance-card-title {
+.fragrance-card-title {
     margin-top: 10px;
     font-size: 16px;
     font-weight: bold;
   }
   
-  .fragrance-card-price-list {
+.fragrance-card-price-list {
     list-style-type: none;
     padding: 0;
     margin: 0;
   }
   
-  .fragrance-card-price-list li {
+.fragrance-card-price-list li {
     margin-bottom: 8px;
   }
   
+.fragrance-card-name{
+    font-family: 'Courier New', Courier, monospace;
+    padding: 10px;
+    font-size: 15px;
+}
+

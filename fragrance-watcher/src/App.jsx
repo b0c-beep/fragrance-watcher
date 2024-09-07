@@ -15,6 +15,12 @@ function App() {
         }
     }, []);
 
+    const extractPriceValue = (price) => {
+        const number = parseFloat(price.replace(/[^0-9.,]/g, '').replace(',', '.'));
+        return isNaN(number) ? 0 : number;
+    };
+    
+
     const handleRunScript = async () => {
         setLoading(true);
         setError(null);
@@ -47,6 +53,15 @@ function App() {
         return acc;
     }, {});
 
+
+    const sortedGroupedPrices = Object.keys(groupedPrices).reduce((acc, fragrance) => {
+        acc[fragrance] = groupedPrices[fragrance].sort((a, b) => {
+            return extractPriceValue(a.price) - extractPriceValue(b.price);
+        });
+        return acc;
+    }, {});
+
+
     return (
         <div>
             <button onClick={handleRunScript} disabled={loading}>
@@ -56,11 +71,11 @@ function App() {
 
             {/* Render fragrance cards */}
             <div className="fragrance-group">
-                {Object.keys(groupedPrices).map((fragrance, index) => (
+                {Object.keys(sortedGroupedPrices).map((fragrance, index) => (
                     <FragranceCard
                         key={index}
                         fragrance={fragrance}
-                        prices={groupedPrices[fragrance]}
+                        prices={sortedGroupedPrices[fragrance]}
                         imageUrl={`/images/${fragrance.replace(/\s+/g, '_').toLowerCase()}.jpg`}
                     />
                 ))}

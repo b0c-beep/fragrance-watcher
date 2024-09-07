@@ -5,6 +5,7 @@ import axios from 'axios';
 import * as cheerio from 'cheerio';
 import pLimit from 'p-limit';
 import psTree from 'ps-tree';
+import { url } from 'inspector';
 
 // Apply stealth plugin to Puppeteer
 puppeteer.use(StealthPlugin());
@@ -30,7 +31,7 @@ const basicFetch = async (page, store, details, fragrance, quantity) => {
         }, details.price_selector);
 
         console.log(`\x1b[32mPrice at ${store} for ${fragrance}: ${price}\x1b[0m`);
-        return { fragrance, store, price };
+        return { fragrance, store, price, url: details.url };
     } catch (error) {
         console.error(`Error fetching price from ${store} for ${fragrance}:`, error);
     }
@@ -67,7 +68,7 @@ const douglasFetch = async (page, store, details, fragrance, quantity) => {
         });
 
         console.log(`\x1b[32mPrice at ${store} for ${fragrance}: ${price}\x1b[0m`);
-        return { fragrance, store, price };
+        return { fragrance, store, price, url: details.url };
     } catch (error) {
         console.error(`Error fetching price from ${store} for ${fragrance}:`, error);
     } finally {
@@ -99,7 +100,7 @@ const notinoFetch = async (page, store, details, fragrance, quantity) => {
         }
 
         console.log(`\x1b[32mPrice at ${store} for ${fragrance}: ${price}\x1b[0m`);
-        return { fragrance, store, price };
+        return { fragrance, store, price, url: details.url };
     }
     catch (error) {
         console.error(`Error fetching price from ${store} for ${fragrance}:`, error);
@@ -138,7 +139,7 @@ const marionnaudFetch = async (page, store, details, fragrance, quantity) => {
         });
 
         console.log(`\x1b[32mPrice at ${store} for ${fragrance}: ${price}\x1b[0m`);
-        return { fragrance, store, price };
+        return { fragrance, store, price, url: details.url };
     } catch (error) {
         console.error(`Error fetching price from ${store} for ${fragrance}:`, error);
     }
@@ -165,7 +166,7 @@ const hirisFetch = async (page, store, details, fragrance, quantity) => {
         }
 
         console.log(`\x1b[32mPrice at ${store} for ${fragrance}: ${price}\x1b[0m`);
-        return { fragrance, store, price };
+        return { fragrance, store, price, url: details.url };
     }catch (error) {
         console.error(`Error fetching price from ${store} for ${fragrance}:`, error);
     }
@@ -189,7 +190,7 @@ const parfumuFetch = async (page, store, details, fragrance, quantity) => {
         }
 
         console.log(`\x1b[32mPrice at ${store} for ${fragrance}: ${price}\x1b[0m`);
-        return { fragrance, store, price };
+        return { fragrance, store, price, url: details.url };
     } catch (error) {
         console.error(`Error fetching price from ${store} for ${fragrance}:`, error);
     }
@@ -222,7 +223,7 @@ const makeupFetch = async (page, store, details, fragrance, quantity) => {
         }
 
         console.log(`\x1b[32mPrice at ${store} for ${fragrance}: ${price}\x1b[0m`);
-        return { fragrance, store, price };
+        return { fragrance, store, price, url: details.url };
 
     } catch (error) {
         console.error(`Error fetching price from ${store} for ${fragrance}:`, error);
@@ -241,7 +242,7 @@ const brastyFetch = async (page, store, details, fragrance, quantity) => {
         price = priceText;
 
         console.log(`\x1b[32mPrice at ${store} for ${fragrance}: ${price}\x1b[0m`);
-        return { fragrance, store, price };
+        return { fragrance, store, price, url: details.url };
     } catch (error) {
         console.error(`Error fetching price from ${store} for ${fragrance}:`, error);
     }
@@ -259,7 +260,7 @@ const obsentumFetch = async (page, store, details, fragrance, quantity) => {
         price = priceText;
 
         console.log(`\x1b[32mFetching from ${store}. for ${fragrance}: ${price}\x1b[0m`);
-        return { fragrance, store, price };
+        return { fragrance, store, price, url: details.url };
     }
     catch (error) {
         console.error(`Error fetching price from ${store} for ${fragrance}:`, error);
@@ -292,7 +293,7 @@ const parfumuritimisoaraFetch = async (page, store, details, fragrance, quantity
             }
 
             console.log(`\x1b[32mFetching from ${store}. for ${fragrance}: ${price}\x1b[0m`);
-            return { fragrance, store, price };
+            return { fragrance, store, price, url: details.url};
         }
     } catch (error) {
         console.error(`Error fetching price from ${store} for ${fragrance}:`, error);
@@ -319,7 +320,7 @@ const vivantisFetch = async (page, store, details, fragrance, quantity) => {
         }
 
         console.log(`\x1b[32mFetching from ${store}. for ${fragrance}: ${price}\x1b[0m`);
-        return { fragrance, store, price };
+        return { fragrance, store, price, url: details.url };
     } catch (error) {
         console.error(`Error fetching price from ${store} for ${fragrance}:`, error);
     }
@@ -349,7 +350,7 @@ const sephoraFetch = async (page, store, details, fragrance, quantity) => {
         }
 
         console.log(`\x1b[32mFetching from ${store}. for ${fragrance}: ${price}\x1b[0m`);
-        return { fragrance, store, price };
+        return { fragrance, store, price, url: details.url };
     }
     catch (error) {
         console.error(`Error fetching price from ${store} for ${fragrance}:`, error);
