@@ -31,11 +31,15 @@
     "store": "hiris.ro",
     "price": "517,00 RON"
   },
-  null,
+  {
+    "fragrance": "armani_swy_100ml",
+    "store": "esentedelux.ro",
+    "price": "399,00 lei"
+  },
   {
     "fragrance": "armani_swy_100ml",
     "store": "notino.ro",
-    "price": "501 RON"
+    "price": "433 RON"
   },
   {
     "fragrance": "armani_swy_100ml",
@@ -52,7 +56,11 @@
     "store": "parfumuri-timisoara.ro",
     "price": "399,00 RON"
   },
-  null,
+  {
+    "fragrance": "armani_swy_100ml",
+    "store": "parfumu.ro",
+    "price": "439 RON"
+  },
   {
     "fragrance": "armani_swy_100ml",
     "store": "sephora.ro",
@@ -66,7 +74,7 @@
   {
     "fragrance": "armani_swy_100ml",
     "store": "marionnaud.ro",
-    "price": "615.0 RON"
+    "price": "440.0 RON"
   },
   {
     "fragrance": "armani_swy_100ml",
@@ -86,7 +94,7 @@
   {
     "fragrance": "jpg_le_male_elixir_125ml",
     "store": "bestvalue.eu",
-    "price": "600 Lei"
+    "price": "449,46 Lei"
   },
   {
     "fragrance": "jpg_le_male_elixir_125ml",
@@ -111,7 +119,7 @@
   {
     "fragrance": "jpg_le_beau_le_parfum_125ml",
     "store": "notino.ro",
-    "price": "Price not found"
+    "price": "527 RON"
   },
   {
     "fragrance": "jpg_le_beau_le_parfum_125ml",
@@ -136,7 +144,7 @@
   {
     "fragrance": "mancera_instant_crush_120ml",
     "store": "brasty.ro",
-    "price": "400 lei"
+    "price": "397 lei"
   },
   {
     "fragrance": "mancera_instant_crush_120ml",
@@ -156,7 +164,7 @@
   {
     "fragrance": "mancera_instant_crush_120ml",
     "store": "parfumu.ro",
-    "price": "389 RON"
+    "price": "Price not found"
   },
   {
     "fragrance": "mancera_instant_crush_120ml",
@@ -171,7 +179,7 @@
   {
     "fragrance": "ch_bad_boy_cobalt_100ml",
     "store": "brasty.ro",
-    "price": "407 lei"
+    "price": "416 lei"
   },
   {
     "fragrance": "ch_bad_boy_cobalt_100ml",
@@ -191,7 +199,7 @@
   {
     "fragrance": "ch_bad_boy_cobalt_100ml",
     "store": "vivantis.ro",
-    "price": "418 lei"
+    "price": "424 lei"
   },
   {
     "fragrance": "ch_bad_boy_cobalt_100ml",
@@ -231,7 +239,7 @@
   {
     "fragrance": "dior_homme_intense_100ml",
     "store": "brasty.ro",
-    "price": "559 lei"
+    "price": "569 lei"
   },
   {
     "fragrance": "dior_homme_intense_100ml",
@@ -246,7 +254,7 @@
   {
     "fragrance": "dior_homme_intense_100ml",
     "store": "notino.ro",
-    "price": "598 RON"
+    "price": "599 RON"
   },
   {
     "fragrance": "dior_homme_intense_100ml",
@@ -256,17 +264,17 @@
   {
     "fragrance": "dior_homme_intense_100ml",
     "store": "parfimo.ro",
-    "price": "664,30 LEI"
+    "price": "534,50 LEI"
   },
   {
     "fragrance": "dior_homme_intense_100ml",
     "store": "makeup.ro",
-    "price": "546 RON"
+    "price": "568 RON"
   },
   {
     "fragrance": "dior_homme_intense_100ml",
     "store": "vivantis.ro",
-    "price": "536 lei"
+    "price": "568 lei"
   },
   {
     "fragrance": "dior_homme_intense_100ml",
@@ -301,7 +309,7 @@
   {
     "fragrance": "tom_ford_noir_50ml",
     "store": "brasty.ro",
-    "price": "455 lei"
+    "price": "458 lei"
   },
   {
     "fragrance": "tom_ford_noir_50ml",
@@ -316,7 +324,7 @@
   {
     "fragrance": "tom_ford_noir_50ml",
     "store": "notino.ro",
-    "price": "720 RON"
+    "price": "Price not found"
   },
   {
     "fragrance": "tom_ford_noir_50ml",
@@ -361,7 +369,7 @@
   {
     "fragrance": "lattafa_khamrah_100ml",
     "store": "brasty.ro",
-    "price": "163 lei"
+    "price": "161 lei"
   },
   {
     "fragrance": "lattafa_khamrah_100ml",
