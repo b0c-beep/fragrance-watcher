@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import FragranceCard from './FragranceCard';
+import './App.css';
 
 function App() {
     const [prices, setPrices] = useState([]);
@@ -49,18 +50,18 @@ function App() {
     return (
         <div>
             <button onClick={handleRunScript} disabled={loading}>
-                {loading ? 'Running...' : 'Run Script'}
+                {loading ? 'Fetching...' : 'Fetch Prices'}
             </button>
             {error && <p>{error}</p>}
 
             {/* Render fragrance cards */}
-            <div>
+            <div className="fragrance-group">
                 {Object.keys(groupedPrices).map((fragrance, index) => (
                     <FragranceCard
                         key={index}
                         fragrance={fragrance}
                         prices={groupedPrices[fragrance]}
-                        imageUrl={`https://via.placeholder.com/150?text=${encodeURIComponent(fragrance)}`}
+                        imageUrl={`/images/${fragrance.replace(/\s+/g, '_').toLowerCase()}.jpg`}
                     />
                 ))}
             </div>

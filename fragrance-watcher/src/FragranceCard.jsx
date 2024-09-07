@@ -1,9 +1,7 @@
 import React from 'react';
 import './FragranceCard.css';
 
-function FragranceCard({ fragrance, prices }) {
-    // Placeholder image; replace with your actual image URL or logic
-    const imageUrl = 'https://via.placeholder.com/150';
+function FragranceCard({ fragrance, prices, imageUrl }) {    
 
     return (
         <div className="fragrance-card">
