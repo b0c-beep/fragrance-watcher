@@ -25,10 +25,21 @@ const storage = multer.diskStorage({
         cb(null, imagesPath);  // Directory to save images
     },
     filename: (req, file, cb) => {
-        const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9);
-        cb(null, `${uniqueSuffix}-${file.originalname}`);
+         // Use the title from the request body as the file name
+         const title = req.body.title || 'untitled';
+        
+         // Replace any characters that are not letters, numbers, or underscores
+         const sanitizedTitle = title.replace(/[^a-zA-Z0-9_]/g, '_');
+         
+         // Extract the original file extension
+         const fileExtension = path.extname(file.originalname);
+         
+         // Set the filename as the sanitized title with the original file extension
+         cb(null, `${sanitizedTitle}${fileExtension}`);
     }
 });
+
+const upload = multer({ storage });
 
 // Endpoint to run the script
 app.get('/run-script', (req, res) => {
@@ -102,14 +113,21 @@ app.post('/fragrances', (req, res) => {
         let jsonData;
         try {
             jsonData = JSON.parse(data);
+            
+            if(req.file){
+                newFragrance.image = `images/${req.file.filename}`;
+            }
+
         } catch (parseError) {
             console.error(`Error parsing JSON: ${parseError}`);
             return res.status(500).send(`Error parsing JSON: ${parseError.message}`);
         }
 
+        
         // Add the new fragrance to the JSON data
         const fragranceKey = Object.keys(newFragrance)[0];
         jsonData[fragranceKey] = newFragrance[fragranceKey];
+        
 
         // Write the updated JSON data back to the file
         fs.writeFile(filePath, JSON.stringify(jsonData, null, 2), 'utf8', (writeErr) => {

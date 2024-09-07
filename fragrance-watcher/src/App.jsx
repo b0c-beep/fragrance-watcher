@@ -84,7 +84,8 @@ function App() {
                         key={index}
                         fragrance={fragrance}
                         prices={sortedGroupedPrices[fragrance]}
-                        imageUrl={`/images/${fragrance.replace(/\s+/g, '_').toLowerCase()}.jpg`}
+                        imageUrl={`/images/${fragrance.replace(/\s+/g, '_').toLowerCase()}.jpg` 
+                        || `/images/${fragrance.replace(/\s+/g, '_').toLowerCase()}.png`}
                     />
                 ))}
             </div>
