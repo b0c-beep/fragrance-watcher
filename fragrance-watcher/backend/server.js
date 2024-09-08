@@ -204,7 +204,38 @@ app.post('/upload-image', upload.single('image'), (req, res) => {
 app.delete('/fragrances/:name', (req, res) => {
     const fragranceName = req.params.name;  // Get the fragrance name from the URL parameter
     const filePath = path.join(__dirname, '', 'fragrances.json');  // Path to the JSON file
-    const imageFilePath = path.join(__dirname, '..', 'public', 'images', `${fragranceName}.png`);  // Path to the image file
+    
+    // Function to find the correct image file extension
+    const findImageFilePath = (fragranceName) => {
+        const imagesDir = path.join(__dirname, '..', 'public', 'images');
+
+        // Read all files in the directory
+        const files = fs.readdirSync(imagesDir);
+
+        // Arrays to store names and extensions
+        const names = [];
+        const extensions = [];
+
+        // Split names and extensions
+        files.forEach(file => {
+            const extname = path.extname(file);
+            const basename = path.basename(file, extname);
+            names.push(basename);
+            extensions.push(extname);
+        });
+
+        // Find the index of the fragranceName
+        const index = names.indexOf(fragranceName);
+
+        if (index === -1) {
+            return null;  // File not found
+        }
+
+        // Recombine name and extension
+        return path.join(imagesDir, `${fragranceName}${extensions[index]}`);
+    };
+
+    let imageFilePath = findImageFilePath(fragranceName);  // Get the image file path
 
     // Read the JSON file to get the current fragrances
     fs.readFile(filePath, 'utf8', (err, data) => {
