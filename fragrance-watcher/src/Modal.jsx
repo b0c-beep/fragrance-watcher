@@ -31,7 +31,7 @@ function Modal({ isOpen, onClose }) {
 
     const handleImageChange = (event) => {
         if (event.target.files.length > 0) {
-            setImage(URL.createObjectURL(event.target.files[0]));
+            setImage(event.target.files[0]);
         }
     };
 
@@ -46,10 +46,12 @@ function Modal({ isOpen, onClose }) {
     };
 
     const handleSubmit = async () => {
+
+        // Construct the new fragrance object
         const newFragrance = {
             [title.replace(/\s+/g, '_').toLowerCase()]: {
                 quantity,
-                ...links
+                ...links  // Spread the flattened links directly here
             }
         };
     
@@ -72,7 +74,33 @@ function Modal({ isOpen, onClose }) {
     
             // Success: Fragrance added successfully
             console.log('Fragrance added successfully');
-            //onAddFragrance(newFragrance);  // Notify parent component
+
+            // If there is an image, upload it separately
+            if (image) {
+                const formData = new FormData();
+                formData.append('image', image);  // Append the image to the FormData
+                formData.append('title', title);  // Append the title or any other identifier
+
+                if (!title) {
+                    console.error('Title is required');
+                    return;
+                }
+
+                const imageResponse = await fetch('http://localhost:5000/upload-image', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                if (!imageResponse.ok) {
+                    const errorText = await imageResponse.text();
+                    console.error('Failed to upload image:', errorText);
+                    alert(`Failed to upload image: ${errorText}`);
+                    return;
+                }
+
+                console.log('Image uploaded successfully');
+            }
+
             onClose();  // Close the modal only after a successful addition
         } catch (error) {
             // Handle network errors or JSON parsing errors

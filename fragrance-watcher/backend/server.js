@@ -12,6 +12,7 @@ const port = 5000;
 
 app.use(cors());
 app.use(express.json());
+//app.use(express.urlencoded({ extended: true }));
 
 // Get __dirname for ES modules
 const __filename = fileURLToPath(import.meta.url);
@@ -25,17 +26,22 @@ const storage = multer.diskStorage({
         cb(null, imagesPath);  // Directory to save images
     },
     filename: (req, file, cb) => {
-         // Use the title from the request body as the file name
-         const title = req.body.title || 'untitled';
         
-         // Replace any characters that are not letters, numbers, or underscores
-         const sanitizedTitle = title.replace(/[^a-zA-Z0-9_]/g, '_');
+        const title = req.body.title; // Access the title from req.body
+        if (!title) {
+            //console.error('Title is missing. Using "untitled" as fallback.');
+            return cb(null, 'untitled' + path.extname(file.originalname));  // Fallback to "untitled"
+        }
+        
+        // Replace any characters that are not letters, numbers, or underscores
+        const sanitizedTitle = title.replace(/[^a-zA-Z0-9_]/g, '_');
          
-         // Extract the original file extension
-         const fileExtension = path.extname(file.originalname);
+        // Extract the original file extension
+        const fileExtension = path.extname(file.originalname);
          
-         // Set the filename as the sanitized title with the original file extension
-         cb(null, `${sanitizedTitle}${fileExtension}`);
+        // Set the filename as the sanitized title with the original file extension
+        cb(null, `${sanitizedTitle}${fileExtension}`);
+       
     }
 });
 
@@ -102,6 +108,7 @@ app.get('/fragrances', (req, res) => {
 // Endpoint to add a new fragrance
 app.post('/fragrances', (req, res) => {
     const newFragrance = req.body;
+
     const filePath = path.join(__dirname, '', 'fragrances.json');
 
     fs.readFile(filePath, 'utf8', (err, data) => {
@@ -113,10 +120,6 @@ app.post('/fragrances', (req, res) => {
         let jsonData;
         try {
             jsonData = JSON.parse(data);
-            
-            if(req.file){
-                newFragrance.image = `images/${req.file.filename}`;
-            }
 
         } catch (parseError) {
             console.error(`Error parsing JSON: ${parseError}`);
@@ -139,6 +142,39 @@ app.post('/fragrances', (req, res) => {
             res.status(201).send('Fragrance added successfully');
         });
     });
+});
+
+// New endpoint to handle image uploads
+app.post('/upload-image', upload.single('image'), (req, res) => {
+    //console.log('Title received:', req.body.title);  // Log to debug
+    //console.log('File received:', req.file);  // Log file details to ensure multer is working correctly
+    const title = req.body.title; // Access the title from req.body
+    const originalFilePath = req.file.path; // Original file path (untitled)
+
+    if (!title) {
+        return res.status(400).send('Title is required.');
+    }
+
+    const sanitizedTitle = title.replace(/[^a-zA-Z0-9_]/g, '_'); // Sanitize the title
+    const fileExtension = path.extname(req.file.originalname); // Extract original file extension
+    const newFileName = `${sanitizedTitle}${fileExtension}`; // New file name
+    const newFilePath = path.join(req.file.destination, newFileName); // New file path
+
+    // Rename the file after it has been uploaded
+    fs.rename(originalFilePath, newFilePath, (err) => {
+        if (err) {
+        console.error('Error renaming file:', err);
+        return res.status(500).send('Error renaming file.');
+        }
+
+        if (!req.file) {
+            return res.status(400).send('No image uploaded.');
+        }
+    });
+
+    const imagePath = `images/${req.file.filename}`;  // Get the image path
+
+    res.status(201).send({ message: 'Image uploaded successfully', imagePath});
 });
 
 
