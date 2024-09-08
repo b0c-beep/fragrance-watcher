@@ -29,6 +29,7 @@
 }
 
 .navbar-button {
+    min-width: 100px;
     background-color: #696867; /* Adjust the button color */
     color: #fff;
     border: none;

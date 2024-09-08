@@ -105,6 +105,28 @@ app.get('/fragrances', (req, res) => {
     });
 });
 
+// New endpoint to get fragrance names only
+app.get('/fragrance-names', (req, res) => {
+    const filePath = path.join(__dirname, '', 'fragrances.json');
+
+    fs.readFile(filePath, 'utf8', (err, data) => {
+        if (err) {
+            console.error(`Error reading JSON file: ${err}`);
+            return res.status(500).send(`Error reading JSON file: ${err.message}`);
+        }
+
+        try {
+            const jsonData = JSON.parse(data);
+            // Extract the keys (fragrance names)
+            const fragranceNames = Object.keys(jsonData);
+            res.json(fragranceNames);
+        } catch (parseError) {
+            console.error(`Error parsing JSON: ${parseError}`);
+            res.status(500).send(`Error parsing JSON: ${parseError.message}`);
+        }
+    });
+});
+
 // Endpoint to add a new fragrance
 app.post('/fragrances', (req, res) => {
     const newFragrance = req.body;
@@ -175,6 +197,58 @@ app.post('/upload-image', upload.single('image'), (req, res) => {
     const imagePath = `images/${req.file.filename}`;  // Get the image path
 
     res.status(201).send({ message: 'Image uploaded successfully', imagePath});
+});
+
+
+// Endpoint to delete a specific fragrance by its name
+app.delete('/fragrances/:name', (req, res) => {
+    const fragranceName = req.params.name;  // Get the fragrance name from the URL parameter
+    const filePath = path.join(__dirname, '', 'fragrances.json');  // Path to the JSON file
+    const imageFilePath = path.join(__dirname, '..', 'public', 'images', `${fragranceName}.png`);  // Path to the image file
+
+    // Read the JSON file to get the current fragrances
+    fs.readFile(filePath, 'utf8', (err, data) => {
+        if (err) {
+            console.error(`Error reading JSON file: ${err}`);
+            return res.status(500).send(`Error reading JSON file: ${err.message}`);
+        }
+
+        let jsonData;
+        try {
+            jsonData = JSON.parse(data);  // Parse the JSON data
+        } catch (parseError) {
+            console.error(`Error parsing JSON: ${parseError}`);
+            return res.status(500).send(`Error parsing JSON: ${parseError.message}`);
+        }
+
+        // Check if the fragrance exists
+        if (!jsonData[fragranceName]) {
+            return res.status(404).send(`Fragrance "${fragranceName}" not found.`);
+        }
+
+        // Delete the fragrance from the JSON data
+        delete jsonData[fragranceName];
+
+        // Write the updated JSON data back to the file
+        fs.writeFile(filePath, JSON.stringify(jsonData, null, 2), 'utf8', (writeErr) => {
+            if (writeErr) {
+                console.error(`Error writing JSON file: ${writeErr}`);
+                return res.status(500).send(`Error writing JSON file: ${writeErr.message}`);
+            }
+
+             // Delete the associated image file
+             fs.unlink(imageFilePath, (unlinkErr) => {
+                if (unlinkErr) {
+                    console.error(`Error deleting image file: ${unlinkErr}`);
+                    // Proceed to send a success message even if the image could not be deleted
+                    return res.status(500).send(`Fragrance deleted, but error deleting image file.`);
+                }
+
+                res.status(200).send(`Fragrance "${fragranceName}" deleted successfully.`);
+            });
+
+        });
+    });
 });
 
 

@@ -3,12 +3,15 @@ import FragranceCard from './FragranceCard';
 import './App.css';
 import Navbar from './Navbar';
 import Modal from './Modal';
+import DeleteModal from './DeleteModal';
 
 function App() {
     const [prices, setPrices] = useState([]);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
+    const [isEditModalOpen, setIsEditModalOpen] = useState(false);
 
     // Load data from local storage on component mount
     useEffect(() => {
@@ -67,10 +70,16 @@ function App() {
 
     return (
         <div>
-            <Navbar onAddFragrance={() => setIsModalOpen(true)} />
+            <Navbar onAddFragrance={() => setIsModalOpen(true)} 
+                    onDeleteFragrance={() => setIsDeleteModalOpen(true)} 
+                    onEditFragrance={() => setIsEditModalOpen(true)}/>
             <Modal
                 isOpen={isModalOpen}
                 onClose={() => setIsModalOpen(false)}
+            />
+            <DeleteModal
+                isOpen={isDeleteModalOpen}
+                onClose={() => setIsDeleteModalOpen(false)}
             />
             <button onClick={handleRunScript} disabled={loading}>
                 {loading ? 'Fetching...' : 'Fetch Prices'}

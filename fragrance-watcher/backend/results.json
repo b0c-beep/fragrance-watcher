@@ -140,7 +140,7 @@
   {
     "fragrance": "jpg_le_male_elixir_125ml",
     "store": "marionnaud.ro",
-    "price": "Price not found",
+    "price": "671.0 RON",
     "url": "https://www.marionnaud.ro/jp-gaultier/le-male/le-male-elixir-parfum/p/BP_82331?varSel=82332"
   },
   {
@@ -170,7 +170,7 @@
   {
     "fragrance": "jpg_le_beau_le_parfum_125ml",
     "store": "marionnaud.ro",
-    "price": "Price not found",
+    "price": "720.0 RON",
     "url": "https://www.marionnaud.ro/jp-gaultier/le-beau/le-beau-le-parfum/p/BP_79077?varSel=79076"
   },
   {
@@ -490,11 +490,5 @@
     "store": "douglas.ro",
     "price": "717,00 RON*",
     "url": "https://www.douglas.ro/p/prada-l-homme-intense-eau-de-parfum-971573"
-  },
-  {
-    "fragrance": "rassasi_hawas_100ml",
-    "store": "brasty.ro",
-    "price": "237 lei",
-    "url": "https://www.brasty.ro/rasasi-hawas-for-men-eau-de-parfum-barba-i-100-ml"
   }
 ]
