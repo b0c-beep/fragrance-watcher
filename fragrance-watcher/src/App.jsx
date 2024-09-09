@@ -4,6 +4,7 @@ import './App.css';
 import Navbar from './Navbar';
 import Modal from './Modal';
 import DeleteModal from './DeleteModal';
+import EditModal from './EditModal';
 
 function App() {
     const [prices, setPrices] = useState([]);
@@ -72,7 +73,8 @@ function App() {
         <div>
             <Navbar onAddFragrance={() => setIsModalOpen(true)} 
                     onDeleteFragrance={() => setIsDeleteModalOpen(true)} 
-                    onEditFragrance={() => setIsEditModalOpen(true)}/>
+                    onEditFragrance={() => setIsEditModalOpen(true)}
+            />
             <Modal
                 isOpen={isModalOpen}
                 onClose={() => setIsModalOpen(false)}
@@ -80,6 +82,10 @@ function App() {
             <DeleteModal
                 isOpen={isDeleteModalOpen}
                 onClose={() => setIsDeleteModalOpen(false)}
+            />
+            <EditModal
+                isOpen={isEditModalOpen}
+                onClose={() => setIsEditModalOpen(false)}
             />
             <button onClick={handleRunScript} disabled={loading}>
                 {loading ? 'Fetching...' : 'Fetch Prices'}

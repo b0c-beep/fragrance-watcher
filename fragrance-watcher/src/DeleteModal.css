@@ -35,11 +35,11 @@ h2 {
     display: flex;
     justify-content: space-between;
     gap: 0.5rem;
-    margin-top: 1rem;
+
 }
 
 .modal-buttons button {
-    margin: 1rem;
+    margin: 1rem 0;
     max-width: 200px;
     background-color: #696867;
     color: #fff;

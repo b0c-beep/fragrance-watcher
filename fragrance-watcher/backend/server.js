@@ -283,6 +283,36 @@ app.delete('/fragrances/:name', (req, res) => {
 });
 
 
+// Endpoint to fetch fragrance details by name
+app.get('/fragrances/:name', (req, res) => {
+    const fragranceName = req.params.name;
+    const filePath = path.join(__dirname, 'fragrances.json');
+
+    fs.readFile(filePath, 'utf8', (err, data) => {
+        if (err) {
+            console.error(`Error reading JSON file: ${err}`);
+            return res.status(500).send(`Error reading JSON file: ${err.message}`);
+        }
+
+        try {
+            // Parse the data as an object
+            const fragrances = JSON.parse(data);
+
+            // Find the fragrance by key (name)
+            if (fragrances[fragranceName]) {
+                const fragranceDetails = fragrances[fragranceName];
+                res.json(fragranceDetails);
+            } else {
+                res.status(404).send('Fragrance not found');
+            }
+        } catch (parseError) {
+            console.error(`Error parsing JSON: ${parseError}`);
+            res.status(500).send(`Error parsing JSON: ${parseError.message}`);
+        }
+    });
+});
+
+
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);
 });
