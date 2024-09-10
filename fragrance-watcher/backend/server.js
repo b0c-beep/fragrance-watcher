@@ -204,7 +204,8 @@ app.post('/upload-image', upload.single('image'), (req, res) => {
 app.delete('/fragrances/:name', (req, res) => {
     const fragranceName = req.params.name;  // Get the fragrance name from the URL parameter
     const filePath = path.join(__dirname, '', 'fragrances.json');  // Path to the JSON file
-    
+    let foundImage = true;
+
     // Function to find the correct image file extension
     const findImageFilePath = (fragranceName) => {
         const imagesDir = path.join(__dirname, '..', 'public', 'images');
@@ -228,7 +229,7 @@ app.delete('/fragrances/:name', (req, res) => {
         const index = names.indexOf(fragranceName);
 
         if (index === -1) {
-            return null;  // File not found
+            foundImage = false;  // File not found
         }
 
         // Recombine name and extension
@@ -267,17 +268,18 @@ app.delete('/fragrances/:name', (req, res) => {
                 return res.status(500).send(`Error writing JSON file: ${writeErr.message}`);
             }
 
-             // Delete the associated image file
-             fs.unlink(imageFilePath, (unlinkErr) => {
-                if (unlinkErr) {
-                    console.error(`Error deleting image file: ${unlinkErr}`);
-                    // Proceed to send a success message even if the image could not be deleted
-                    return res.status(500).send(`Fragrance deleted, but error deleting image file.`);
-                }
+            if(foundImage){
+                // Delete the associated image file
+                fs.unlink(imageFilePath, (unlinkErr) => {
+                    if (unlinkErr) {
+                        console.error(`Error deleting image file: ${unlinkErr}`);
+                        // Proceed to send a success message even if the image could not be deleted
+                        return res.status(500).send(`Fragrance deleted, but error deleting image file.`);
+                    }
 
-                res.status(200).send(`Fragrance "${fragranceName}" deleted successfully.`);
-            });
-
+                });
+            }
+            res.status(200).send(`Fragrance "${fragranceName}" deleted successfully.`);
         });
     });
 });

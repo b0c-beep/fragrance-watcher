@@ -137,7 +137,97 @@ function EditModal({ isOpen, onClose }) {
 
     const handleSave = async () => {
 
+        // Construct the updated fragrance object
+        const updatedFragrance = {
+            [title.replace(/\s+/g, '_').toLowerCase()]: {
+                quantity,
+                ...links  // Spread the flattened links directly here
+            }
+        };
+    
+        try {
+            const deleteResponse = await fetch(`http://localhost:5000/fragrances/${chosenFragrance}`, {
+                method: 'DELETE'
+            });
 
+            const updateResponse = await fetch('http://localhost:5000/fragrances', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(updatedFragrance)
+            });
+
+            const formData = new FormData();
+                formData.append('image', image);  // Append the image to the FormData
+                formData.append('title', title);  // Append the title or any other identifier
+
+            if (!title) {
+                console.error('Title is required');
+                return;
+            }
+
+            const imageResponse = await fetch('http://localhost:5000/upload-image', {
+                method: 'POST',
+                body: formData
+            });
+
+            if (!imageResponse.ok) {
+                const errorText = await imageResponse.text();
+                console.error('Failed to upload image:', errorText);
+                alert(`Failed to upload image: ${errorText}`);
+                return;
+            }
+
+            if (!deleteResponse.ok) {
+                console.error(`Failed to delete fragrance "${chosenFragrance}":`, await deleteResponse.text());
+                return;
+            }
+            
+            if (!updateResponse.ok) {
+                // Handle non-2xx HTTP responses
+                const errorText = await updateResponse.text();
+                console.error('Failed to update fragrance:', errorText);
+                alert(`Failed to update fragrance: ${errorText}`);
+                return; 
+            }
+
+            // Success: Fragrance updated successfully
+            console.log('Fragrance updated successfully');
+
+            //clear fields
+            setChosenFragrance('');
+            setTitle('');
+            setQuantity('');
+            setLinks({
+                "brasty.ro": { url: '', price_selector: '.c-pd-shopbox__row' },
+                "hiris.ro": { url: '', price_selector: '.custom-tag-price' },
+                "esentedelux.ro": { url: '', price_selector: '.product-price.current-price-value' },
+                "notino.ro": { url: '', price_selector: '#pd-price' },
+                "parfumss.ro": { url: '', price_selector: '.price' },
+                "parfimo.ro": { url: '', price_selector: '.Price.ProductRow-price.js-price' },
+                "makeup.ro": { url: '', price_selector: '.price_item' },
+                "vivantis.ro": { url: '', price_selector: '.lh-18.font-size-sm.fw-bold' },
+                "bestvalue.eu": { url: '', price_selector: '#product-price' },
+                "parfumuri_timisoara.ro": { url: '', price_selector: '.price' },
+                "deluxury.ro": { url: '', price_selector: '' },
+                "parfumat.ro": { url: '', price_selector: '' },
+                "parfumu.ro": { url: '', price_selector: '.ty-price-num' },
+                "obsentum.com": { url: '', price_selector: '.cstm-product-summary.cstm-product-summary-no-mk' },
+                "sephora.ro": { url: '', price_selector: '.price-sales.price-sales-standard' },
+                "douglas.ro": { url: '', price_selector: '.product-detail-price.neutralColor' },
+                "beautik.ro": { url: '', price_selector: '' },
+                "parfumy.ro": { url: '', price_selector: '' },
+                "marionnaud.ro": { url: '', price_selector: '.formatted-price__decimal' },
+                "simplestore.ro": { url: '', price_selector: '.priceprodnormal.pret-normal-tva.pretpagprod' },
+                "depozituldecosmetice.ro": { url: '', price_selector: '.price' }
+            });
+
+           
+            onClose();
+        } catch (error) {
+            console.error('Error updating fragrance:', error);
+        }
 
     }
 
